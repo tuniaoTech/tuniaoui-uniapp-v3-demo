@@ -1,14 +1,14 @@
 {
-    "name" : "",
+    "name" : "TuniaoUI-v3-演示",
     "appid" : "",
-    "description" : "",
+    "description" : "TuniaoUI-v3-演示",
     "versionName" : "1.0.0",
     "versionCode" : "100",
-    "transformPx" : false,
+    "transformPx" : true,
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
-        "nvueStyleCompiler" : "图鸟UI-模板",
+        "nvueStyleCompiler" : "图鸟UI-v3-演示",
         "compilerVersion" : 3,
         "splashscreen" : {
             "alwaysShowBeforeRender" : true,
@@ -50,11 +50,14 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false
-        },
-        "usingComponents" : true
+      "appid": "wxd4296f570b8b39c9",
+      "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "ignoreDevUnusedFiles": false
+      },
+      "usingComponents": true,
+      "optimization": { "subPackages": true }
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -67,6 +70,13 @@
     },
     "uniStatistics": {  
         "enable": false
+    },
+    "h5": {
+        "router": {
+            "mode": "hash",
+            "base": "./"
+        },
+        "title": "Tuniao UI vue3 演示"
     },
     "vueVersion" : "3"
 }

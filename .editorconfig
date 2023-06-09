@@ -1,0 +1,21 @@
+root = true
+
+[*]
+charset = utf-8
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true // 删除文件中换行符之前的所有空白字符
+
+# // 当打开一个文件时，EditorConfig插件会在打开文件的目录和每个父目录中寻找一个名为.editorconfig的文件。
+# // 如果达到根文件路径或找到一个root=true的EditorConfig文件，对.editorconfig文件的搜索将停止。
+# root = true
+
+# [*]
+# charset = utf-8 // 字符集
+# indent_style = space // 设置为tab或space
+# indent_size = 2  // 缩进级别的列数
+# insert_final_newline = true // 以换行符结尾
+# trim_trailing_whitespace = true // 删除文件中换行符之前的所有空白字符
+
+# [*.ts]
+quote_type = single // ts文件中为单引方式
