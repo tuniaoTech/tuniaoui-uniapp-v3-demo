@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { useComponents } from './composables'
+import { useComponent } from './composables'
 
-useComponents()
+useComponent()
 </script>
 
 <template>
-  <view>Components</view>
+  <view>Component</view>
 </template>
 
 <style lang="scss" scoped></style>

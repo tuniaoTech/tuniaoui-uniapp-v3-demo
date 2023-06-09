@@ -6,10 +6,10 @@ import { useOrderedChildren } from '@tuniao/tnui-vue3-uniapp/hooks'
 import TnTabbar from '@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar.vue'
 import TnTabbarItem from '@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar-item.vue'
 
-import BasicPage from './sub-page/basic/basic.vue'
-import ComponentsPage from './sub-page/components/components.vue'
-import TemplatePage from './sub-page/template/template.vue'
-import AboutPage from './sub-page/about/about.vue'
+import BasicPage from './sub-page/components/basic/basic.vue'
+import ComponentPage from './sub-page/components/component/component.vue'
+import TemplatePage from './sub-page/components/template/template.vue'
+import AboutPage from './sub-page/components/about/about.vue'
 
 import type { CSSProperties } from 'vue'
 import type { IndexSubPageContext } from '@/tokens'
@@ -30,7 +30,6 @@ const tabbarData = [
 ]
 // 导航切换事件
 const onTabbarChange = (index: string | number) => {
-  currentTabbarIndex.value = index as number
   if (!pageStatus.value?.[index as number]) {
     pageStatus.value[index as number] = true
     nextTick(() => {
@@ -62,9 +61,16 @@ const pageContainerStyle = computed<(index: number) => CSSProperties>(() => {
 
 onLoad((options: any) => {
   // 获取当前进入的子页面的索引
-  const index = options?.index || 0
+  const index = Number(options?.index || 0)
   // 设置当前子页面的状态为true
   pageStatus.value[index] = true
+  nextTick(() => {
+    currentTabbarIndex.value = index
+    setTimeout(() => {
+      // 执行子页面的onLoad钩子
+      items.value?.[index]?.onLoad?.()
+    }, 50)
+  })
 })
 
 provide(
@@ -95,7 +101,7 @@ provide(
       :style="pageContainerStyle(1)"
     >
       <scroll-view class="scroll-view" scroll-y>
-        <ComponentsPage />
+        <ComponentPage />
       </scroll-view>
     </view>
     <view
@@ -117,7 +123,7 @@ provide(
       </scroll-view>
     </view>
   </view>
-  <TnTabbar fixed @change="onTabbarChange">
+  <TnTabbar v-model="currentTabbarIndex" fixed @change="onTabbarChange">
     <TnTabbarItem
       v-for="(item, index) in tabbarData"
       :key="index"
