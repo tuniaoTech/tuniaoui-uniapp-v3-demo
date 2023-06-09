@@ -1,0 +1,29 @@
+# Editor directory and files
+.idea
+.vscode/*
+!.vscode/extensions.json
+.eslintcache
+cypress/screenshots/*
+cypress/videos/*
+tmp
+
+# Package Manager
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# System
+.DS_Store
+
+# Bundle
+dist
+coverage
+dist-ssr
+*.local
