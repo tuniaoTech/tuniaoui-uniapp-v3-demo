@@ -1,0 +1,323 @@
+$top-container-height: 690rpx;
+$animation-time: 0.25s;
+$animation-delay: 0.15s;
+
+.about-page {
+  position: relative;
+  display: inline-block; // 消除共享margin属性
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 80rpx;
+  background-image: linear-gradient(
+    180deg,
+    #d6f4fa 0%,
+    var(--tn-color-gray-light) 100%
+  );
+  background-size: 100% calc($top-container-height - 100rpx);
+  background-repeat: no-repeat;
+  background-color: var(--tn-color-gray-light);
+
+  /* 顶部容器 start */
+  &__top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $top-container-height;
+    width: 100%;
+    box-sizing: content-box;
+
+    /* 背景毛玻璃 start */
+    .bg-frosted-glass {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(20rpx);
+      -webkit-backdrop-filter: blur(20rpx);
+    }
+    /* 背景毛玻璃 end */
+
+    /* 信息容器 start */
+    .info-container {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 30rpx 30rpx 0rpx 30rpx;
+      line-height: 1;
+
+      // nickName
+      .user-nickname {
+        font-size: 46rpx;
+        font-weight: bold;
+      }
+
+      // 版本
+      .frame-version {
+        margin-top: 18rpx;
+        font-size: 32rpx;
+      }
+
+      // 头像
+      .user-avatar {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+        font-size: 100rpx;
+      }
+    }
+    /* 信息容器 end */
+
+    /* 图鸟数据 start */
+    .tuniao-github-data {
+      position: absolute;
+      left: 0;
+      padding: 240rpx 30rpx 0rpx 30rpx;
+
+      .item {
+        line-height: 1;
+        margin-right: 50rpx;
+        .value {
+          font-size: 38rpx;
+          font-weight: 500;
+        }
+        .key {
+          margin-top: 10rpx;
+          font-size: 32rpx;
+          color: var(--tn-text-color-secondary);
+        }
+      }
+    }
+    /* 图鸟数据 end */
+
+    /* 加入vip start */
+    .tuniao-vip {
+      position: absolute;
+      left: 30rpx;
+      bottom: 0;
+      width: calc(100% - 60rpx);
+      padding: 50rpx 30rpx 30rpx 30rpx;
+      border-radius: 30rpx 30rpx 0rpx 0rpx;
+      background-color: #131313;
+      background-image: url('https://tnuiimage.tnkjapp.com/vue3_demo/image/about-page/vip-bg.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      transform: scaleY(0);
+      transform-origin: center bottom;
+      animation: join-vip-enter-animation $animation-time $animation-delay ease
+        forwards;
+
+      .vip-info {
+        .icon {
+          font-size: 140rpx;
+          height: 40rpx;
+          line-height: 1;
+          transform: translate(-20rpx, -60rpx);
+        }
+        .join-text {
+          font-size: 28rpx;
+        }
+      }
+
+      .operation-btn {
+        padding: 12rpx 30rpx;
+        border-radius: 1000rpx;
+        transform: translateY(-8rpx);
+        background: linear-gradient(270deg, #feeacc 0%, #ffe3a3 100%);
+        color: #5e3d05;
+      }
+    }
+    /* 加入vip end */
+
+    // 占位内容
+    &--placeholder {
+      height: $top-container-height;
+    }
+  }
+  /* 顶部容器 end */
+
+  /* 图鸟信息 start */
+  .tuniao-info {
+    position: relative;
+    width: calc(100% - 60rpx);
+    margin: 0rpx auto;
+    padding: 30rpx 10rpx;
+    border-radius: 0rpx 0rpx 30rpx 30rpx;
+    line-height: 1;
+
+    transform: scaleY(0);
+    transform-origin: center top;
+    animation: tuniao-info-enter-animation $animation-time $animation-delay ease
+      forwards;
+
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        flex: auto;
+      }
+
+      .icon {
+        color: var(--tn-color-white);
+        font-size: 44rpx;
+        width: 80rpx;
+        height: 80rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .text {
+        margin-top: 20rpx;
+      }
+    }
+  }
+  /* 图鸟信息 end */
+
+  /* 项目信息 start */
+  .project-info {
+    position: relative;
+    width: calc(100% - 60rpx);
+    margin: 0rpx auto;
+    border-radius: 30rpx;
+    margin-top: 30rpx;
+    overflow: hidden;
+
+    .item-container {
+      position: relative;
+      width: 100%;
+      padding: 30rpx;
+
+      transform: translateX(-100%);
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation: project-info-item-enter-animation
+            $animation-time
+            ease
+            forwards;
+          animation-delay: $animation-delay + $i * 0.1s;
+        }
+      }
+    }
+
+    .item {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      tn-button {
+        width: 100%;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .left-icon {
+          width: 44rpx;
+          height: 44rpx;
+          overflow: hidden;
+          border-radius: 50%;
+          color: var(--tn-color-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+
+          &.github {
+            font-size: 38rpx;
+          }
+          &.wechat {
+            font-size: 34rpx;
+          }
+        }
+        .left-text {
+          margin-left: 26rpx;
+        }
+      }
+    }
+  }
+  /* 项目信息 end */
+
+  /* 友情链接 start */
+  .friend-link {
+    position: relative;
+    width: calc(100% - 60rpx);
+    margin: 0 auto;
+    margin-top: 50rpx;
+
+    .title-container {
+      position: relative;
+      width: 100%;
+      .title {
+        font-weight: bold;
+        font-size: 30rpx;
+      }
+    }
+
+    .list-container {
+      position: relative;
+      width: 100%;
+      margin-top: 18rpx;
+      border-radius: 30rpx;
+      padding: 30rpx;
+
+      .list-content {
+        .list-item {
+          flex-shrink: 0;
+          margin-right: 46rpx;
+          .logo {
+            width: 90rpx;
+            height: 90rpx;
+            border-radius: 50%;
+          }
+
+          .name {
+            line-height: 1;
+            margin-top: 20rpx;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  /* 友情链接 end */
+}
+
+/* 入场动画 start */
+@keyframes join-vip-enter-animation {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes tuniao-info-enter-animation {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes project-info-item-enter-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/* 入场动画 end */
