@@ -23,10 +23,10 @@ const {
 
 // 底部导航栏数据
 const tabbarData = [
-  { text: '基础', icon: 'assign', activeIcon: 'assign-fill' },
-  { text: '组件', icon: 'menu-more', activeIcon: 'menu-more-fill' },
-  { text: '模板', icon: 'menu-match', activeIcon: 'menu-match-fill' },
-  { text: '图鸟', icon: 'logo-tuniao', activeIcon: 'logo-tuniao' },
+  { text: '基础', icon: 'assign-fill' },
+  { text: '组件', icon: 'menu-more-fill' },
+  { text: '模板', icon: 'menu-match-fill' },
+  { text: '图鸟', icon: 'logo-tuniao' },
 ]
 // 导航切换事件
 const onTabbarChange = (index: string | number) => {
@@ -123,14 +123,22 @@ provide(
       </scroll-view>
     </view>
   </view>
-  <TnTabbar v-model="currentTabbarIndex" fixed @change="onTabbarChange">
+  <TnTabbar
+    v-model="currentTabbarIndex"
+    fixed
+    :placeholder="false"
+    switch-animation
+    frosted
+    @change="onTabbarChange"
+  >
     <TnTabbarItem
       v-for="(item, index) in tabbarData"
       :key="index"
       :name="index"
       :text="item.text"
+      inactive-color="#c5cad5"
       :icon="item.icon"
-      :active-icon="item.activeIcon"
+      :active-icon="item.icon"
     />
   </TnTabbar>
 </template>

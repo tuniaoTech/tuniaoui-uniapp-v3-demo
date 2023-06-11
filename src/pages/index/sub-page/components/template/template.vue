@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import TnEmpty from '@tuniao/tnui-vue3-uniapp/components/empty/src/empty.vue'
 import { useTemplate } from './composables'
 
 useTemplate()
@@ -16,7 +17,20 @@ export default {
 // #endif
 
 <template>
-  <view>Template</view>
+  <view class="template-page">
+    <TnEmpty size="320rpx">
+      <template #icon>
+        <view class="empty-icon">
+          <TnIcon name="clip" />
+        </view>
+      </template>
+      <template #tips>
+        <view class="empty-tips"> 模板即将上线 </view>
+      </template>
+    </TnEmpty>
+  </view>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import './styles/index.scss';
+</style>

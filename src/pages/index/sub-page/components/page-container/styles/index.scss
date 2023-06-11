@@ -1,0 +1,143 @@
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: calc(100rpx + 80rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(100rpx + 80rpx + env(safe-area-inset-bottom));
+
+  /* 顶部轮播图 start */
+  .top-swiper {
+    position: relative;
+    width: 100%;
+    height: 680rpx;
+
+    .swiper-container,
+    .swiper-item,
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /* 顶部轮播图 end */
+
+  /* 列表容器 start */
+  .list-container {
+    position: relative;
+    width: 100%;
+    padding: 0rpx 30rpx;
+
+    /* 列表Item start */
+    .list-item {
+      position: relative;
+      width: 100%;
+      margin-top: 60rpx;
+
+      // 标题
+      .list-title {
+        position: relative;
+
+        padding-left: 26rpx;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 10rpx;
+          height: 70%;
+          border-radius: 100rpx;
+          background-color: var(--tn-color-primary);
+          transform: translateY(-58%);
+        }
+      }
+
+      /* 列表项 start */
+      .content-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .content-item {
+          flex-grow: 0;
+          flex-shrink: 0;
+          position: relative;
+          width: calc(100% / 2 - 16rpx);
+          height: 117rpx;
+          margin-top: 30rpx;
+
+          opacity: 0;
+          animation: list-item-enter-animation 0.3s ease forwards;
+
+          &:nth-of-type(odd) {
+            margin-right: 30rpx;
+          }
+
+          .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NDcuMyAyODkuOSI+PGNpcmNsZSBjeD0iNzczLjQiIGN5PSIyMTYiIHI9IjczIi8+PHBhdGggZD0iTTc5NCAwSDQyLjVDMTkgMCAwIDE5IDAgNDIuNXYyMDQuOGMwIDIzLjUgMTkgNDIuNSA0Mi41IDQyLjVoNjA4LjhjMjQuMSAwIDQxLjMtMjEuNiAzNy44LTQ0LjEtLjQtMi42LTEuMS01LjMtMi4xLTcuOS0xLjQtMy41LTIuNS03LjItMy4zLTExLS44LTQuNy0xLjItOS41LTEuMi0xNC40IDAtNDggMzguOS04Ni45IDg2LjktODYuOSA3LjggMCAxNS40IDEgMjIuNiAzIDEuMS40IDIuMS43IDMuMiAxLjEgMS43LjYgMy40IDEuMSA1LjEgMS41IDIzLjUgNS41IDQ3LTEyLjIgNDctMzcuMlY1My4zQzg0Ny4zIDIzLjggODIzLjUgMCA3OTQgMHoiLz48L3N2Zz4=');
+            mask-size: 100% 100%, contain;
+            mask-repeat: no-repeat;
+            mask-composite: xor;
+            z-index: 1;
+          }
+
+          /* 数据 start */
+          .data {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            padding: 20rpx 30rpx;
+            line-height: 1;
+
+            .title {
+              font-size: 38rpx;
+              width: 90%;
+            }
+            .path {
+              margin-top: 12rpx;
+              width: 80%;
+
+              text {
+                margin-left: 10rpx;
+              }
+            }
+
+            .icon {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              width: 60rpx;
+              height: 60rpx;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 36rpx;
+            }
+          }
+          /* 数据 end */
+        }
+      }
+      /* 列表项 end */
+    }
+    /* 列表Item end */
+  }
+  /* 列表容器 end */
+}
+
+/* 入场动画 start */
+@keyframes list-item-enter-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 入场动画 end */

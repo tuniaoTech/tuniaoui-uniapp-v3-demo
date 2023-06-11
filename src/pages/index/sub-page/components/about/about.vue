@@ -144,7 +144,7 @@ export default {
               name="vip-text"
             />
           </view>
-          <view class="join-text tn-gray_text">加入图鸟VIP</view>
+          <view class="join-text tn-gray_text">加入图鸟会员</view>
         </view>
         <view
           class="operation-btn"

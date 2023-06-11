@@ -1,8 +1,7 @@
 .page {
   position: relative;
   width: 100%;
-  height: calc(100vh - 100rpx - env(safe-area-inset-bottom));
-  height: calc(100vh - 100rpx - constant(safe-area-inset-bottom));
+  height: 100vh;
 
   &__container {
     position: relative;
