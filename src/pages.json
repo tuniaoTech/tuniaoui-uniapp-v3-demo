@@ -7,6 +7,28 @@
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "demo-pages",
+			"pages": [{
+				"path": "basic/flex/index",
+				"style": {
+					"navigationBarTitleText": "Flex布局"
+				}
+			},{
+        "path": "basic/color/index",
+        "style": {
+          "navigationBarTitleText": "Color配色"
+        }
+      }]
+		}
+	],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["demo-pages"]
+		}
+	},
 	"globalStyle": {
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black",

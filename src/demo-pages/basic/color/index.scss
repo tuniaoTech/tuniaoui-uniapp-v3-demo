@@ -1,0 +1,151 @@
+.color-page {
+  position: relative;
+  width: 100%;
+}
+
+/* 选择颜色容器 start */
+.select-container {
+  position: fixed;
+  left: 0;
+  z-index: 2;
+
+  &__scroll-view {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    padding: 30rpx 20rpx;
+  }
+  &__item {
+    width: 64rpx;
+    height: 64rpx;
+    margin-bottom: 30rpx;
+    font-size: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease;
+
+    &.active {
+      transform: scale(1.2);
+    }
+  }
+}
+/* 选择颜色容器 end */
+
+/* 颜色展示容器 start */
+.show-container {
+  position: relative;
+  width: 100%;
+  padding: 30rpx;
+  padding-left: 130rpx;
+  z-index: 1;
+
+  &__content {
+    & + & {
+      margin-top: 50rpx;
+    }
+  }
+
+  &__title {
+    font-size: 42rpx;
+    margin-bottom: 30rpx;
+  }
+
+  /* 默认演示item */
+  &__item {
+    padding: 40rpx 30rpx 40rpx 30rpx;
+    border-radius: 15rpx;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // 固定高度
+    &.fill-height {
+      height: 150rpx;
+    }
+
+    // 紧贴
+    &.cling-to {
+      border-radius: 0rpx;
+      & + & {
+        margin-top: 0;
+      }
+
+      &:nth-of-type(1) {
+        border-top-left-radius: 15rpx;
+        border-top-right-radius: 15rpx;
+      }
+      &:nth-of-type(4) {
+        border-bottom-left-radius: 15rpx;
+        border-bottom-right-radius: 15rpx;
+      }
+    }
+
+    // 没有该元素
+    &.no-element {
+      display: none;
+    }
+
+    & + & {
+      margin-top: 30rpx;
+    }
+
+    .data-name {
+      font-size: 38rpx;
+      &.small {
+        font-size: 30rpx;
+      }
+    }
+    .data-value {
+      font-size: 24rpx;
+      margin-top: 14rpx;
+      text-transform: uppercase;
+
+      &.no-upper {
+        text-transform: none;
+      }
+    }
+  }
+
+  /* 垂直演示item */
+  &__item-vertical {
+    position: relative;
+    width: 100%;
+
+    & + & {
+      margin-top: 30rpx;
+    }
+
+    .item-title {
+      font-size: 36rpx;
+      margin-bottom: 20rpx;
+    }
+
+    .item-data {
+      width: 100%;
+      height: 160rpx;
+      display: flex;
+
+      .type-color {
+        flex: 1;
+        writing-mode: vertical-lr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-of-type(1) {
+          border-top-left-radius: 15rpx;
+        }
+        &:last-of-type {
+          border-top-right-radius: 15rpx;
+        }
+      }
+    }
+  }
+}
+/* 颜色展示容器 end */

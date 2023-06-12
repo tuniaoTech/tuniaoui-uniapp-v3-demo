@@ -1,0 +1,77 @@
+.flex-container {
+  &--fix-height {
+    height: 360rpx;
+  }
+
+  &--has-height {
+    height: 140rpx;
+    padding: 20rpx;
+  }
+}
+
+.flex-item {
+  display: inline-block; // 消除共享margin属性
+  height: 74rpx;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+
+/* 示例1 start */
+.example-1 {
+  position: relative;
+  padding: 20rpx 0rpx;
+
+  .avatar {
+    width: 120rpx;
+    height: 120rpx;
+  }
+
+  .message {
+    margin-left: 30rpx;
+    .content {
+      height: 40rpx;
+      .data {
+        height: 100%;
+        margin-right: 30rpx;
+      }
+      .time {
+        width: 80rpx;
+        height: 100%;
+      }
+    }
+    .brief {
+      height: 40rpx;
+      margin-top: 20rpx;
+      .data {
+        height: 100%;
+        margin-right: 30rpx;
+      }
+      .message-count {
+        width: 40rpx;
+        height: 40rpx;
+      }
+    }
+  }
+}
+/* 示例1 end */
+
+/* 示例2 start */
+.example-2 {
+  height: 260rpx;
+  .left {
+    width: 40%;
+    height: 100%;
+  }
+  .right {
+    height: 100%;
+    margin-left: 30rpx;
+
+    .bottom {
+      margin-top: 20rpx;
+    }
+  }
+}
+/* 示例2 end */

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import TnTitle from '@tuniao/tnui-vue3-uniapp/components/title/src/title.vue'
+import { tnNavPage } from '@tuniao/tnui-vue3-uniapp/utils'
 
 import { pageContainerProps } from './page-container'
 
@@ -32,6 +33,11 @@ watch(
     immediate: true,
   }
 )
+
+// 跳转到对应的演示页面
+const navDemoPage = (path: string) => {
+  tnNavPage(path, 'navigateTo')
+}
 </script>
 
 // #ifdef MP-WEIXIN
@@ -77,6 +83,7 @@ export default {
             v-for="(dItem, dIndex) in item.data"
             :key="dIndex"
             class="content-item"
+            @tap.stop="navDemoPage(dItem.url)"
           >
             <view class="bg tn-gradient-bg__blue-light" />
             <view class="data">

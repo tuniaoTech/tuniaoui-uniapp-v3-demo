@@ -13,10 +13,10 @@ const topSwiperData = [
 const pageData: PageContainerData = {
   基础: [
     {
-      title: 'Flex布局',
-      icon: 'menu-more',
-      path: 'flex',
-      url: '/demo-pages/basic/flex/index',
+      title: '配色',
+      icon: 'gloves',
+      path: 'color',
+      url: '/demo-pages/basic/color/index',
     },
     {
       title: '标题',
@@ -25,16 +25,16 @@ const pageData: PageContainerData = {
       url: '/demo-pages/basic/title/index',
     },
     {
-      title: '配色',
-      icon: 'gloves',
-      path: 'color',
-      url: '/demo-pages/basic/color/index',
-    },
-    {
       title: '图标',
       icon: 'font',
       path: 'icon',
       url: '/demo-pages/basic/icon/index',
+    },
+    {
+      title: 'Flex布局',
+      icon: 'menu-more',
+      path: 'flex',
+      url: '/demo-pages/basic/flex/index',
     },
     {
       title: '按钮',
