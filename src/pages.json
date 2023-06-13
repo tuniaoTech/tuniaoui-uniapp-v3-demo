@@ -10,17 +10,26 @@
 	"subPackages": [
 		{
 			"root": "demo-pages",
-			"pages": [{
-				"path": "basic/flex/index",
-				"style": {
-					"navigationBarTitleText": "Flex布局"
-				}
-			},{
-        "path": "basic/color/index",
-        "style": {
-          "navigationBarTitleText": "Color配色"
+			"pages": [
+        {
+          "path": "basic/flex/index",
+          "style": {
+            "navigationBarTitleText": "Flex布局"
+          }
+        },
+        {
+          "path": "basic/color/index",
+          "style": {
+            "navigationBarTitleText": "Color配色"
+          }
+        },
+        {
+          "path": "basic/icon/index",
+          "style": {
+            "navigationBarTitleText": "Icon图标"
+          }
         }
-      }]
+      ]
 		}
 	],
 	"preloadRule": {

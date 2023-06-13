@@ -103,7 +103,6 @@ const monitorDataContainerScrollInfo = () => {
   connectObserver(
     '.show-container__title',
     (observerRes: any) => {
-      console.log('observerRes', observerRes)
       if (observerRes.intersectionRatio > 0.98) {
         if (clickEventFlag) {
           clickEventFlag = false

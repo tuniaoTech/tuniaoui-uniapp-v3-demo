@@ -34,7 +34,13 @@ export default {
 
 <template>
   <view class="custom-page">
-    <TnNavbar fixed frosted>{{ title }}</TnNavbar>
+    <TnNavbar
+      fixed
+      :frosted="navbarFrosted"
+      :bottom-shadow="navbarBottomShadow"
+    >
+      {{ title }}
+    </TnNavbar>
     <view
       class="custom-page__container tn-u-safe-area--more"
       :style="containerStyle"

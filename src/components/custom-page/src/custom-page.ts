@@ -18,6 +18,20 @@ export const customPageProps = buildProps({
     type: String,
     default: '30',
   },
+  /**
+   * @description 导航栏是否有毛玻璃效果
+   */
+  navbarFrosted: {
+    type: Boolean,
+    default: true,
+  },
+  /**
+   * @description 导航栏是否显示底部阴影
+   */
+  navbarBottomShadow: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 export type CustomPageProps = ExtractPropTypes<typeof customPageProps>

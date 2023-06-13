@@ -1,0 +1,84 @@
+.icon-category {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* 搜索框 start */
+.icon-search-box {
+  position: fixed;
+  left: 0;
+  width: calc(100% - 60rpx);
+  margin: 0rpx 30rpx;
+  border-radius: 100rpx;
+  z-index: 9999;
+}
+/* 搜索框 end */
+
+/* 展示 icon 容器 start */
+.icon-show-container {
+  position: relative;
+  width: 100%;
+  margin-top: 180rpx;
+  padding: 30rpx;
+
+  .icon-data {
+    width: 100%;
+
+    & + .icon-data {
+      margin-top: 60rpx;
+    }
+
+    .data-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32rpx;
+      font-weight: 500;
+
+      .title-icon {
+        margin: 0rpx 20rpx;
+      }
+    }
+
+    .icon-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .icon-item {
+        position: relative;
+        width: calc(100% / 3 - 30rpx);
+        height: 0;
+        padding-bottom: calc(100% / 3 - 30rpx);
+        margin-right: 30rpx;
+        margin-top: 30rpx;
+        border-radius: 15rpx;
+
+        &__content {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 18rpx;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          line-height: 1;
+
+          .icon {
+            font-size: 60rpx;
+          }
+          .value {
+            margin-top: 20rpx;
+          }
+        }
+      }
+    }
+  }
+}
+/* 展示 icon 容器 end */
