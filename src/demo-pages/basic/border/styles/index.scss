@@ -1,0 +1,22 @@
+.border-container {
+  position: relative;
+  width: 100%;
+
+  .border-item {
+    padding: 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & + .border-item {
+      margin-top: 30rpx;
+    }
+
+    &.square {
+      width: 120rpx;
+      height: 120rpx;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

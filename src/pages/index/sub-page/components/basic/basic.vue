@@ -19,34 +19,10 @@ const pageData: PageContainerData = {
       url: '/demo-pages/basic/color/index',
     },
     {
-      title: '标题',
-      icon: 'bankcard',
-      path: 'title',
-      url: '/demo-pages/basic/title/index',
-    },
-    {
       title: '图标',
       icon: 'font',
       path: 'icon',
       url: '/demo-pages/basic/icon/index',
-    },
-    {
-      title: 'Flex布局',
-      icon: 'menu-more',
-      path: 'flex',
-      url: '/demo-pages/basic/flex/index',
-    },
-    {
-      title: '按钮',
-      icon: 'circle-fill',
-      path: 'button',
-      url: '/demo-pages/basic/button/index',
-    },
-    {
-      title: '标签',
-      icon: 'tag',
-      path: 'tag',
-      url: '/demo-pages/basic/tag/index',
     },
     {
       title: '边框',
@@ -59,6 +35,30 @@ const pageData: PageContainerData = {
       icon: 'copy-fill',
       path: 'shadow',
       url: '/demo-pages/basic/shadow/index',
+    },
+    {
+      title: 'Flex布局',
+      icon: 'menu-more',
+      path: 'flex',
+      url: '/demo-pages/basic/flex/index',
+    },
+    {
+      title: '标题',
+      icon: 'bankcard',
+      path: 'title',
+      url: '/demo-pages/basic/title/index',
+    },
+    {
+      title: '按钮',
+      icon: 'circle-fill',
+      path: 'button',
+      url: '/demo-pages/basic/button/index',
+    },
+    {
+      title: '标签',
+      icon: 'tag',
+      path: 'tag',
+      url: '/demo-pages/basic/tag/index',
     },
     {
       title: '徽标',

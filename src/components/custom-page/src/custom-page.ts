@@ -32,6 +32,13 @@ export const customPageProps = buildProps({
     type: Boolean,
     default: true,
   },
+  /**
+   * @description 底部是否需要预留更多空间
+   */
+  bottomMoreSpace: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 export type CustomPageProps = ExtractPropTypes<typeof customPageProps>

@@ -17,6 +17,10 @@ const containerStyle = computed<CSSProperties>(() => {
     style.padding = formatDomSizeValue(props.padding)
   }
 
+  if (props.bottomMoreSpace) {
+    style.paddingBottom = '80rpx'
+  }
+
   return style
 })
 </script>
@@ -41,10 +45,7 @@ export default {
     >
       {{ title }}
     </TnNavbar>
-    <view
-      class="custom-page__container tn-u-safe-area--more"
-      :style="containerStyle"
-    >
+    <view class="custom-page__container" :style="containerStyle">
       <slot />
     </view>
   </view>

@@ -1,0 +1,34 @@
+.shadow-container {
+  position: relative;
+  width: 100%;
+
+  .shadow-item {
+    position: relative;
+    width: 100%;
+    padding: 24rpx;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & + .shadow-item {
+      margin-top: 50rpx;
+    }
+
+    &.square {
+      width: calc(100% / 2 - 50rpx);
+      height: 0;
+      padding: 0rpx;
+      padding-bottom: calc(100% / 2 - 50rpx);
+      margin-top: 50rpx;
+      margin-right: 50rpx;
+    }
+
+    &.bg-image {
+      background-image: url('https://resource.tnkjapp.com/images/publicity/publicity-vue2.jpg');
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

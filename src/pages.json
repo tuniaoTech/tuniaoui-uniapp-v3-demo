@@ -28,6 +28,24 @@
           "style": {
             "navigationBarTitleText": "Icon图标"
           }
+        },
+        {
+          "path": "basic/border/index",
+          "style": {
+            "navigationBarTitleText": "Border边框"
+          }
+        },
+        {
+          "path": "basic/shadow/index",
+          "style": {
+            "navigationBarTitleText": "Shadow阴影"
+          }
+        },
+        {
+          "path": "basic/title/index",
+          "style": {
+            "navigationBarTitleText": "Title标题"
+          }
         }
       ]
 		}
