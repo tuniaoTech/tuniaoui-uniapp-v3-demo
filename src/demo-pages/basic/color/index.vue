@@ -101,8 +101,9 @@ const colorClickEvent = (color: string, index: number) => {
 const monitorDataContainerScrollInfo = () => {
   disconnectObserver()
   connectObserver(
-    '.show-container__content',
+    '.show-container__title',
     (observerRes: any) => {
+      console.log('observerRes', observerRes)
       if (observerRes.intersectionRatio > 0.98) {
         if (clickEventFlag) {
           clickEventFlag = false
@@ -248,8 +249,10 @@ onUnmounted(() => {
       </view>
       <view class="show-container">
         <!-- 图鸟配色 -->
-        <view :id="`${showContainerId}-0`" class="show-container__content">
-          <view class="show-container__title"> 图鸟配色 </view>
+        <view class="show-container__content">
+          <view :id="`${showContainerId}-0`" class="show-container__title">
+            图鸟配色
+          </view>
           <view class="show-container__data">
             <view
               v-for="(item, index) in tuniaoColorMatching"
@@ -266,8 +269,10 @@ onUnmounted(() => {
           </view>
         </view>
         <!-- 主题配色 -->
-        <view :id="`${showContainerId}-1`" class="show-container__content">
-          <view class="show-container__title"> 主题配色 </view>
+        <view class="show-container__content">
+          <view :id="`${showContainerId}-1`" class="show-container__title">
+            主题配色
+          </view>
           <view class="show-container__data">
             <view
               v-for="(item, index) in colorTypes"
@@ -306,8 +311,10 @@ onUnmounted(() => {
         </view>
 
         <!-- 酷炫渐变背景 -->
-        <view :id="`${showContainerId}-2`" class="show-container__content">
-          <view class="show-container__title"> 酷炫渐变背景 </view>
+        <view class="show-container__content">
+          <view :id="`${showContainerId}-2`" class="show-container__title">
+            酷炫渐变背景
+          </view>
           <view class="show-container__data">
             <view
               v-for="index in 16"
@@ -323,11 +330,13 @@ onUnmounted(() => {
         <!-- 图鸟内置颜色 -->
         <view
           v-for="(colorItem, colorIndex) in tuniaoColors"
-          :id="`${showContainerId}-${colorIndex + 3}`"
           :key="colorIndex"
           class="show-container__content"
         >
-          <view class="show-container__title tn-text-capitalize">
+          <view
+            :id="`${showContainerId}-${colorIndex + 3}`"
+            class="show-container__title tn-text-capitalize"
+          >
             {{ colorItem }}
           </view>
           <view class="show-container__data">
