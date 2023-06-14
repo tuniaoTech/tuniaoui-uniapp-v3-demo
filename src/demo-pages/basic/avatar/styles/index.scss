@@ -1,0 +1,30 @@
+.avatar-category-title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  :deep(.tn-title) {
+    font-weight: 500;
+  }
+}
+
+.avatar-container {
+  position: relative;
+  width: 100%;
+
+  .avatar-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & + .avatar-item {
+      margin-top: 30rpx;
+    }
+
+    .item {
+      margin-right: 20rpx;
+    }
+  }
+}

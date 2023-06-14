@@ -179,7 +179,7 @@ export default {
       </view>
       <view class="item button">
         <TnButton
-          shape="text"
+          text
           hover-class=""
           open-type="share"
           :custom-style="customButtonStyle"
@@ -223,7 +223,7 @@ export default {
       <view class="item-container">
         <TnButton
           width="100%"
-          shape="text"
+          text
           hover-class=""
           open-type="contact"
           :custom-style="customButtonStyle"
@@ -244,7 +244,7 @@ export default {
       <view class="item-container">
         <TnButton
           width="100%"
-          shape="text"
+          text
           hover-class=""
           open-type="feedback"
           :custom-style="customButtonStyle"

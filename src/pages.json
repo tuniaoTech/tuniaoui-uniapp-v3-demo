@@ -46,6 +46,24 @@
           "style": {
             "navigationBarTitleText": "Title标题"
           }
+        },
+        {
+          "path": "basic/button/index",
+          "style": {
+            "navigationBarTitleText": "Button按钮"
+          }
+        },
+        {
+          "path": "basic/badge/index",
+          "style": {
+            "navigationBarTitleText": "Badge徽标"
+          }
+        },
+        {
+          "path": "basic/avatar/index",
+          "style": {
+            "navigationBarTitleText": "Avatar头像"
+          }
         }
       ]
 		}

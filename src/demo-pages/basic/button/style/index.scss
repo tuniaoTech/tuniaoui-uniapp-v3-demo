@@ -1,0 +1,19 @@
+.button-container {
+  position: relative;
+  width: 100%;
+
+  .button-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & + .button-item {
+      margin-top: 30rpx;
+    }
+
+    .item {
+      margin-right: 10rpx;
+    }
+  }
+}

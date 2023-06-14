@@ -1,0 +1,39 @@
+.badge-container {
+  position: relative;
+  width: 100%;
+
+  .badge-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .item {
+      position: relative;
+
+      margin-right: 30rpx;
+      margin-top: 30rpx;
+    }
+
+    .badge-content {
+      position: relative;
+      width: 120rpx;
+      height: 120rpx;
+      padding: 30rpx;
+      border-radius: 15rpx;
+      background-color: var(--tn-color-gray-disabled);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22rpx;
+      text-align: center;
+
+      &.no-center {
+        display: block;
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
+}

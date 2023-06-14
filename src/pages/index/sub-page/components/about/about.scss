@@ -159,6 +159,7 @@ $animation-delay: 0.15s;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      color: var(--tn-text-color-primary);
 
       .item {
         flex: auto;
@@ -214,6 +215,7 @@ $animation-delay: 0.15s;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      color: var(--tn-text-color-primary);
 
       tn-button {
         width: 100%;

@@ -149,6 +149,7 @@ export const useIcon = () => {
       success: () => {
         uni.showToast({
           title: name,
+          icon: 'none',
           duration: 10000,
         })
       },
