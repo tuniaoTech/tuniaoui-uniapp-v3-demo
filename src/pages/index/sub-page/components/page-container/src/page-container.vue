@@ -36,7 +36,12 @@ watch(
 
 // 跳转到对应的演示页面
 const navDemoPage = (path: string) => {
-  tnNavPage(path, 'navigateTo')
+  tnNavPage(path, 'navigateTo').catch(() => {
+    uni.showToast({
+      title: '即将上线',
+      icon: 'none',
+    })
+  })
 }
 </script>
 

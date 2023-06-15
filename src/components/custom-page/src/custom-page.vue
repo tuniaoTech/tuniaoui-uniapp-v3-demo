@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import TnNavbar from '@tuniao/tnui-vue3-uniapp/components/navbar/src/navbar.vue'
+import { useComponentColor } from '@tuniao/tnui-vue3-uniapp/hooks'
 import { formatDomSizeValue } from '@tuniao/tnui-vue3-uniapp/utils'
 
 import { customPageProps } from './custom-page'
@@ -9,6 +10,17 @@ import type { CSSProperties } from 'vue'
 
 const props = defineProps(customPageProps)
 
+// 解析颜色
+const [pageBgClass, pageBgStyle] = useComponentColor(props.pageBgColor, 'bg')
+
+// 页面容器的类
+const containerClass = computed<string>(() => {
+  const cls: string[] = ['custom-page__container']
+
+  if (pageBgClass.value) cls.push(pageBgClass.value)
+
+  return cls.join(' ')
+})
 // 页面容器样式
 const containerStyle = computed<CSSProperties>(() => {
   const style: CSSProperties = {}
@@ -16,6 +28,8 @@ const containerStyle = computed<CSSProperties>(() => {
   if (props.padding) {
     style.padding = formatDomSizeValue(props.padding)
   }
+
+  if (pageBgStyle.value) style.backgroundColor = pageBgStyle.value
 
   if (props.bottomMoreSpace) {
     style.paddingBottom = '80rpx'
@@ -45,7 +59,7 @@ export default {
     >
       {{ title }}
     </TnNavbar>
-    <view class="custom-page__container" :style="containerStyle">
+    <view :class="[containerClass]" :style="containerStyle">
       <slot />
     </view>
   </view>

@@ -1,0 +1,27 @@
+.collapse-container {
+  position: relative;
+  width: 100%;
+
+  .collapse-item {
+    position: relative;
+    width: 100%;
+    border-radius: 15rpx;
+
+    & + .collapse-item {
+      margin-top: 30rpx;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+
+      .icon ~ .value {
+        margin-left: 20rpx;
+      }
+
+      .value {
+        transition: color 0.3s ease;
+      }
+    }
+  }
+}

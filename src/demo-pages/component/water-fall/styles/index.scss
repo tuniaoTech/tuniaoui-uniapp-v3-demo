@@ -1,0 +1,22 @@
+.water-fall-container {
+  position: relative;
+  width: 100%;
+
+  .water-fall-item {
+    position: relative;
+    width: 100%;
+
+    .tips {
+      color: var(--tn-color-gray);
+    }
+
+    .nav-water-fall-button {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20rpx;
+    }
+  }
+}

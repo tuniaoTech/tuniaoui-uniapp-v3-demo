@@ -19,6 +19,10 @@ export const customPageProps = buildProps({
     default: '30',
   },
   /**
+   * @description 页面背景颜色
+   */
+  pageBgColor: String,
+  /**
    * @description 导航栏是否有毛玻璃效果
    */
   navbarFrosted: {

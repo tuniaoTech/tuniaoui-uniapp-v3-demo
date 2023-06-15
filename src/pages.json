@@ -64,6 +64,48 @@
           "style": {
             "navigationBarTitleText": "Avatar头像"
           }
+        },
+        {
+          "path": "basic/footer/index",
+          "style": {
+            "navigationBarTitleText": "Footer页脚"
+          }
+        },
+        {
+          "path": "component/list/index",
+          "style": {
+            "navigationBarTitleText": "List列表"
+          }
+        },
+        {
+          "path": "component/sticky/index",
+          "style": {
+            "navigationBarTitleText": "Sticky吸顶"
+          }
+        },
+        {
+          "path": "component/collapse/index",
+          "style": {
+            "navigationBarTitleText": "Collapse折叠面板"
+          }
+        },
+        {
+          "path": "component/water-fall/index",
+          "style": {
+            "navigationBarTitleText": "WaterFall瀑布流"
+          }
+        },
+        {
+          "path": "component/water-fall/normal-waterfall",
+          "style": {
+            "navigationBarTitleText": "普通瀑布流"
+          }
+        },
+        {
+          "path": "component/water-fall/calc-waterfall",
+          "style": {
+            "navigationBarTitleText": "计算瀑布流"
+          }
         }
       ]
 		}

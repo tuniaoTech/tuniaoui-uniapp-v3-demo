@@ -3,7 +3,7 @@ import TnTitle from '@tuniao/tnui-vue3-uniapp/components/title/src/title.vue'
 import TnAvatar from '@tuniao/tnui-vue3-uniapp/components/avatar/src/avatar.vue'
 import TnAvatarGroup from '@tuniao/tnui-vue3-uniapp/components/avatar/src/avatar-group.vue'
 
-import type { AvatarBadgeProps } from '@tuniao/tnui-vue3-uniapp/components'
+import type { AvatarBadgeProps } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'

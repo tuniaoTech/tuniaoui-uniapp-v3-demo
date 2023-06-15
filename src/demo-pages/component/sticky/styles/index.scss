@@ -1,0 +1,11 @@
+.sticky-container {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  border-top: solid transparent; // 移除margin影响
+
+  .sticky-placeholder-block {
+    height: 120rpx;
+    width: 1rpx;
+  }
+}

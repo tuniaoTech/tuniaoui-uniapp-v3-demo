@@ -72,6 +72,12 @@ const pageData: PageContainerData = {
       path: 'avatar',
       url: '/demo-pages/basic/avatar/index',
     },
+    {
+      title: '页脚',
+      icon: 'rocket',
+      path: 'footer',
+      url: '/demo-pages/basic/footer/index',
+    },
   ],
 }
 </script>

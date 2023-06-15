@@ -1,0 +1,34 @@
+.list-container {
+  position: relative;
+  width: 100%;
+
+  .list-item {
+    position: relative;
+    width: 100%;
+
+    & + .list-item {
+      margin-top: 30rpx;
+    }
+
+    .list-content {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+
+      .icon {
+        width: 50rpx;
+        height: 50rpx;
+        border-radius: 50%;
+        font-size: 38rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        margin-left: 20rpx;
+      }
+    }
+  }
+}

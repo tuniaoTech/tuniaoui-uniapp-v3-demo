@@ -1,0 +1,17 @@
+.footer-container {
+  position: relative;
+  width: 100%;
+
+  .footer-item {
+    position: relative;
+    width: 100%;
+
+    & + .footer-item {
+      margin-top: 30rpx;
+    }
+
+    &.fill-height {
+      height: 400rpx;
+    }
+  }
+}

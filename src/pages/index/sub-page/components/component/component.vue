@@ -275,12 +275,6 @@ const pageData: PageContainerData = {
       url: '/demo-pages/component/title/index',
     },
     {
-      title: '页脚',
-      icon: 'rocket',
-      path: 'footer',
-      url: '/demo-pages/component/footer/index',
-    },
-    {
       title: '图文卡片',
       icon: 'rocket',
       path: 'graphic-card',
