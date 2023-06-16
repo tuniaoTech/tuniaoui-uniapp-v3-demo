@@ -106,6 +106,48 @@
           "style": {
             "navigationBarTitleText": "计算瀑布流"
           }
+        },
+        {
+          "path": "component/subsection/index",
+          "style": {
+            "navigationBarTitleText": "Subsection分段器"
+          }
+        },
+        {
+          "path": "component/search-box/index",
+          "style": {
+            "navigationBarTitleText": "SearchBox搜索框"
+          }
+        },
+        {
+          "path": "component/switch-tabs/index",
+          "style": {
+            "navigationBarTitleText": "SwitchTab选项卡切换"
+          }
+        },
+        {
+          "path": "component/popup/index",
+          "style": {
+            "navigationBarTitleText": "Popup弹出框"
+          }
+        },
+        {
+          "path": "component/modal/index",
+          "style": {
+            "navigationBarTitleText": "Modal模态框"
+          }
+        },
+        {
+          "path": "component/notify/index",
+          "style": {
+            "navigationBarTitleText": "Notify消息通知"
+          }
+        },
+        {
+          "path": "component/notice-bar/index",
+          "style": {
+            "navigationBarTitleText": "NoticeBar通知栏"
+          }
         }
       ]
 		}

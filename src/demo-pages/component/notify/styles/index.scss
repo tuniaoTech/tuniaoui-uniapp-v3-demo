@@ -1,0 +1,19 @@
+.notify-container {
+  position: relative;
+  width: 100%;
+
+  .notify-item {
+    position: relative;
+    width: 100%;
+
+    & + .notify-item {
+      margin-top: 30rpx;
+    }
+
+    &.line {
+      width: auto;
+      margin-right: 20rpx;
+      margin-top: 20rpx;
+    }
+  }
+}

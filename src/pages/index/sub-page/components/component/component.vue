@@ -51,8 +51,8 @@ const pageData: PageContainerData = {
     {
       title: '选项卡切换',
       icon: 'rocket',
-      path: 'switch-card',
-      url: '/demo-pages/component/switch-card/index',
+      path: 'switch-tabs',
+      url: '/demo-pages/component/switch-tabs/index',
     },
   ],
   反馈组件: [

@@ -1,0 +1,13 @@
+.notice-bar-container {
+  position: relative;
+  width: 100%;
+
+  .notice-bar-item {
+    position: relative;
+    width: 100%;
+
+    & + .notice-bar-item {
+      margin-top: 30rpx;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.modal-container {
+  position: relative;
+  width: 100%;
+
+  .modal-item {
+    position: relative;
+    width: 100%;
+
+    & + .modal-item {
+      margin-top: 30rpx;
+    }
+
+    &.line {
+      width: auto;
+      margin-top: 0rpx;
+
+      & + .modal-item {
+        margin-left: 20rpx;
+      }
+    }
+  }
+}

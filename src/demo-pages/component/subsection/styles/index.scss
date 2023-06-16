@@ -1,0 +1,13 @@
+.subsection-container {
+  position: relative;
+  width: 100%;
+
+  .subsection-item {
+    position: relative;
+    width: 100%;
+
+    & + .subsection-item {
+      margin-top: 30rpx;
+    }
+  }
+}
