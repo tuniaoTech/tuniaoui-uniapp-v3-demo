@@ -1,0 +1,21 @@
+.overlay-container {
+  position: relative;
+  width: 100%;
+
+  .overlay-item {
+    position: relative;
+    width: 100%;
+
+    & + .overlay-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 34rpx;
+  color: var(--tn-gray-disabled);
+}

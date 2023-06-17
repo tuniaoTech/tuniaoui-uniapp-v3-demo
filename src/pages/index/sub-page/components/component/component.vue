@@ -101,8 +101,8 @@ const pageData: PageContainerData = {
     {
       title: '滑动菜单',
       icon: 'rocket',
-      path: 'swiper-action',
-      url: '/demo-pages/component/swiper-action/index',
+      path: 'swipe-action',
+      url: '/demo-pages/component/swipe-action/index',
     },
   ],
   导航组件: [

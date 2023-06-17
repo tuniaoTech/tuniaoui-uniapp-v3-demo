@@ -148,6 +148,36 @@
           "style": {
             "navigationBarTitleText": "NoticeBar通知栏"
           }
+        },
+        {
+          "path": "component/action-sheet/index",
+          "style": {
+            "navigationBarTitleText": "ActionSheet操作菜单"
+          }
+        },
+        {
+          "path": "component/bubble-box/index",
+          "style": {
+            "navigationBarTitleText": "BubbleBox气泡弹框"
+          }
+        },
+        {
+          "path": "component/overlay/index",
+          "style": {
+            "navigationBarTitleText": "Overlay遮罩层"
+          }
+        },
+        {
+          "path": "component/swipe-action/index",
+          "style": {
+            "navigationBarTitleText": "SwipeAction滑动菜单"
+          }
+        },
+        {
+          "path": "component/navbar/index",
+          "style": {
+            "navigationBarTitleText": "Navbar顶部导航栏"
+          }
         }
       ]
 		}

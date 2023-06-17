@@ -1,0 +1,13 @@
+.action-sheet-container {
+  position: relative;
+  width: 100%;
+
+  .action-sheet-item {
+    position: relative;
+    width: 100%;
+
+    & + .action-sheet-item {
+      margin-top: 30rpx;
+    }
+  }
+}
