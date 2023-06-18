@@ -1,0 +1,13 @@
+.tabs-container {
+  position: relative;
+  width: 100%;
+
+  .tabs-item {
+    position: relative;
+    width: 100%;
+
+    & + .tabs-item {
+      margin-top: 30rpx;
+    }
+  }
+}

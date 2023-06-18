@@ -178,6 +178,24 @@
           "style": {
             "navigationBarTitleText": "Navbar顶部导航栏"
           }
+        },
+        {
+          "path": "component/tabbar/index",
+          "style": {
+            "navigationBarTitleText": "Tabbar底部导航栏"
+          }
+        },
+        {
+          "path": "component/tabs/index",
+          "style": {
+            "navigationBarTitleText": "Tabs标签栏"
+          }
+        },
+        {
+          "path": "component/steps/index",
+          "style": {
+            "navigationBarTitleText": "Steps步骤条"
+          }
         }
       ]
 		}

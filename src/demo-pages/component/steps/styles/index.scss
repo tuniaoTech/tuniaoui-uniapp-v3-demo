@@ -1,0 +1,28 @@
+.steps-container {
+  position: relative;
+  width: 100%;
+
+  .steps-item {
+    position: relative;
+    width: 100%;
+
+    & + .steps-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.steps-operation {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx 30rpx;
+  z-index: 100;
+}
+
+.placeholder-top {
+  height: 50px;
+}
