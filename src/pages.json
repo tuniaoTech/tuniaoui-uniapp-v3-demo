@@ -196,6 +196,24 @@
           "style": {
             "navigationBarTitleText": "Steps步骤条"
           }
+        },
+        {
+          "path": "component/index-list/index",
+          "style": {
+            "navigationBarTitleText": "IndexList索引列表"
+          }
+        },
+        {
+          "path": "component/index-list/fix-height-index-list",
+          "style": {
+            "navigationBarTitleText": "FixHeightIndexList索引列表"
+          }
+        },
+        {
+          "path": "component/index-list/hidden-keys-index-list",
+          "style": {
+            "navigationBarTitleText": "hiddenKeysIndexList索引列表"
+          }
         }
       ]
 		}

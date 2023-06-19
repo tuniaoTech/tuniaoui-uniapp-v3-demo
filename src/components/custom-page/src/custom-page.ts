@@ -37,6 +37,13 @@ export const customPageProps = buildProps({
     default: true,
   },
   /**
+   * @description 是否开启导航栏占位空间
+   */
+  navbarPlaceholder: {
+    type: Boolean,
+    default: true,
+  },
+  /**
    * @description 底部是否需要预留更多空间
    */
   bottomMoreSpace: {

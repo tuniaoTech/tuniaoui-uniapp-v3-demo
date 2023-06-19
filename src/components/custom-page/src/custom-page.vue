@@ -56,6 +56,7 @@ export default {
       fixed
       :frosted="navbarFrosted"
       :bottom-shadow="navbarBottomShadow"
+      :placeholder="navbarPlaceholder"
     >
       {{ title }}
     </TnNavbar>

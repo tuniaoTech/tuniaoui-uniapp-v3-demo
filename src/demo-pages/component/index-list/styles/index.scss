@@ -1,0 +1,17 @@
+.index-list-container {
+  position: relative;
+  width: 100%;
+
+  .index-list-item {
+    position: relative;
+    width: 100%;
+
+    & + .index-list-item {
+      margin-top: 30rpx;
+    }
+
+    .tips {
+      color: var(--tn-color-gray);
+    }
+  }
+}
