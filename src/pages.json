@@ -214,6 +214,60 @@
           "style": {
             "navigationBarTitleText": "hiddenKeysIndexList索引列表"
           }
+        },
+        {
+          "path": "component/progress/index",
+          "style": {
+            "navigationBarTitleText": "Progress进度条"
+          }
+        },
+        {
+          "path": "component/count-down/index",
+          "style": {
+            "navigationBarTitleText": "CountDown倒计时"
+          }
+        },
+        {
+          "path": "component/loading/index",
+          "style": {
+            "navigationBarTitleText": "Loading加载图标"
+          }
+        },
+        {
+          "path": "component/loadmore/index",
+          "style": {
+            "navigationBarTitleText": "Loadmore加载更多"
+          }
+        },
+        {
+          "path": "component/empty/index",
+          "style": {
+            "navigationBarTitleText": "Empty空白页"
+          }
+        },
+        {
+          "path": "component/read-more/index",
+          "style": {
+            "navigationBarTitleText": "ReadMore查看更多"
+          }
+        },
+        {
+          "path": "component/photo-album/index",
+          "style": {
+            "navigationBarTitleText": "PhotoAlbum相册"
+          }
+        },
+        {
+          "path": "component/graphic-card/index",
+          "style": {
+            "navigationBarTitleText": "GraphicCard图文卡片"
+          }
+        },
+        {
+          "path": "component/keyboard/index",
+          "style": {
+            "navigationBarTitleText": "Keyboard软键盘"
+          }
         }
       ]
 		}

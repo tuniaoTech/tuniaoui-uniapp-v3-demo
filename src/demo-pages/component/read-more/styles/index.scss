@@ -1,0 +1,13 @@
+.read-more-container {
+  position: relative;
+  width: 100%;
+
+  .read-more-item {
+    position: relative;
+    width: 100%;
+
+    & + .read-more-item {
+      margin-top: 30rpx;
+    }
+  }
+}

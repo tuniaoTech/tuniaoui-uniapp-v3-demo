@@ -11,4 +11,10 @@
   & + & {
     margin-top: 50rpx;
   }
+
+  &__title {
+    &.title-padding {
+      padding: 0rpx 30rpx;
+    }
+  }
 }

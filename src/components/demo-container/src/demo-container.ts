@@ -11,6 +11,10 @@ export const demoContainerProps = buildProps({
     type: String,
     required: true,
   },
+  /**
+   * @description 标题带边距
+   */
+  titlePadding: Boolean,
 })
 
 export type DemoContainerProps = ExtractPropTypes<typeof demoContainerProps>

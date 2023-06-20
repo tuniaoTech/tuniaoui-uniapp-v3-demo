@@ -1,0 +1,14 @@
+.photo-album-container {
+  position: relative;
+  width: 100%;
+
+  .photo-album-item {
+    position: relative;
+    width: 100%;
+    padding: 30rpx 0rpx;
+
+    & + .photo-album-item {
+      border-top: 1rpx solid var(--tn-color-gray-disabled);
+    }
+  }
+}

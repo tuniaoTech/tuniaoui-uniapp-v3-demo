@@ -1,0 +1,12 @@
+.progress-container {
+  position: relative;
+  width: 100%;
+
+  .progress-item {
+    position: relative;
+    width: 100%;
+    & + .progress-item {
+      margin-top: 30rpx;
+    }
+  }
+}

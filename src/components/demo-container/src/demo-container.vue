@@ -19,7 +19,14 @@ export default {
 
 <template>
   <view class="demo-container">
-    <view class="demo-container__title">
+    <view
+      class="demo-container__title"
+      :class="[
+        {
+          'title-padding': titlePadding,
+        },
+      ]"
+    >
       <TnTitle
         mode="hLine"
         :title="title"

@@ -1,0 +1,13 @@
+.loading-container {
+  position: relative;
+  width: 100%;
+
+  .loading-item {
+    position: relative;
+    width: 100%;
+
+    & + .loading-item {
+      margin-top: 30rpx;
+    }
+  }
+}

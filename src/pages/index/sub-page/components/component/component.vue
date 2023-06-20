@@ -269,12 +269,6 @@ const pageData: PageContainerData = {
       url: '/demo-pages/component/photo-album/index',
     },
     {
-      title: '标题',
-      icon: 'rocket',
-      path: 'title',
-      url: '/demo-pages/component/title/index',
-    },
-    {
       title: '图文卡片',
       icon: 'rocket',
       path: 'graphic-card',

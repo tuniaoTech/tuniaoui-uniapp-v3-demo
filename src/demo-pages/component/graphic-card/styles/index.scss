@@ -1,0 +1,13 @@
+.graphic-card-container {
+  position: relative;
+  width: 100%;
+
+  .graphic-card-item {
+    position: relative;
+    width: 100%;
+
+    & + .graphic-card-item {
+      margin-top: 30rpx;
+    }
+  }
+}

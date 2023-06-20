@@ -1,0 +1,16 @@
+.count-down-container {
+  position: relative;
+  width: 100%;
+
+  .count-down-item {
+    position: relative;
+    width: 100%;
+
+    & + .count-down-item {
+      margin-top: 30rpx;
+    }
+    .operation-btn {
+      margin-right: 20rpx;
+    }
+  }
+}

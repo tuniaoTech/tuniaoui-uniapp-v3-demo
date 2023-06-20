@@ -1,0 +1,13 @@
+.loadmore-container {
+  position: relative;
+  width: 100%;
+
+  .loadmore-item {
+    position: relative;
+    width: 100%;
+
+    & + .loadmore-item {
+      margin-top: 30rpx;
+    }
+  }
+}
