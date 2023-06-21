@@ -1,0 +1,13 @@
+.number-box-container {
+  position: relative;
+  width: 100%;
+
+  .number-box-item {
+    position: relative;
+    width: 100%;
+
+    & + .number-box-item {
+      margin-top: 30rpx;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.keyboard-container {
+  position: relative;
+  width: 100%;
+
+  .keyboard-item {
+    position: relative;
+    width: 100%;
+
+    & + .keyboard-item {
+      margin-top: 30rpx;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.radio-container {
+  position: relative;
+  width: 100%;
+
+  .radio-item {
+    position: relative;
+    width: 100%;
+    & + .radio-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.custom-left-radio {
+  font-size: 38rpx;
+}

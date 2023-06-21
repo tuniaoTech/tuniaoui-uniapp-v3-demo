@@ -1,0 +1,20 @@
+.input-container {
+  position: relative;
+  width: 100%;
+
+  .input-item {
+    position: relative;
+    width: 100%;
+
+    & + .input-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+/* 自定义输入框插槽内容 start */
+.custom-input-prefix {
+  line-height: 1;
+  padding-right: 20rpx;
+}
+/* 自定义输入框插槽内容 end */

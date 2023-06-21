@@ -20,7 +20,7 @@ export default {
 <template>
   <view class="sub-demo-container">
     <view v-if="title" class="sub-demo-container__title tn-flex-center">
-      <TnTitle mode="transparent" color="gradient__cool-6" size="xl">
+      <TnTitle mode="transparent" color="gradient__cool-6" size="lg">
         {{ title }}
       </TnTitle>
     </view>

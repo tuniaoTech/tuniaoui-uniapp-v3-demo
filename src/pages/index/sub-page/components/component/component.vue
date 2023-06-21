@@ -282,6 +282,12 @@ const pageData: PageContainerData = {
       path: 'keyboard',
       url: '/demo-pages/component/keyboard/index',
     },
+    {
+      title: '懒加载',
+      icon: 'rocket',
+      path: 'lazy-load',
+      url: '/demo-pages/component/lazy-load/index',
+    },
   ],
 }
 </script>

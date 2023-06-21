@@ -1,0 +1,15 @@
+.lazy-load-container {
+  position: relative;
+  width: 100%;
+
+  .lazy-load-item {
+    position: relative;
+    width: 100%;
+    height: 280rpx;
+    border-radius: 15rpx;
+
+    & + .lazy-load-item {
+      margin-top: 30rpx;
+    }
+  }
+}

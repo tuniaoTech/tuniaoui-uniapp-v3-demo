@@ -268,6 +268,30 @@
           "style": {
             "navigationBarTitleText": "Keyboard软键盘"
           }
+        },
+        {
+          "path": "component/lazy-load/index",
+          "style": {
+            "navigationBarTitleText": "LazyLoad懒加载"
+          }
+        },
+        {
+          "path": "component/input/index",
+          "style": {
+            "navigationBarTitleText": "Input输入框"
+          }
+        },
+        {
+          "path": "component/number-box/index",
+          "style": {
+            "navigationBarTitleText": "NumberBox步进器"
+          }
+        },
+        {
+          "path": "component/radio/index",
+          "style": {
+            "navigationBarTitleText": "Radio单选框"
+          }
         }
       ]
 		}
