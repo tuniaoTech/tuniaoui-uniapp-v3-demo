@@ -1,0 +1,13 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+
+  .slider-item {
+    position: relative;
+    width: 100%;
+
+    & + .slider-item {
+      margin-top: 30rpx;
+    }
+  }
+}

@@ -292,6 +292,24 @@
           "style": {
             "navigationBarTitleText": "Radio单选框"
           }
+        },
+        {
+          "path": "component/checkbox/index",
+          "style": {
+            "navigationBarTitleText": "Checkbox复选框"
+          }
+        },
+        {
+          "path": "component/switch/index",
+          "style": {
+            "navigationBarTitleText": "Switch开关"
+          }
+        },
+        {
+          "path": "component/slider/index",
+          "style": {
+            "navigationBarTitleText": "Slider滑动条"
+          }
         }
       ]
 		}

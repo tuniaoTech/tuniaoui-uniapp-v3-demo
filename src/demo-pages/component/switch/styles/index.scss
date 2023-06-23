@@ -1,0 +1,13 @@
+.switch-container {
+  position: relative;
+  width: 100%;
+
+  .switch-item {
+    position: relative;
+    width: 100%;
+
+    & + .switch-item {
+      margin-top: 30rpx;
+    }
+  }
+}

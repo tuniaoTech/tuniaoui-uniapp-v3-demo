@@ -1,0 +1,12 @@
+.checkbox-container {
+  position: relative;
+  width: 100%;
+
+  .checkbox-item {
+    position: relative;
+    width: 100%;
+    & + .checkbox-item {
+      margin-top: 30rpx;
+    }
+  }
+}
