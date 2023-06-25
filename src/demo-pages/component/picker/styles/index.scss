@@ -1,0 +1,17 @@
+.picker-container {
+  position: relative;
+  width: 100%;
+
+  .picker-item {
+    position: relative;
+    width: 100%;
+
+    & + .picker-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.fit-bottom {
+  height: 800rpx;
+}

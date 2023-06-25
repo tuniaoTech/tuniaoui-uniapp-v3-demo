@@ -310,6 +310,30 @@
           "style": {
             "navigationBarTitleText": "Slider滑动条"
           }
+        },
+        {
+          "path": "component/picker/index",
+          "style": {
+            "navigationBarTitleText": "Picker选择器"
+          }
+        },
+        {
+          "path": "component/date-time-picker/index",
+          "style": {
+            "navigationBarTitleText": "日期时间选择器"
+          }
+        },
+        {
+          "path": "component/region-picker/index",
+          "style": {
+            "navigationBarTitleText": "地区选择器"
+          }
+        },
+        {
+          "path": "component/image-upload/index",
+          "style": {
+            "navigationBarTitleText": "图片上传"
+          }
         }
       ]
 		}

@@ -1,0 +1,21 @@
+.region-container {
+  position: relative;
+  width: 100%;
+
+  .region-item {
+    position: relative;
+    width: 100%;
+
+    & + .region-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.warning-tips {
+  padding-bottom: 30rpx;
+}
+
+.fit-height {
+  height: 800rpx;
+}

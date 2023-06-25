@@ -1,0 +1,17 @@
+.date-time-picker-container {
+  position: relative;
+  width: 100%;
+
+  .date-time-picker-item {
+    position: relative;
+    width: 100%;
+
+    & + .date-time-picker-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.fit-height {
+  height: 800rpx;
+}
