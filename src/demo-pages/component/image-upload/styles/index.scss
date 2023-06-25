@@ -1,0 +1,31 @@
+.image-upload-container {
+  position: relative;
+  width: 100%;
+
+  .image-upload-item {
+    position: relative;
+    width: 100%;
+
+    & + .image-upload-item {
+      margin-top: 30rpx;
+    }
+
+    .upload-value {
+      word-break: break-all;
+    }
+
+    .custom-upload-item {
+      width: 100%;
+      height: 340rpx;
+      border-radius: 30rpx;
+      background-color: var(--tn-color-gray-light);
+      color: var(--tn-color-gray);
+
+      &.btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
