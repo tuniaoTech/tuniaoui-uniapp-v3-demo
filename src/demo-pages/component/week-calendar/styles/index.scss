@@ -1,0 +1,12 @@
+.week-calendar-container {
+  position: relative;
+  width: 100%;
+
+  .week-calendar-item {
+    position: relative;
+    width: 100%;
+    & + .week-calendar-item {
+      margin-top: 30rpx;
+    }
+  }
+}

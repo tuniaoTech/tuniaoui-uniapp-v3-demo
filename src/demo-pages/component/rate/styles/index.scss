@@ -1,0 +1,13 @@
+.rate-container {
+  position: relative;
+  width: 100%;
+
+  .rate-item {
+    position: relative;
+    width: 100%;
+
+    & + .rate-item {
+      margin-top: 30rpx;
+    }
+  }
+}

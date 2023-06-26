@@ -1,0 +1,17 @@
+.calendar-container {
+  position: relative;
+  width: 100%;
+
+  .calendar-item {
+    position: relative;
+    width: 100%;
+
+    & + .calendar-item {
+      margin-top: 30rpx;
+    }
+
+    .item-value {
+      word-break: break-all;
+    }
+  }
+}
