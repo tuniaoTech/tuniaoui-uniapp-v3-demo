@@ -276,6 +276,12 @@
           }
         },
         {
+          "path": "component/form/index",
+          "style": {
+            "navigationBarTitleText": "Form表单"
+          }
+        },
+        {
           "path": "component/input/index",
           "style": {
             "navigationBarTitleText": "Input输入框"

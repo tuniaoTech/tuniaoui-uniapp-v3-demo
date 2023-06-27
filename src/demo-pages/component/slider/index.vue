@@ -8,7 +8,7 @@ import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 const rangeSliderValue1 = ref([0, 0])
 const rangeSliderValue2 = ref([0, 0])
 const sliderValue1 = ref(0)
-const sliderValue2 = ref(0)
+const sliderValue2 = ref(20)
 const sliderValue3 = ref(0)
 const sliderValue4 = ref(0)
 const sliderValue5 = ref(0)
