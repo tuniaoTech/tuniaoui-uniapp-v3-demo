@@ -66,7 +66,7 @@ export default {
           :key="index"
           class="swiper-item"
         >
-          <image class="image" :src="item" mode="aspectFill" />
+          <image class="image" :src="item" mode="heightFix" />
         </swiper-item>
       </swiper>
     </view>

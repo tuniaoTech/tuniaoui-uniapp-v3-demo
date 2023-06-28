@@ -7,7 +7,7 @@ import type { PageContainerData } from '../page-container'
 useComponent()
 
 const topSwiperData = [
-  'https://tnuiimage.tnkjapp.com/vue3_demo/image/index-page/top-swiper/1-image.jpg',
+  'https://resource.tnkjapp.com/images/vue3/banner/vue3-2-min.jpg',
 ]
 
 const pageData: PageContainerData = {

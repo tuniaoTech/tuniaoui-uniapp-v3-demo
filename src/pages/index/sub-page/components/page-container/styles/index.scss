@@ -32,6 +32,10 @@
       width: 100%;
       margin-top: 60rpx;
 
+      &:first-of-type {
+        margin-top: 0;
+      }
+
       // 标题
       .list-title {
         position: relative;
