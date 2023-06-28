@@ -86,12 +86,10 @@ const testButtonDebounce = () => {
       <view class="button-container">
         <view class="button-item">
           <view class="item">
-            <TnButton @click="testButtonDebounce">开启防抖</TnButton>
+            <TnButton debounce @click="testButtonDebounce">开启防抖</TnButton>
           </view>
           <view class="item">
-            <TnButton :debounce="false" @click="testButtonDebounce">
-              关闭防抖
-            </TnButton>
+            <TnButton @click="testButtonDebounce"> 关闭防抖(默认值) </TnButton>
           </view>
         </view>
       </view>

@@ -43,7 +43,7 @@ const {
       :style="{ top: `${navBarInfo.height + 50}px` }"
     >
       <TnSearchBox
-        placeholder="搜索图标"
+        placeholder="搜索 中文 / 英文 名称"
         shape="round"
         text-align="center"
         :border="false"

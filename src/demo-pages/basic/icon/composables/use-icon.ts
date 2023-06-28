@@ -180,6 +180,7 @@ export const useIcon = () => {
 
       initCount = 0
       iconTitleTop = titleRectInfos.map((item) => item.top || 0)
+      hideLoading()
     } catch (err) {
       debugWarn('DemoIcon', `获取icon主题标题容器信息失败：${err}`)
     }
@@ -214,9 +215,6 @@ export const useIcon = () => {
       },
       fail: () => {
         getDataFail()
-      },
-      complete: () => {
-        hideLoading()
       },
     })
   }

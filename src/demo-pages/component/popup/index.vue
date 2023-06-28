@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { nextTick, ref } from 'vue'
+import { ref } from 'vue'
 import TnPopup from '@tuniao/tnui-vue3-uniapp/components/popup/src/popup.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -15,111 +15,84 @@ import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 
-// 弹出弹出框
-const showPopup = ref<boolean>(false)
-const openPopup = ref<boolean>(false)
-const showCustomPopup = ref<boolean>(false)
-
-// 弹框背景颜色
-const popupBgColor = ref<string>('#fff')
-// 弹框弹出位置
-const popupDirection = ref<PopupOpenDirection>('center')
-// 弹出框距离顶部的距离
-const popupTop = ref<number>(navBarInfo.height)
-// 显示关闭按钮
-const showCloseBtn = ref<boolean>(false)
-// 关闭按钮方向
-const closeBtnPosition = ref<PopupCloseBtnPosition>('right-top')
-// 显示遮罩
-const showOverlay = ref<boolean>(true)
-// 点击遮罩是否可以关闭
-const closeOnClickOverlay = ref<boolean>(true)
-// 遮罩透明度
-const overlayOpacity = ref<number>(0.5)
-
-// 弹出弹框，先设置好参数在打开
-const _openPopup = () => {
-  showPopup.value = true
-  nextTick(() => {
-    setTimeout(() => {
-      openPopup.value = true
-    }, 50)
-  })
-}
-
-// 重置参数
-const resetPopupParams = () => {
-  popupBgColor.value = '#fff'
-  popupDirection.value = 'center'
-  popupTop.value = navBarInfo.height
-  showCloseBtn.value = false
-  closeBtnPosition.value = 'right-top'
-  showOverlay.value = true
-  closeOnClickOverlay.value = true
-  overlayOpacity.value = 0.5
-}
-
-// 弹框关闭事件
-const popupCloseEvent = () => {
-  nextTick(() => {
-    setTimeout(() => {
-      resetPopupParams()
-      showPopup.value = false
-    }, 350)
-  })
-}
-
-// 关闭弹框
-const closeCustomPopup = () => {
-  showCustomPopup.value = false
-}
-
-// 普通弹框
+const showNormalPopup = ref(false)
 const openNormalPopup = () => {
-  _openPopup()
+  showNormalPopup.value = true
 }
 
 // 弹出设置弹出方向弹框
-const openSetDirectionPopup = (direction: PopupOpenDirection) => {
-  popupDirection.value = direction
-  _openPopup()
+const showTopDirectionPopup = ref(false)
+const showRightDirectionPopup = ref(false)
+const showBottomDirectionPopup = ref(false)
+const showLeftDirectionPopup = ref(false)
+const showCenterDirectionPopup = ref(false)
+const openDirectionPopup = (direction: PopupOpenDirection) => {
+  switch (direction) {
+    case 'top':
+      showTopDirectionPopup.value = true
+      break
+    case 'right':
+      showRightDirectionPopup.value = true
+      break
+    case 'bottom':
+      showBottomDirectionPopup.value = true
+      break
+    case 'left':
+      showLeftDirectionPopup.value = true
+      break
+    case 'center':
+      showCenterDirectionPopup.value = true
+      break
+  }
 }
 
 // 显示关闭按钮
-const showCloseBtnPopup = () => {
-  showCloseBtn.value = true
-  _openPopup()
-}
-// 设置关闭按钮位置
-const setCloseBtnPosition = (position: PopupCloseBtnPosition) => {
-  showCloseBtn.value = true
-  closeBtnPosition.value = position
-  _openPopup()
+const showLeftTopCloseBtnPopup = ref(false)
+const showRightTopCloseBtnPopup = ref(false)
+const showLeftBottomCloseBtnPopup = ref(false)
+const showRightBottomCloseBtnPopup = ref(false)
+const openCloseBtnPopup = (position: PopupCloseBtnPosition) => {
+  switch (position) {
+    case 'left-top':
+      showLeftTopCloseBtnPopup.value = true
+      break
+    case 'right-top':
+      showRightTopCloseBtnPopup.value = true
+      break
+    case 'left-bottom':
+      showLeftBottomCloseBtnPopup.value = true
+      break
+    case 'right-bottom':
+      showRightBottomCloseBtnPopup.value = true
+      break
+  }
 }
 
 // 隐藏遮罩
-const hideOverlay = () => {
-  popupBgColor.value = 'tn-gray-light'
-  showCloseBtn.value = true
-  showOverlay.value = false
-  _openPopup()
+const showHideOverlayPopup = ref(false)
+const openHideOverlayPopup = () => {
+  showHideOverlayPopup.value = true
 }
+
 // 关闭点击遮罩关闭
-const closeOnClickOverlayPopup = () => {
-  showCloseBtn.value = true
-  closeOnClickOverlay.value = false
-  _openPopup()
+const showNoOverlayClosePopup = ref(false)
+const openNoOverlayClosePopup = () => {
+  showNoOverlayClosePopup.value = true
 }
+
 // 设置遮罩透明度
-const setOverlayOpacity = (opacity: number) => {
-  popupBgColor.value = 'tn-gray-light'
-  overlayOpacity.value = opacity
-  _openPopup()
+const showTransparentOverlayPopup = ref(false)
+const openTransparentOverlayPopup = () => {
+  showTransparentOverlayPopup.value = true
 }
 
 // 自定义弹框
+const showCustomPopup = ref(false)
 const openCustomPopup = () => {
   showCustomPopup.value = true
+}
+const closeCustomPopup = () => {
+  showCustomPopup.value = false
 }
 </script>
 
@@ -146,7 +119,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="openSetDirectionPopup('top')"
+            @click="openDirectionPopup('top')"
           >
             在上方弹出弹出框
           </TnButton>
@@ -156,7 +129,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="openSetDirectionPopup('right')"
+            @click="openDirectionPopup('right')"
           >
             在右方弹出弹出框
           </TnButton>
@@ -166,7 +139,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="openSetDirectionPopup('bottom')"
+            @click="openDirectionPopup('bottom')"
           >
             在下方弹出弹出框
           </TnButton>
@@ -176,7 +149,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="openSetDirectionPopup('left')"
+            @click="openDirectionPopup('left')"
           >
             在左方弹出弹出框
           </TnButton>
@@ -186,7 +159,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="openSetDirectionPopup('center')"
+            @click="openDirectionPopup('center')"
           >
             在中间弹出弹出框
           </TnButton>
@@ -200,17 +173,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="showCloseBtnPopup"
-          >
-            显示关闭按钮
-          </TnButton>
-        </view>
-        <view class="popup-item">
-          <TnButton
-            size="lg"
-            bg-color="gradient-bg__cool-6"
-            text-color="tn-white"
-            @click="setCloseBtnPosition('left-top')"
+            @click="openCloseBtnPopup('left-top')"
           >
             显示左上角关闭按钮
           </TnButton>
@@ -220,7 +183,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="setCloseBtnPosition('right-top')"
+            @click="openCloseBtnPopup('right-top')"
           >
             显示右上角关闭按钮
           </TnButton>
@@ -230,7 +193,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="setCloseBtnPosition('left-bottom')"
+            @click="openCloseBtnPopup('left-bottom')"
           >
             显示左下角关闭按钮
           </TnButton>
@@ -240,7 +203,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="setCloseBtnPosition('right-bottom')"
+            @click="openCloseBtnPopup('right-bottom')"
           >
             显示右下角关闭按钮
           </TnButton>
@@ -254,7 +217,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="hideOverlay"
+            @click="openHideOverlayPopup"
           >
             不显示遮罩
           </TnButton>
@@ -264,7 +227,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="setOverlayOpacity(0)"
+            @click="openTransparentOverlayPopup"
           >
             设置透明遮罩
           </TnButton>
@@ -274,7 +237,7 @@ const openCustomPopup = () => {
             size="lg"
             bg-color="gradient-bg__cool-6"
             text-color="tn-white"
-            @click="closeOnClickOverlayPopup"
+            @click="openNoOverlayClosePopup"
           >
             禁用点击遮罩关闭弹框
           </TnButton>
@@ -297,7 +260,7 @@ const openCustomPopup = () => {
     </DemoContainer>
   </CustomPage>
 
-  <TnPopup
+  <!-- <TnPopup
     v-if="showPopup"
     v-model="openPopup"
     :bg-color="popupBgColor"
@@ -311,7 +274,93 @@ const openCustomPopup = () => {
     @close="popupCloseEvent"
   >
     <view class="popup-content" :class="[popupDirection]"> 图鸟UI </view>
+  </TnPopup> -->
+
+  <!-- 基础弹框 -->
+  <TnPopup v-model="showNormalPopup">
+    <view class="popup-content center"> 图鸟UI </view>
   </TnPopup>
+
+  <!-- 上方弹框 -->
+  <TnPopup
+    v-model="showTopDirectionPopup"
+    open-direction="top"
+    :top="navBarInfo.height"
+  >
+    <view class="popup-content top"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 右方弹框 -->
+  <TnPopup v-model="showRightDirectionPopup" open-direction="right">
+    <view class="popup-content right"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 下方弹框 -->
+  <TnPopup v-model="showBottomDirectionPopup" open-direction="bottom">
+    <view class="popup-content bottom"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 左方弹框 -->
+  <TnPopup v-model="showLeftDirectionPopup" open-direction="left">
+    <view class="popup-content left"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 显示左上方关闭按钮弹框 -->
+  <TnPopup
+    v-model="showLeftTopCloseBtnPopup"
+    close-btn
+    close-btn-position="left-top"
+  >
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 显示右上方关闭按钮弹框 -->
+  <TnPopup
+    v-model="showRightTopCloseBtnPopup"
+    close-btn
+    close-btn-position="right-top"
+  >
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 显示左下方关闭按钮弹框 -->
+  <TnPopup
+    v-model="showLeftBottomCloseBtnPopup"
+    close-btn
+    close-btn-position="left-bottom"
+  >
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 显示右下方关闭按钮弹框 -->
+  <TnPopup
+    v-model="showRightBottomCloseBtnPopup"
+    close-btn
+    close-btn-position="right-bottom"
+  >
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 不显示遮罩 -->
+  <TnPopup v-model="showHideOverlayPopup" :overlay="false" close-btn>
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 设置透明遮罩 -->
+  <TnPopup v-model="showTransparentOverlayPopup" :overlay-opacity="0">
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 禁用点击遮罩关闭弹框 -->
+  <TnPopup
+    v-model="showNoOverlayClosePopup"
+    :overlay-closeable="false"
+    close-btn
+  >
+    <view class="popup-content center"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 弹框演示 -->
   <TnPopup
     v-model="showCustomPopup"
     bg-color="transparent"
