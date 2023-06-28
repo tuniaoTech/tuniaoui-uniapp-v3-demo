@@ -260,22 +260,6 @@ const closeCustomPopup = () => {
     </DemoContainer>
   </CustomPage>
 
-  <!-- <TnPopup
-    v-if="showPopup"
-    v-model="openPopup"
-    :bg-color="popupBgColor"
-    :open-direction="popupDirection"
-    :top="popupTop"
-    :close-btn="showCloseBtn"
-    :close-btn-position="closeBtnPosition"
-    :overlay="showOverlay"
-    :overlay-closeable="closeOnClickOverlay"
-    :overlay-opacity="overlayOpacity"
-    @close="popupCloseEvent"
-  >
-    <view class="popup-content" :class="[popupDirection]"> 图鸟UI </view>
-  </TnPopup> -->
-
   <!-- 基础弹框 -->
   <TnPopup v-model="showNormalPopup">
     <view class="popup-content center"> 图鸟UI </view>
@@ -303,6 +287,11 @@ const closeCustomPopup = () => {
   <!-- 左方弹框 -->
   <TnPopup v-model="showLeftDirectionPopup" open-direction="left">
     <view class="popup-content left"> 图鸟UI </view>
+  </TnPopup>
+
+  <!-- 中间弹框 -->
+  <TnPopup v-model="showCenterDirectionPopup" open-direction="center">
+    <view class="popup-content center"> 图鸟UI </view>
   </TnPopup>
 
   <!-- 显示左上方关闭按钮弹框 -->

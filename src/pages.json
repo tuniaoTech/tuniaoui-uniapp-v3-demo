@@ -204,6 +204,12 @@
           }
         },
         {
+          "path": "component/index-list/base-index-list",
+          "style": {
+            "navigationBarTitleText": "BaseIndexList索引列表"
+          }
+        },
+        {
           "path": "component/index-list/fix-height-index-list",
           "style": {
             "navigationBarTitleText": "FixHeightIndexList索引列表"
