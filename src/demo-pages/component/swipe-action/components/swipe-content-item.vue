@@ -25,8 +25,10 @@ export default {
         <view class="date">7月1日</view>
       </view>
       <view class="bottom">
-        <view class="message tn-text-ellipsis-1">
-          图鸟UI: 图鸟UI-uniapp-vue3版本正式发布，欢迎大家使用
+        <view class="message">
+          <text class="tn-text-ellipsis-1">
+            图鸟UI: 图鸟UI-uniapp-vue3版本正式发布，欢迎大家使用
+          </text>
         </view>
       </view>
     </view>
@@ -77,6 +79,8 @@ export default {
       justify-content: space-between;
 
       .message {
+        height: 1em;
+        overflow: hidden;
         color: var(--tn-color-gray);
         margin-top: 14rpx;
         margin-right: 80rpx;
