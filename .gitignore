@@ -27,3 +27,6 @@ dist
 coverage
 dist-ssr
 *.local
+
+# ignore config files
+src/config/upload-headers.ts
