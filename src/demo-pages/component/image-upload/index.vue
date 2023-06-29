@@ -13,8 +13,13 @@ import type {
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 
+import { UPLOAD_URL, uploadHeaders } from '@/config'
+
 // 图片上传地址
-const uploadActionUrl = 'https://imageupload.tnkjapp.com/upload/image'
+const uploadActionUrl = UPLOAD_URL
+
+// 上传时携带的请求头
+const uploadActionHeaders = uploadHeaders
 
 // 基础图片上传
 const baseImageUploadValue = ref<string[]>([])
@@ -70,6 +75,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
     const url = (file as UniApp.ChooseImageSuccessCallbackResultFile).path
     uni.uploadFile({
       url: uploadActionUrl,
+      header: uploadActionHeaders,
       filePath: url,
       name: 'file',
       success: (res) => {
@@ -115,6 +121,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
           <TnImageUpload
             v-model="baseImageUploadValue"
             :action="uploadActionUrl"
+            :header="uploadActionHeaders"
           />
         </view>
       </view>
@@ -125,6 +132,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
           <TnImageUpload
             v-model="defaultValueImageUploadValue"
             :action="uploadActionUrl"
+            :header="uploadActionHeaders"
           />
         </view>
       </view>
@@ -135,6 +143,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
           <TnImageUpload
             v-model="customUploadCallbackImageUploadValue"
             :action="uploadActionUrl"
+            :header="uploadActionHeaders"
             :custom-upload-callback="customUploadCallbackHandle"
           />
         </view>
@@ -157,6 +166,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
             ref="customUploadContainerImageUploadRef"
             v-model="customUploadContainerImageUploadValue"
             :action="uploadActionUrl"
+            :header="uploadActionHeaders"
             :limit="1"
           >
             <template #uploadBtn>
