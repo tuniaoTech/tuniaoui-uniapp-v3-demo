@@ -8,11 +8,15 @@ import { useAbout } from './composables'
 
 import type { CSSProperties } from 'vue'
 
-import { formatNumberWithQuantityUnit, navMiniProgram } from '@/utils'
+import {
+  copyToClipBoard,
+  formatNumberWithQuantityUnit,
+  navMiniProgram,
+} from '@/utils'
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 
-useAbout()
+const { githubData } = useAbout()
 
 // 自定义按钮样式
 const customButtonStyle: CSSProperties = {
@@ -20,17 +24,11 @@ const customButtonStyle: CSSProperties = {
 }
 
 const userInfo = reactive({
-  nickName: '图鸟小伙伴',
+  nickName: '图鸟UI-vue3',
   avatarUrl: '',
 })
 
 const frameVersion = ref('1.0.0')
-
-const githubData = reactive({
-  view: 1290,
-  star: 0,
-  fork: 168,
-})
 
 const friendLinkData = ref([
   {
@@ -79,6 +77,14 @@ const friendLinkData = ref([
     url: '',
   },
 ])
+
+// 复制github地址到剪切板
+const copyGithubUrl = () => {
+  copyToClipBoard(
+    'https://github.com/tuniaoTech/tuniaoui-rc-vue3-uniapp',
+    '复制地址成功'
+  )
+}
 </script>
 
 // #ifdef MP-WEIXIN
@@ -107,7 +113,7 @@ export default {
         <view class="left">
           <view class="user-nickname">{{ userInfo.nickName }}</view>
           <view class="frame-version tn-gray-dark_text">
-            uniapp-v3 version: {{ frameVersion }}
+            uniapp-ts-v3 version: {{ frameVersion }}
           </view>
         </view>
         <view class="right">
@@ -208,7 +214,7 @@ export default {
         </view>
       </view>
       <view class="item-container">
-        <view class="item">
+        <view class="item" @tap.stop="copyGithubUrl">
           <view class="left">
             <view class="left-icon github tn-gradient-bg__cool-1">
               <TnIcon name="github" />

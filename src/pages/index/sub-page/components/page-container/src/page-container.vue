@@ -59,7 +59,7 @@ export default {
 <template>
   <view class="page-container">
     <!-- 顶部轮播 -->
-    <view v-if="showTopSwiper" class="top-swiper">
+    <view v-if="showTopSwiper" class="top-swiper tn-animation-fade-in">
       <swiper class="swiper-container">
         <swiper-item
           v-for="(item, index) in topSwiperData"

@@ -14,8 +14,9 @@
     .swiper-container,
     .swiper-item,
     .image {
-      width: 100%;
+      width: auto;
       height: 100%;
+      will-change: transform;
     }
   }
   /* 顶部轮播图 end */
