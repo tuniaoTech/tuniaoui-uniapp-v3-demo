@@ -47,9 +47,6 @@ dependencies:
   '@dcloudio/uni-quickapp-webview':
     specifier: 3.0.0-alpha-3080720230627002
     version: 3.0.0-alpha-3080720230627002(postcss@8.4.24)(vue@3.2.47)
-  '@esbuild/darwin-arm64':
-    specifier: ^0.18.11
-    version: 0.18.11
   '@tuniao/tn-icon':
     specifier: ^1.4.0
     version: 1.4.0
@@ -2414,13 +2411,6 @@ packages:
     os: [darwin]
     requiresBuild: true
     optional: true
-
-  /@esbuild/darwin-arm64@0.18.11:
-    resolution: {integrity: sha512-Gm0QkI3k402OpfMKyQEEMG0RuW2LQsSmI6OeO4El2ojJMoF5NLYb3qMIjvbG/lbMeLOGiW6ooU8xqc+S0fgz2w==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    dev: false
 
   /@esbuild/darwin-x64@0.16.17:
     resolution: {integrity: sha512-2By45OBHulkd9Svy5IOCZt376Aa2oOkiE9QWUK9fe6Tb+WDr8hXL3dpqi+DeLiMed8tVXspzsTAvd0jUl96wmg==}
