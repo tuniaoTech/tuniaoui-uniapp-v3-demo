@@ -211,9 +211,13 @@ export const useIcon = () => {
         nextTick(() => {
           getIconTitleRectInfo()
           monitorIconTitleScrollTop()
+          setTimeout(() => {
+            hideLoading()
+          }, 2000)
         })
       },
       fail: () => {
+        hideLoading()
         getDataFail()
       },
     })
