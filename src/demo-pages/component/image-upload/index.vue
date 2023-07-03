@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnImageUpload from '@tuniao/tnui-vue3-uniapp/components/image-upload/src/image-upload.vue'
 
 import { isJsonString } from '@tuniao/tnui-vue3-uniapp/utils/validator'
@@ -14,6 +15,16 @@ import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 
 import { UPLOAD_URL, uploadHeaders } from '@/config'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/image-upload/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 图片上传地址
 const uploadActionUrl = UPLOAD_URL
@@ -102,7 +113,7 @@ const customUploadHandle: ImageUploadCustomFunction = (
 </script>
 
 <template>
-  <CustomPage title="图片上传">
+  <CustomPage title="图片上传" :is-h5-demo-page="isDemoH5Page">
     <view class="tn-pt tn-mb tn-type-danger_text">
       <view class="tn-text-xl">警告:</view>
       <view class="tn-mt-sm">

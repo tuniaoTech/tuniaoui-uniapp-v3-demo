@@ -1,9 +1,19 @@
 <script lang="ts" setup>
 import { onUnmounted, ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnLineProgress from '@tuniao/tnui-vue3-uniapp/components/line-progress/src/line-progress.vue'
 import TnCircleProgress from '@tuniao/tnui-vue3-uniapp/components/circle-progress/src/circle-progress.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/progress/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 进度值
 const percent = ref(0)
@@ -21,7 +31,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <CustomPage title="进度条">
+  <CustomPage title="进度条" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="progress-container">
         <view class="progress-item">

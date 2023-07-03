@@ -1,8 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSwitchTab from '@tuniao/tnui-vue3-uniapp/components/switch-tab/src/switch-tab.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/switch-tabs/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 当前激活的选项卡
 const currentActiveTab = ref<number>(0)
@@ -12,7 +23,11 @@ const tabsData: string[] = ['选项卡一', '选项卡二']
 </script>
 
 <template>
-  <CustomPage title="选项卡切换" page-bg-color="tn-gray-light">
+  <CustomPage
+    title="选项卡切换"
+    page-bg-color="tn-gray-light"
+    :is-h5-demo-page="isDemoH5Page"
+  >
     <DemoContainer title="基础使用">
       <view class="switch-tab-container">
         <view class="switch-tab-item">

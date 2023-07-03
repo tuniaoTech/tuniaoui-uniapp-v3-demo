@@ -1,9 +1,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnCollapse from '@tuniao/tnui-vue3-uniapp/components/collapse/src/collapse.vue'
 import TnCollapseItem from '@tuniao/tnui-vue3-uniapp/components/collapse/src/collapse-item.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/collapse/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const currentCollapse = ref<number>()
 const currentCustomCollapse = ref<number>(1)
@@ -28,7 +39,11 @@ const collapseData: { title: string; content: string }[] = [
 </script>
 
 <template>
-  <CustomPage title="折叠面板" page-bg-color="tn-gray-light">
+  <CustomPage
+    title="折叠面板"
+    page-bg-color="tn-gray-light"
+    :is-h5-demo-page="isDemoH5Page"
+  >
     <DemoContainer title="基础使用">
       <view class="collapse-container">
         <view class="collapse-item tn-black_text">

@@ -37,6 +37,28 @@ const containerStyle = computed<CSSProperties>(() => {
 
   return style
 })
+
+// 导航栏返回按钮
+const navBarIcon = {
+  back: {
+    hide: '',
+    show: 'left',
+    only: 'left-arrow',
+  },
+  home: {
+    hide: '',
+    show: 'home-capsule-fill',
+  },
+}
+const backIcon = computed<string>(
+  () =>
+    navBarIcon.back[
+      props.isH5DemoPage ? 'hide' : props.onlyBack ? 'only' : 'show'
+    ]
+)
+const homeIcon = computed<string>(
+  () => navBarIcon.home[props.isH5DemoPage || props.onlyBack ? 'hide' : 'show']
+)
 </script>
 
 // #ifdef MP-WEIXIN
@@ -54,9 +76,12 @@ export default {
   <view class="custom-page">
     <TnNavbar
       fixed
+      :back-icon="backIcon"
+      :home-icon="homeIcon"
       :frosted="navbarFrosted"
       :bottom-shadow="navbarBottomShadow"
       :placeholder="navbarPlaceholder"
+      :safe-area-inset-right="!isH5DemoPage"
     >
       {{ title }}
     </TnNavbar>

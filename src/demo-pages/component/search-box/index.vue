@@ -1,8 +1,18 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSearchBox from '@tuniao/tnui-vue3-uniapp/components/search-box/src/search-box.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/search-box/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 搜索框输入的值
 const searchValue = ref<string>('')
@@ -19,7 +29,7 @@ const searchEvent = (value: string) => {
 </script>
 
 <template>
-  <CustomPage title="搜索框">
+  <CustomPage title="搜索框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="search-box-container">
         <view class="search-box-item">

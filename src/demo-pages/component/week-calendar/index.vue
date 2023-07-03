@@ -1,11 +1,22 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnWeekCalendar from '@tuniao/tnui-vue3-uniapp/components/week-calendar/src/week-calendar.vue'
 
 import type { WeekCalendarCustomData } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/week-calendar/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 周日历的值
 const baseWeekCalendarValue = ref<number>()
@@ -30,7 +41,7 @@ const customDataCalendarValue = ref<number>(13)
 </script>
 
 <template>
-  <CustomPage title="周日历">
+  <CustomPage title="周日历" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="week-calendar-container">
         <view class="week-calendar-item">

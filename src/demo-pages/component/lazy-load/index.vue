@@ -1,7 +1,17 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnLazyLoad from '@tuniao/tnui-vue3-uniapp/components/lazy-load/src/lazy-load.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/lazy-load/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 图片数据
 const imageData = [
@@ -28,7 +38,7 @@ generateData()
 </script>
 
 <template>
-  <CustomPage title="懒加载">
+  <CustomPage title="懒加载" :is-h5-demo-page="isDemoH5Page">
     <view class="lazy-load-container">
       <view
         v-for="(item, index) in imageList"

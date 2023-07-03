@@ -1,10 +1,20 @@
 <script lang="ts" setup>
 import TnTabs from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs.vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnTabsItem from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs-item.vue'
 import TnSearchBox from '@tuniao/tnui-vue3-uniapp/components/search-box/src/search-box.vue'
 import { useIcon } from './composables'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/icon/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const {
   dataTitleId,
@@ -24,6 +34,7 @@ const {
     padding="0"
     :navbar-frosted="false"
     :navbar-bottom-shadow="false"
+    :is-h5-demo-page="isDemoH5Page"
   >
     <!-- 图标分类 -->
     <view class="icon-category" :style="{ top: `${navBarInfo.height}px` }">

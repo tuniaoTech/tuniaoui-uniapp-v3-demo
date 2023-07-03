@@ -1,10 +1,21 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/shadow/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 </script>
 
 <template>
-  <CustomPage title="阴影">
+  <CustomPage title="阴影" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="shadow-container">
         <view class="shadow-item tn-shadow-sm">浅色</view>

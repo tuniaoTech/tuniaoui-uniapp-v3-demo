@@ -1,11 +1,21 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnRate from '@tuniao/tnui-vue3-uniapp/components/rate/src/rate.vue'
 
 import type { RateCustomDataMap } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/rate/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 评分的值
 const baseRateValue = ref(3)
@@ -53,7 +63,7 @@ const customRateData: RateCustomDataMap = {
 </script>
 
 <template>
-  <CustomPage title="评分">
+  <CustomPage title="评分" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="rate-container">
         <view class="rate-item">

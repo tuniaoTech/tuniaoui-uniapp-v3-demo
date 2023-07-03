@@ -1,10 +1,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnCalendar from '@tuniao/tnui-vue3-uniapp/components/calendar/src/calendar.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import TnPopup from '@tuniao/tnui-vue3-uniapp/components/popup/src/popup.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/calendar/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 日历的值
 const baseCalendarValue = ref('')
@@ -34,7 +44,7 @@ const closeCalendarPopup = () => {
 </script>
 
 <template>
-  <CustomPage title="日历">
+  <CustomPage title="日历" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="calendar-container">
         <view class="calendar-item">

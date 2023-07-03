@@ -1,11 +1,22 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnTitle from '@tuniao/tnui-vue3-uniapp/components/title/src/title.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/title/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 </script>
 
 <template>
-  <CustomPage title="标题">
+  <CustomPage title="标题" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础用法">
       <view class="title-container">
         <view class="title-item">

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnActionSheet from '@tuniao/tnui-vue3-uniapp/components/action-sheet/src/action-sheet.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -7,6 +8,15 @@ import type { TnActionSheetInstance } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/action-sheet/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // actionSheetRef
 const actionSheetRef = ref<TnActionSheetInstance>()
@@ -108,7 +118,7 @@ const openHideCancelActionSheet = () => {
 </script>
 
 <template>
-  <CustomPage title="操作菜单">
+  <CustomPage title="操作菜单" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="action-sheet-container">
         <view class="action-sheet-item">

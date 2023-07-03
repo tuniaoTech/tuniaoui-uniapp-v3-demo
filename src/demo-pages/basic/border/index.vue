@@ -1,10 +1,20 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/border/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 </script>
 
 <template>
-  <CustomPage title="边框">
+  <CustomPage title="边框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="border-container">
         <view class="border-item tn-border">默认</view>

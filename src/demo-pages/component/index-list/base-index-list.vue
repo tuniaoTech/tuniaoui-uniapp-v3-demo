@@ -17,6 +17,7 @@ const { listData } = useGenerateListData()
     padding="0"
     :navbar-placeholder="false"
     :bottom-more-space="false"
+    only-back
   >
     <TnIndexList
       :data="listData"

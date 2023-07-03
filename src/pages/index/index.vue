@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, provide, reactive, ref } from 'vue'
-import { onLoad } from '@dcloudio/uni-app'
+import { onLoad, onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import { useOrderedChildren } from '@tuniao/tnui-vue3-uniapp/hooks'
 
 import TnTabbar from '@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar.vue'
@@ -13,7 +13,14 @@ import AboutPage from './sub-page/components/about/about.vue'
 
 import type { CSSProperties } from 'vue'
 import type { IndexSubPageContext } from '@/tokens'
+
+import { useWxShare } from '@/hooks'
 import { indexPageContextKey } from '@/tokens'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare()
 
 const {
   children: items,

@@ -1,9 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnRadio from '@tuniao/tnui-vue3-uniapp/components/radio/src/radio.vue'
 import TnRadioGroup from '@tuniao/tnui-vue3-uniapp/components/radio/src/radio-group.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/radio/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 当前的选中状态
 const radioSelectStatus = ref(false)
@@ -19,7 +29,7 @@ const radioValue5 = ref('')
 </script>
 
 <template>
-  <CustomPage title="单选框">
+  <CustomPage title="单选框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="radio-container">
         <view class="radio-item">

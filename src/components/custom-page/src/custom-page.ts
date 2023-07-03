@@ -23,6 +23,20 @@ export const customPageProps = buildProps({
    */
   pageBgColor: String,
   /**
+   * @description 是否为h5演示页面
+   */
+  isH5DemoPage: {
+    type: Boolean,
+    default: false,
+  },
+  /**
+   * @description 只有返回按钮
+   */
+  onlyBack: {
+    type: Boolean,
+    default: false,
+  },
+  /**
    * @description 导航栏是否有毛玻璃效果
    */
   navbarFrosted: {

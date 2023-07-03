@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnNotify from '@tuniao/tnui-vue3-uniapp/components/notify/src/notify.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -9,6 +10,15 @@ import type { NotifyOptions, TnNotifyInstance } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/notify/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 
@@ -49,7 +59,11 @@ const openPositionNotify = (position: NotifyOptions['position']) => {
 </script>
 
 <template>
-  <CustomPage title="消息通知" :navbar-frosted="false">
+  <CustomPage
+    title="消息通知"
+    :navbar-frosted="false"
+    :is-h5-demo-page="isDemoH5Page"
+  >
     <DemoContainer title="基础使用">
       <view class="notify-container">
         <view class="notify-item">

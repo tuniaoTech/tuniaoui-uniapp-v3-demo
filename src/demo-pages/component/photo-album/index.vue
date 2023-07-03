@@ -1,7 +1,17 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnPhotoAlbum from '@tuniao/tnui-vue3-uniapp/components/photo-album/src/photo-album.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/photo-album/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 图片列表
 const imageListData = [
@@ -18,7 +28,7 @@ const imageListData = [
 </script>
 
 <template>
-  <CustomPage title="相册">
+  <CustomPage title="相册" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用 - 这里使用max限制图片数量">
       <view class="photo-album-container">
         <view class="photo-album-item">

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSteps from '@tuniao/tnui-vue3-uniapp/components/steps/src/steps.vue'
 import TnStep from '@tuniao/tnui-vue3-uniapp/components/steps/src/step.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
@@ -8,6 +9,15 @@ import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/steps/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 
@@ -63,7 +73,7 @@ const nextStep = () => {
 </script>
 
 <template>
-  <CustomPage title="步骤条">
+  <CustomPage title="步骤条" :is-h5-demo-page="isDemoH5Page">
     <view
       class="steps-operation"
       :style="{ top: `${navBarInfo.height + 20}px` }"

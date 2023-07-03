@@ -1,9 +1,23 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnCheckbox from '@tuniao/tnui-vue3-uniapp/components/checkbox/src/checkbox.vue'
 import TnCheckboxGroup from '@tuniao/tnui-vue3-uniapp/components/checkbox/src/checkbox-group.vue'
+
+import type { CheckboxValueType } from '@tuniao/tnui-vue3-uniapp'
+
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/checkbox/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 是否同意协议
 const agent = ref(false)
@@ -14,7 +28,7 @@ const isAllChecked = computed<boolean>(
   () => currentSelectValue.value.length === 3
 )
 // 全选按钮点击事件
-const isAllCheckedChange = (value) => {
+const isAllCheckedChange = (value: CheckboxValueType) => {
   if (value) {
     currentSelectValue.value = ['凶姐太漂亮了', 'UI太酷炫', '响应快']
   } else {
@@ -32,7 +46,7 @@ const checkboxValue6 = ref([])
 </script>
 
 <template>
-  <CustomPage title="复选框 - 使用图鸟的理由">
+  <CustomPage title="复选框 - 使用图鸟的理由" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="checkbox-container">
         <view class="checkbox-item">

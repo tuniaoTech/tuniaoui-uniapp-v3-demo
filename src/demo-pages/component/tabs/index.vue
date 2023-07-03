@@ -1,9 +1,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnTabs from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs.vue'
 import TnTabsItem from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs-item.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/tabs/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 当前选中的标签索引
 const currentTabsIndex = ref(0)
@@ -83,7 +94,7 @@ const interceptSwitchEvent = (index: number) => {
 </script>
 
 <template>
-  <CustomPage title="标签栏">
+  <CustomPage title="标签栏" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="tabs-container">
         <view class="tabs-item">

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnLoadmore from '@tuniao/tnui-vue3-uniapp/components/loadmore/src/loadmore.vue'
 
 import type { LoadmoreText } from '@tuniao/tnui-vue3-uniapp'
@@ -6,8 +7,18 @@ import type { LoadmoreText } from '@tuniao/tnui-vue3-uniapp'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/loadmore/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
+
 // 自定义加载文案
-const customLoadmoreText = {
+const customLoadmoreText: LoadmoreText = {
   loadmore: '往下滑试试',
   loading: '等等，数据正在赶来路上',
   nomore: '没有啦，不要滑啦',
@@ -16,7 +27,7 @@ const customLoadmoreText = {
 </script>
 
 <template>
-  <CustomPage title="加载更多">
+  <CustomPage title="加载更多" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="loadmore-container">
         <view class="loadmore-item">

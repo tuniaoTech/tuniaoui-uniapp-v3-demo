@@ -1,11 +1,21 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnReadMore from '@tuniao/tnui-vue3-uniapp/components/read-more/src/read-more.vue'
 
 import type { TnReadMoreInstance } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/read-more/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const content = `噫吁嚱，危乎高哉！
   蜀道之难，难于上青天！
@@ -78,7 +88,7 @@ const beforeExpand = () => {
 </script>
 
 <template>
-  <CustomPage title="阅读更多">
+  <CustomPage title="阅读更多" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="read-more-container">
         <view class="read-more-item">

@@ -1,7 +1,17 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/button/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 测试按钮点击防抖
 let debounceCount = 0
@@ -18,7 +28,7 @@ const testButtonDebounce = () => {
 </script>
 
 <template>
-  <CustomPage title="按钮">
+  <CustomPage title="按钮" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础">
       <view class="button-container">
         <view class="button-item">

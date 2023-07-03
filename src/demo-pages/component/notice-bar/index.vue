@@ -1,7 +1,17 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnNoticeBar from '@tuniao/tnui-vue3-uniapp/components/notice-bar/src/notice-bar.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/notice-bar/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 通知内容
 const noticeData: string[] = [
@@ -13,7 +23,7 @@ const noticeData: string[] = [
 </script>
 
 <template>
-  <CustomPage title="通知栏">
+  <CustomPage title="通知栏" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="notice-bar-container">
         <view class="notice-bar-item">

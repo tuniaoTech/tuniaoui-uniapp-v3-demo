@@ -1,8 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSlider from '@tuniao/tnui-vue3-uniapp/components/slider/src/slider.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/slider/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 滑动条的值
 const rangeSliderValue1 = ref([0, 0])
@@ -15,7 +26,11 @@ const sliderValue5 = ref(0)
 </script>
 
 <template>
-  <CustomPage title="滑动条" padding="30rpx 40rpx">
+  <CustomPage
+    title="滑动条"
+    padding="30rpx 40rpx"
+    :is-h5-demo-page="isDemoH5Page"
+  >
     <DemoContainer title="基础使用">
       <view class="slider-container">
         <view class="slider-item">

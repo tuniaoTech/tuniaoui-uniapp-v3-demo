@@ -7,6 +7,7 @@ import {
   onUnmounted,
   ref,
 } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import {
   useObserver,
   useSelectorQuery,
@@ -21,6 +22,16 @@ import {
 import type { CSSProperties } from 'vue'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/color/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const instance = getCurrentInstance()
 
@@ -205,7 +216,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <CustomPage title="color配色" padding="0">
+  <CustomPage title="color配色" padding="0" :is-h5-demo-page="isDemoH5Page">
     <view class="color-page">
       <view class="select-container" :style="selectContainerStyle">
         <scroll-view

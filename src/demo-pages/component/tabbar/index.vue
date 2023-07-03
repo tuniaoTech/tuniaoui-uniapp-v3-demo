@@ -1,9 +1,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnTabbar from '@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar.vue'
 import TnTabbarItem from '@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar-item.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/tabbar/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 当前选中的导航索引
 const currentTabbarIndex = ref<number>(0)
@@ -61,7 +72,7 @@ const interceptTabbarSwitch = (index: number) => {
 </script>
 
 <template>
-  <CustomPage title="底部导航栏">
+  <CustomPage title="底部导航栏" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="tabbar-container">
         <view class="tabbar-item">

@@ -1,11 +1,21 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnBadge from '@tuniao/tnui-vue3-uniapp/components/badge/src/badge.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/badge/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 </script>
 
 <template>
-  <CustomPage title="徽标">
+  <CustomPage title="徽标" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="badge-container">
         <view class="badge-item">

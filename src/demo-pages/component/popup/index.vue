@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnPopup from '@tuniao/tnui-vue3-uniapp/components/popup/src/popup.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -12,6 +13,15 @@ import type {
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/popup/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 
@@ -97,7 +107,7 @@ const closeCustomPopup = () => {
 </script>
 
 <template>
-  <CustomPage title="弹出框">
+  <CustomPage title="弹出框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="popup-container">
         <view class="popup-item">

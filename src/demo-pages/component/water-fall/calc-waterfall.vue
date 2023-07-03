@@ -10,7 +10,7 @@ const { imageData } = useGenerateImageData()
 </script>
 
 <template>
-  <CustomPage title="计算瀑布流">
+  <CustomPage title="计算瀑布流" only-back>
     <TnWaterFall :data="imageData" mode="calc">
       <template #left="{ item }">
         <WaterFallItem :url="item.url" />

@@ -1,10 +1,20 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnBubbleBox from '@tuniao/tnui-vue3-uniapp/components/bubble-box/src/bubble-box.vue'
 
 import type { BubbleBoxOption } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/bubble-box/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 气泡弹框数据
 const bubbleBoxOptions: BubbleBoxOption = [{ text: '收藏' }, { text: '分享' }]
@@ -52,7 +62,7 @@ const onBubbleOptionClickEvent = (index: number) => {
 </script>
 
 <template>
-  <CustomPage title="气泡弹框">
+  <CustomPage title="气泡弹框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="bubble-box-container">
         <view class="bubble-box-item top-empty fit-content">

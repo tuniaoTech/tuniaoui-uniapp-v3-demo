@@ -1,13 +1,23 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSticky from '@tuniao/tnui-vue3-uniapp/components/sticky/src/sticky.vue'
 import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/sticky/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const { navBarInfo } = useUniAppSystemRectInfo()
 </script>
 
 <template>
-  <CustomPage title="吸顶">
+  <CustomPage title="吸顶" :is-h5-demo-page="isDemoH5Page">
     <view class="sticky-container">
       <TnSticky :offset-top="navBarInfo.height">
         <view

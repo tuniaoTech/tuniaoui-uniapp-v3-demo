@@ -1,8 +1,18 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnNavbar from '@tuniao/tnui-vue3-uniapp/components/navbar/src/navbar.vue'
 import TnSearchBox from '@tuniao/tnui-vue3-uniapp/components/search-box/src/search-box.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/navbar/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 演示顶部导航栏的高度
 const demoNavbarHeight = '45px'
@@ -33,7 +43,7 @@ const interceptBackHomeEvent = () => {
 </script>
 
 <template>
-  <CustomPage title="顶部导航栏">
+  <CustomPage title="顶部导航栏" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="navbar-container">
         <view class="navbar-item">

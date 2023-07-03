@@ -1,9 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnRegionPicker from '@tuniao/tnui-vue3-uniapp/components/region-picker/src/region-picker.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/region-picker/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 基础地区选择器
 const baseRegionPickerValue = ref<string[]>([])
@@ -32,7 +42,7 @@ const openNameDefaultRegionPicker = () => {
 </script>
 
 <template>
-  <CustomPage title="地区选择器">
+  <CustomPage title="地区选择器" :is-h5-demo-page="isDemoH5Page">
     <view class="warning-tips tn-type-warning_text">
       <text class="tn-text-xl">提示:</text>
       <view class="tn-mt-sm">

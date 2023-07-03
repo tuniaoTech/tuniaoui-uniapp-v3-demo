@@ -10,7 +10,7 @@ const { listData } = useGenerateListData()
 </script>
 
 <template>
-  <CustomPage title="固定高度索引列表" padding="0">
+  <CustomPage title="固定高度索引列表" padding="0" only-back>
     <view class="fix-height-container tn-gray-light_bg">
       <TnIndexList :data="listData" :height="650">
         <template #default="{ data }">

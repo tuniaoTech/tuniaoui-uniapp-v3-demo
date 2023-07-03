@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnFooter from '@tuniao/tnui-vue3-uniapp/components/footer/src/footer.vue'
 import { tnNavPage } from '@tuniao/tnui-vue3-uniapp/utils'
 
@@ -9,6 +10,16 @@ import type {
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/footer/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const footerNavigator: FooterNavigatorData = [
   {
@@ -31,7 +42,7 @@ const navClick = (nav: FooterNavigator) => {
 </script>
 
 <template>
-  <CustomPage title="页脚">
+  <CustomPage title="页脚" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="footer-container">
         <view class="footer-item">

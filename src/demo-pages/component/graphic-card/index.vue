@@ -1,8 +1,18 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnGraphicCard from '@tuniao/tnui-vue3-uniapp/components/graphic-card/src/graphic-card.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 import SubDemoContainer from '@/components/demo-container/src/sub-demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/graphic-card/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const graphicCardData = {
   id: 1,
@@ -37,7 +47,7 @@ const graphicCardData = {
 </script>
 
 <template>
-  <CustomPage title="图文卡片" padding="0">
+  <CustomPage title="图文卡片" padding="0" :is-h5-demo-page="isDemoH5Page">
     <view class="tn-mt" />
     <DemoContainer title="基础使用" title-padding>
       <view class="graphic-card-container">

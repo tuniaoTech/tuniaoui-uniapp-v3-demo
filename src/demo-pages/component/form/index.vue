@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, reactive, ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnForm from '@tuniao/tnui-vue3-uniapp/components/form/src/form.vue'
 import TnFormItem from '@tuniao/tnui-vue3-uniapp/components/form/src/form-item.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
@@ -24,6 +25,15 @@ import type { RuleItem } from '@tuniao/tnui-vue3-uniapp/libs/async-validator'
 import { UPLOAD_URL } from '@/config'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/form/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const formRef = ref<TnFormInstance>()
 
@@ -190,7 +200,7 @@ const submitForm = () => {
 </script>
 
 <template>
-  <CustomPage title="表单">
+  <CustomPage title="表单" :is-h5-demo-page="isDemoH5Page">
     <TnForm
       ref="formRef"
       :model="formData"

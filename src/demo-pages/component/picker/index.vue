@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnPicker from '@tuniao/tnui-vue3-uniapp/components/picker/src/picker.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -13,6 +14,16 @@ import {
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/picker/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 单值数组数据选择器
 const singlePickerValue = ref()
@@ -51,7 +62,7 @@ const openLinkagePicker = () => {
 </script>
 
 <template>
-  <CustomPage title="Picker选择器">
+  <CustomPage title="Picker选择器" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="单列选择器-单值数组数据">
       <view class="picker-container">
         <view class="picker-item">

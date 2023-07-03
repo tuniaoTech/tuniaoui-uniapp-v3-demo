@@ -1,11 +1,22 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 import SubDemoContainer from '@/components/demo-container/src/sub-demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/basic/flex/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 </script>
 
 <template>
-  <CustomPage>
+  <CustomPage :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="排列方式">
       <SubDemoContainer title="flex-row">
         <view class="tn-w-full tn-flex tn-flex-row">

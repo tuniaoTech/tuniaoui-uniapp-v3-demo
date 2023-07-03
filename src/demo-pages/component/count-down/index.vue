@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnCountDown from '@tuniao/tnui-vue3-uniapp/components/count-down/src/count-down.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
@@ -7,6 +8,16 @@ import type { TnCountDownInstance } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/count-down/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 const countDownRef = ref<TnCountDownInstance>()
 
@@ -27,7 +38,7 @@ const resetCountDown = () => {
 </script>
 
 <template>
-  <CustomPage title="倒计时">
+  <CustomPage title="倒计时" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="count-down-container">
         <view class="count-down-item">

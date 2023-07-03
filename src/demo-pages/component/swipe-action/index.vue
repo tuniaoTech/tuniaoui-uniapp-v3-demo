@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSwipeAction from '@tuniao/tnui-vue3-uniapp/components/swipe-action/src/swipe-action.vue'
 import TnSwipeActionItem from '@tuniao/tnui-vue3-uniapp/components/swipe-action/src/swipe-action-item.vue'
 
@@ -8,6 +9,16 @@ import type { SwipeActionItemOption } from '@tuniao/tnui-vue3-uniapp'
 
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/swipe-action/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 菜单选项
 const swipeActionItemOption: SwipeActionItemOption = [
@@ -36,7 +47,7 @@ const swipeActionOptionSelectEvent = (
 </script>
 
 <template>
-  <CustomPage title="滑动菜单">
+  <CustomPage title="滑动菜单" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="swipe-action-container">
         <view class="swipe-action-item">

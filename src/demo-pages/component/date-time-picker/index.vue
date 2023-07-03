@@ -1,9 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnDateTimePicker from '@tuniao/tnui-vue3-uniapp/components/date-time-picker/src/date-time-picker.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/date-time-piacker/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 选择年月日
 const dateDateTimePickerValue = ref('')
@@ -35,7 +45,7 @@ const openDateTimeDateTimePicker = () => {
 </script>
 
 <template>
-  <CustomPage title="日期时间选择器">
+  <CustomPage title="日期时间选择器" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="选择年月日">
       <view class="date-time-picker-container">
         <view class="date-time-picker-item">

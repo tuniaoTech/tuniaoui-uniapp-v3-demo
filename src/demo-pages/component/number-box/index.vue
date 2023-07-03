@@ -1,15 +1,25 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnNumberBox from '@tuniao/tnui-vue3-uniapp/components/number-box/src/number-box.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/number-box/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 当前的步进值
 const numberBoxValue = ref(0)
 </script>
 
 <template>
-  <CustomPage title="步进器">
+  <CustomPage title="步进器" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="number-box-container">
         <view class="number-box-item">

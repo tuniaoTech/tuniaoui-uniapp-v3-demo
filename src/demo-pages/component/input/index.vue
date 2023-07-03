@@ -1,17 +1,27 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnInput from '@tuniao/tnui-vue3-uniapp/components/input/src/input.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 import SubDemoContainer from '@/components/demo-container/src/sub-demo-container.vue'
+import { useDemoH5Page, useWxShare } from '@/hooks'
+
+// 微信分享
+onShareAppMessage(() => ({}))
+onShareTimeline(() => ({}))
+useWxShare({
+  path: '/demo-pages/component/input/index',
+})
+const { isDemoH5Page } = useDemoH5Page()
 
 // 输入框输入的值
 const inputValue = ref('')
 </script>
 
 <template>
-  <CustomPage title="输入框">
+  <CustomPage title="输入框" :is-h5-demo-page="isDemoH5Page">
     <DemoContainer title="基础使用">
       <view class="input-container">
         <view class="input-item">
