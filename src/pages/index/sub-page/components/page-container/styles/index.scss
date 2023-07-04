@@ -98,15 +98,17 @@
             height: 100%;
             z-index: 2;
             padding: 20rpx 30rpx;
-            line-height: 1;
+            padding-top: 14rpx;
 
             .title {
               font-size: 38rpx;
               width: 90%;
+              vertical-align: middle;
             }
             .path {
-              margin-top: 12rpx;
+              margin-top: 8rpx;
               width: 80%;
+              line-height: 1;
 
               text {
                 margin-left: 10rpx;

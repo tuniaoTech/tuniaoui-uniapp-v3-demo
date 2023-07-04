@@ -54,6 +54,12 @@ const pageData: PageContainerData = {
       path: 'switch-tabs',
       url: '/demo-pages/component/switch-tabs/index',
     },
+    {
+      title: '横向滚动',
+      icon: 'rocket',
+      path: 'scroll-list',
+      url: '/demo-pages/component/scroll-list/index',
+    },
   ],
   反馈组件: [
     {

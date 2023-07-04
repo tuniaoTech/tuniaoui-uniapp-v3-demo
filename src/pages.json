@@ -364,6 +364,12 @@
           "style": {
             "navigationBarTitleText": "WeekCalendar周日历"
           }
+        },
+        {
+          "path": "component/scroll-list/index",
+          "style": {
+            "navigationBarTitleText": "ScrollList横向滚动"
+          }
         }
       ]
 		}

@@ -18,6 +18,7 @@ const { isDemoH5Page } = useDemoH5Page()
 
 // 日历的值
 const baseCalendarValue = ref('')
+const lunarCalendarValue = ref('')
 
 // 多选日期
 const multiCalendarValue = ref<string[]>(['2023/06/20', '2023/06/21'])
@@ -59,7 +60,7 @@ const closeCalendarPopup = () => {
     <DemoContainer title="显示农历">
       <view class="calendar-container">
         <view class="calendar-item">
-          <TnCalendar v-model="baseCalendarValue" show-lunar />
+          <TnCalendar v-model="lunarCalendarValue" show-lunar />
         </view>
       </view>
     </DemoContainer>

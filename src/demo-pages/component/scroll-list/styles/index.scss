@@ -1,0 +1,45 @@
+.scroll-list-container {
+  position: relative;
+  width: 100%;
+
+  .scroll-list-item {
+    position: relative;
+    width: 100%;
+
+    & + .scroll-list-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.scroll-data {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 30rpx;
+
+  .data-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40rpx;
+
+    .item-icon {
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 15rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      font-size: 70rpx;
+    }
+    .item-title {
+      margin-top: 14rpx;
+      line-height: 1;
+    }
+  }
+}
