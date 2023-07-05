@@ -15,7 +15,7 @@ export default {
   <view class="swipe-item-content">
     <view class="avatar">
       <image
-        src="https://resource.tnkjapp.com/images/tuniao_logo/logo.jpg"
+        src="https://resource.tuniaokj.com/images/tuniao_logo/logo.jpg"
         mode="aspectFill"
       />
     </view>

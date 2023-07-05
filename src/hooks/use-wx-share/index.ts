@@ -13,7 +13,7 @@ export const useWxShare = (options?: WxShareOptions) => {
   const query = options?.query ?? ''
   const imageUrl =
     options?.imageUrl ??
-    'https://resource.tnkjapp.com/images/vue3/market/vue3-banner-min.jpg'
+    'https://resource.tuniaokj.com/images/vue3/market/vue3-banner-min.jpg'
   onShareAppMessage(() => {
     return {
       title,

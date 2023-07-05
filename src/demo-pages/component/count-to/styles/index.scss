@@ -1,0 +1,17 @@
+.count-to-container {
+  position: relative;
+  width: 100%;
+
+  .count-to-item {
+    position: relative;
+    width: 100%;
+
+    & + .count-to-item {
+      margin-top: 30rpx;
+    }
+
+    &.no-mt {
+      margin-top: 0;
+    }
+  }
+}

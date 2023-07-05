@@ -15,15 +15,15 @@ const { isDemoH5Page } = useDemoH5Page()
 
 // 图片列表
 const imageListData = [
-  'https://resource.tnkjapp.com/images/album/xiong1.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong2.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong3.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong4.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong5.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong6.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong7.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong8.jpg',
-  'https://resource.tnkjapp.com/images/album/xiong9.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong1.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong2.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong3.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong4.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong5.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong6.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong7.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong8.jpg',
+  'https://resource.tuniaokj.com/images/album/xiong9.jpg',
 ]
 </script>
 

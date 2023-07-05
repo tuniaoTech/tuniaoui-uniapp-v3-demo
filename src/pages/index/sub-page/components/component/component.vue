@@ -7,7 +7,7 @@ import type { PageContainerData } from '../page-container'
 useComponent()
 
 const topSwiperData = [
-  'https://resource.tnkjapp.com/images/vue3/banner/vue3-2-min.jpg',
+  'https://resource.tuniaokj.com/images/vue3/banner/vue3-2-min.jpg',
 ]
 
 const pageData: PageContainerData = {
@@ -259,6 +259,18 @@ const pageData: PageContainerData = {
       icon: 'rocket',
       path: 'empty',
       url: '/demo-pages/component/empty/index',
+    },
+    {
+      title: '数字跳转',
+      icon: 'rocket',
+      path: 'count-to',
+      url: '/demo-pages/component/count-to/index',
+    },
+    {
+      title: '数字滚动',
+      icon: 'rocket',
+      path: 'count-scroll',
+      url: '/demo-pages/component/count-scroll/index',
     },
   ],
   内容展示: [

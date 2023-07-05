@@ -15,11 +15,11 @@ const { isDemoH5Page } = useDemoH5Page()
 
 // 图片数据
 const imageData = [
-  'https://resource.tnkjapp.com/images/swiper/ad1.jpg',
-  'https://resource.tnkjapp.com/images/swiper/ad2.jpg',
-  'https://resource.tnkjapp.com/images/swiper/ad3.jpg',
-  'https://resource.tnkjapp.com/images/swiper/ad4.jpg',
-  'https://resource.tnkjapp.com/images/swiper/ad5.jpg',
+  'https://resource.tuniaokj.com/images/swiper/ad1.jpg',
+  'https://resource.tuniaokj.com/images/swiper/ad2.jpg',
+  'https://resource.tuniaokj.com/images/swiper/ad3.jpg',
+  'https://resource.tuniaokj.com/images/swiper/ad4.jpg',
+  'https://resource.tuniaokj.com/images/swiper/ad5.jpg',
 ]
 
 // 图片列表

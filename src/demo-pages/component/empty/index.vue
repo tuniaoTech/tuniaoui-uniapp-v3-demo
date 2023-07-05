@@ -76,7 +76,7 @@ const { isDemoH5Page } = useDemoH5Page()
             <template #icon>
               <image
                 class="custom-empty-icon"
-                src="https://resource.tnkjapp.com/images/empty/alien/12.png"
+                src="https://resource.tuniaokj.com/images/empty/alien/12.png"
                 mode="aspectFit"
               />
             </template>

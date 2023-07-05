@@ -35,17 +35,23 @@ const avatarGroupBadgeConfig: AvatarBadgeProps = {
 
 // 用于头像组数据
 const avatarList: AvatarList[] = [
-  { url: 'https://resource.tnkjapp.com/images/avatar/default/1.png' },
   {
-    url: 'https://resource.tnkjapp.com/images/avatar/default/2.png',
+    url: 'https://resource.tuniaokj.com/images/avatar/default/1.png',
+  },
+  {
+    url: 'https://resource.tuniaokj.com/images/avatar/default/2.png',
     badge: true,
   },
-  { url: 'https://resource.tnkjapp.com/images/avatar/default/3.png' },
   {
-    url: 'https://resource.tnkjapp.com/images/avatar/default/4.png',
+    url: 'https://resource.tuniaokj.com/images/avatar/default/3.png',
+  },
+  {
+    url: 'https://resource.tuniaokj.com/images/avatar/default/4.png',
     badge: true,
   },
-  { url: 'https://resource.tnkjapp.com/images/avatar/default/5.png' },
+  {
+    url: 'https://resource.tuniaokj.com/images/avatar/default/5.png',
+  },
 ]
 </script>
 
@@ -56,7 +62,7 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
             />
           </view>
           <view class="item">
@@ -94,7 +100,7 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               shape="square"
             />
           </view>
@@ -114,13 +120,13 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               size="sm"
             />
           </view>
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               size="lg"
             />
           </view>
@@ -129,7 +135,7 @@ const avatarList: AvatarList[] = [
           </view>
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               size="xl"
             />
           </view>
@@ -137,7 +143,7 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               size="160"
             />
           </view>
@@ -182,7 +188,7 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               border
             />
           </view>
@@ -197,7 +203,7 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               shadow
             />
           </view>
@@ -216,14 +222,14 @@ const avatarList: AvatarList[] = [
         <view class="avatar-item">
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               badge="icon-sex-female"
               :badge-config="{ absoluteCenter: false }"
             />
           </view>
           <view class="item">
             <TnAvatar
-              url="https://resource.tnkjapp.com/images/avatar/test_avatar.jpg"
+              url="https://resource.tuniaokj.com/images/avatar/test_avatar.jpg"
               badge="99"
               :badge-config="{
                 type: 'danger',

@@ -7,7 +7,7 @@ import type {
 
 export const useGenerateListData = () => {
   // 头像基础地址
-  const avatarBaseUrl = 'https://resource.tnkjapp.com/images/avatar/default/'
+  const avatarBaseUrl = 'https://resource.tuniaokj.com/images/avatar/default/'
 
   // 列表数据
   const listData = ref<IndexListData>({})
@@ -49,19 +49,19 @@ export const useGenerateListData = () => {
       data: [
         {
           id: 0,
-          avatar: 'https://tnuiimage.tnkjapp.com/avatar/normal/1.png',
+          avatar: 'https://resource.tuniaokj.com/images/avatar/default/1.png',
           nickname: '图鸟-打杂部-打杂1号',
           department: '打杂',
         },
         {
           id: 1,
-          avatar: 'https://tnuiimage.tnkjapp.com/avatar/normal/2.png',
+          avatar: 'https://resource.tuniaokj.com/images/avatar/default/2.png',
           nickname: '图鸟UI-打杂部-打杂2号',
           department: '打杂',
         },
         {
           id: 2,
-          avatar: 'https://tnuiimage.tnkjapp.com/avatar/normal/3.png',
+          avatar: 'https://resource.tuniaokj.com/images/avatar/default/3.png',
           nickname: '图鸟UI-打杂部-打杂3号',
           department: '打杂',
         },

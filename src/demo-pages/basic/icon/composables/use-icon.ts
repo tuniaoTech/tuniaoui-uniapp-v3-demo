@@ -199,7 +199,7 @@ export const useIcon = () => {
   const getIconData = () => {
     showLoading()
     uni.request({
-      url: 'https://resource.tnkjapp.com/vue3_page_data/iconfont.json',
+      url: 'https://resource.tuniaokj.com/vue3_page_data/iconfont.json',
       success: (res) => {
         if (res.statusCode !== 200) {
           getDataFail()

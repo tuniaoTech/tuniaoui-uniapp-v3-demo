@@ -1,0 +1,13 @@
+.count-scroll-container {
+  position: relative;
+  width: 100%;
+
+  .count-scroll-item {
+    position: relative;
+    width: 100%;
+
+    & + .count-scroll-item {
+      margin-top: 30rpx;
+    }
+  }
+}

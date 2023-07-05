@@ -370,6 +370,18 @@
           "style": {
             "navigationBarTitleText": "ScrollList横向滚动"
           }
+        },
+        {
+          "path": "component/count-to/index",
+          "style": {
+            "navigationBarTitleText": "CountTo数字跳转"
+          }
+        },
+        {
+          "path": "component/count-scroll/index",
+          "style": {
+            "navigationBarTitleText": "CountScroll数字滚动"
+          }
         }
       ]
 		}

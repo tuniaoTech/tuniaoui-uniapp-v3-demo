@@ -370,7 +370,7 @@ const closeCustomPopup = () => {
       <view class="content">
         <image
           class="content-image"
-          src="https://resource.tnkjapp.com/images/landscape/2022-new-year.png"
+          src="https://resource.tuniaokj.com/images/landscape/2022-new-year.png"
           mode="widthFix"
         />
       </view>

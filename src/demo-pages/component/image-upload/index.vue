@@ -37,7 +37,7 @@ const baseImageUploadValue = ref<string[]>([])
 
 // 带已上传图片列表
 const defaultValueImageUploadValue = ref<string[]>([
-  'https://resource.tnkjapp.com/images/advertise/10.jpg',
+  'https://resource.tuniaokj.com/images/advertise/10.jpg',
 ])
 
 // 自定义上传框列表
