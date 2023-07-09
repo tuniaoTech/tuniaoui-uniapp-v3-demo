@@ -28,14 +28,13 @@ const userInfo = reactive({
   avatarUrl: '',
 })
 
-const frameVersion = ref('1.0.0')
+const frameVersion = ref('1.0.4')
 
 const friendLinkData = ref([
   {
     id: 1,
     name: 'uCharts',
-    image:
-      'https://oos.tuniaokj.com/tuniao-admin/atlas/e50f22f557747fb6d7b095968e7f0715.jpg',
+    image: 'https://resource.tuniaokj.com/images/friend_link/1_uCharts.jpg',
     mini_app_id: 'wx37a9ee6a7398dec0',
     mini_app_path: 'demo/home',
     url: '',
@@ -43,8 +42,7 @@ const friendLinkData = ref([
   {
     id: 2,
     name: '芊云全景',
-    image:
-      'https://oos.tuniaokj.com/tuniao-admin/atlas/11baab1d3d0fba0c85d93389e4e1c11f.jpg',
+    image: 'https://resource.tuniaokj.com/images/friend_link/2_qianyun.jpg',
     mini_app_id: 'wx9f77d65eb4eff65b',
     mini_app_path: 'pages/index/index',
     url: '',
@@ -52,8 +50,7 @@ const friendLinkData = ref([
   {
     id: 3,
     name: '前端铺子',
-    image:
-      'https://oos.tuniaokj.com/tuniao-admin/atlas/830b51e3a706abc0d4772e193de1021d.jpg',
+    image: 'https://resource.tuniaokj.com/images/friend_link/3_puzi.jpg',
     mini_app_id: 'wx201efd3f86fa2ba7',
     mini_app_path: 'pages/index/tabbar',
     url: '',
@@ -61,8 +58,7 @@ const friendLinkData = ref([
   {
     id: 4,
     name: 'DIY神器',
-    image:
-      'https://oos.tuniaokj.com/tuniao-admin/atlas/6698093f5dfbec1205b9e2586a36935a.png',
+    image: 'https://resource.tuniaokj.com/images/friend_link/4_diy.jpg',
     mini_app_id: 'wxda438798441f31f1',
     mini_app_path: 'pages/index',
     url: '',
@@ -70,8 +66,7 @@ const friendLinkData = ref([
   {
     id: 5,
     name: 'nPro',
-    image:
-      'https://oos.tuniaokj.com/tuniao-admin/atlas/af0ab744e345d8314e08be38bbe59437.jpg',
+    image: 'https://resource.tuniaokj.com/images/friend_link/5_nPro.jpg',
     mini_app_id: 'wx4f16bef982e13464',
     mini_app_path: 'pages/tabs/component',
     url: '',
