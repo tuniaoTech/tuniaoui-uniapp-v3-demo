@@ -14,6 +14,7 @@ import TnSwitch from '@tuniao/tnui-vue3-uniapp/components/switch/src/switch.vue'
 import TnNumberBox from '@tuniao/tnui-vue3-uniapp/components/number-box/src/number-box.vue'
 import TnSlider from '@tuniao/tnui-vue3-uniapp/components/slider/src/slider.vue'
 import TnImageUpload from '@tuniao/tnui-vue3-uniapp/components/image-upload/src/image-upload.vue'
+import TnPicker from '@tuniao/tnui-vue3-uniapp/components/picker/src/picker.vue'
 
 import type {
   FormRules,
@@ -51,6 +52,7 @@ const formData = reactive({
   payCount: 1,
   suggestionImages: [],
   suggestion: '',
+  vueVersion: '',
 })
 
 // 规则
@@ -182,9 +184,16 @@ const getMobileVerifyCode = () => {
   }, 2000)
 }
 
+// vue版本选择
+const vueVersionPickerData: string[] = ['Vue 2.x', 'Vue 3.x']
+const showVueVersionPicker = ref(false)
+const openVueVersionPicker = () => {
+  showVueVersionPicker.value = true
+}
+
 /* 提交表单 */
 const submitForm = () => {
-  formRef.value?.validate((valid) => {
+  formRef.value?.validate((valid: boolean) => {
     if (valid) {
       uni.showToast({
         title: '提交成功',
@@ -246,6 +255,14 @@ const submitForm = () => {
           <TnCheckbox label="图鸟UI太酷炫了"> 图鸟UI太酷炫了 </TnCheckbox>
         </TnCheckboxGroup>
       </TnFormItem>
+      <TnFormItem label="请选择使用的版本" props="vueVersion">
+        <TnInput
+          v-model="formData.vueVersion"
+          type="picker"
+          placeholder="请选择当前使用的Vue版本"
+          @click="openVueVersionPicker"
+        />
+      </TnFormItem>
       <TnFormItem
         label="请为图鸟打分"
         prop="score"
@@ -295,6 +312,12 @@ const submitForm = () => {
       <TnButton size="lg" @click="submitForm"> 提交 </TnButton>
     </view>
   </CustomPage>
+
+  <TnPicker
+    v-model="formData.vueVersion"
+    v-model:open="showVueVersionPicker"
+    :data="vueVersionPickerData"
+  />
 </template>
 
 <style lang="scss" scoped>

@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnInput from '@tuniao/tnui-vue3-uniapp/components/input/src/input.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
+import TnPicker from '@tuniao/tnui-vue3-uniapp/components/picker/src/picker.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 import SubDemoContainer from '@/components/demo-container/src/sub-demo-container.vue'
@@ -18,6 +19,14 @@ const { isDemoH5Page } = useDemoH5Page()
 
 // 输入框输入的值
 const inputValue = ref('')
+
+// 配合picker进行使用
+const pickerData = ['图鸟UI vue2', '图鸟UI vue3']
+const pickerValue = ref('')
+const showPicker = ref(false)
+const openPicker = () => {
+  showPicker.value = true
+}
 </script>
 
 <template>
@@ -157,7 +166,25 @@ const inputValue = ref('')
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="配合picker进行使用">
+      <view class="input-container">
+        <view class="input-item">
+          <TnInput
+            v-model="pickerValue"
+            type="picker"
+            placeholder="请选择需要使用tuniaoUI版本"
+            @click="openPicker"
+          />
+        </view>
+      </view>
+    </DemoContainer>
   </CustomPage>
+
+  <TnPicker
+    v-model="pickerValue"
+    v-model:open="showPicker"
+    :data="pickerData"
+  />
 </template>
 
 <style lang="scss" scoped>

@@ -307,6 +307,14 @@ const pageData: PageContainerData = {
       url: '/demo-pages/component/lazy-load/index',
     },
   ],
+  插件: [
+    {
+      title: '签名板',
+      icon: 'rocket',
+      path: 'tn-sign-board',
+      url: '/plugin-demo/tn-sign-board/index',
+    },
+  ],
 }
 </script>
 
