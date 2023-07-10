@@ -229,6 +229,7 @@ const submitForm = () => {
       <TnFormItem ref="mobileFormItemRef" label="手机号" prop="mobile">
         <TnInput
           v-model="formData.mobile"
+          type="number"
           clearable
           @blur="mobileInputBlurEvent"
         />
