@@ -393,6 +393,12 @@
           "style": {
             "navigationBarTitleText": "TnSignBoard签名板"
           }
+        },
+        {
+          "path": "tn-time-line/index",
+          "style": {
+            "navigationBarTitleText": "TnTimeLine时间轴"
+          }
         }
       ]
     }

@@ -314,6 +314,12 @@ const pageData: PageContainerData = {
       path: 'tn-sign-board',
       url: '/plugin-demo/tn-sign-board/index',
     },
+    {
+      title: '时间轴',
+      icon: 'rocket',
+      path: 'tn-time-line',
+      url: '/plugin-demo/tn-time-line/index',
+    },
   ],
 }
 </script>

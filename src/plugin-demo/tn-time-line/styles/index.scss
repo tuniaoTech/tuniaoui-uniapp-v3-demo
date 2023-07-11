@@ -1,0 +1,41 @@
+.time-line-container {
+  position: relative;
+  width: 100%;
+
+  .time-line-item {
+    position: relative;
+    width: 100%;
+
+    .time-line {
+      width: 100%;
+      .date-info {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 30rpx;
+      }
+      .content {
+        color: var(--tn-color-gray);
+        margin-top: 20rpx;
+        .data {
+          // 两端对齐
+          text-align: justify;
+        }
+        .data-image {
+          width: 100%;
+          margin-top: 14rpx;
+          border-radius: 15rpx;
+          border: 1rpx solid var(--tn-color-gray-light);
+
+          .image {
+            display: block;
+            width: 100%;
+            border-radius: inherit;
+          }
+        }
+      }
+    }
+  }
+}
