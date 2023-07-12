@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 import TnSteps from '@tuniao/tnui-vue3-uniapp/components/steps/src/steps.vue'
-import TnStep from '@tuniao/tnui-vue3-uniapp/components/steps/src/step.vue'
+import TnStepsItem from '@tuniao/tnui-vue3-uniapp/components/steps/src/steps-item.vue'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 
 import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
@@ -93,7 +93,7 @@ const nextStep = () => {
         </view>
         <view class="steps-item">
           <TnSteps v-model="currentStepIndex">
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -106,7 +106,7 @@ const nextStep = () => {
       <view class="steps-container">
         <view class="steps-item">
           <TnSteps v-model="currentStepIndex" disabled>
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -123,7 +123,7 @@ const nextStep = () => {
             color="tn-teal-light"
             active-color="tn-teal"
           >
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -138,7 +138,7 @@ const nextStep = () => {
       <view class="steps-container">
         <view class="steps-item">
           <TnSteps v-model="currentStepIndex" mode="number">
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -152,7 +152,7 @@ const nextStep = () => {
             color="tn-teal-light"
             active-color="tn-teal"
           >
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -167,7 +167,7 @@ const nextStep = () => {
       <view class="steps-container">
         <view class="steps-item">
           <TnSteps v-model="currentStepIndex" mode="dotIcon">
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -183,7 +183,7 @@ const nextStep = () => {
             color="tn-teal-light"
             active-color="tn-teal"
           >
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -200,7 +200,7 @@ const nextStep = () => {
       <view class="steps-container">
         <view class="steps-item">
           <TnSteps v-model="currentStepIndex" mode="icon">
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -216,7 +216,7 @@ const nextStep = () => {
             color="tn-teal-light"
             active-color="tn-teal"
           >
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
@@ -234,7 +234,7 @@ const nextStep = () => {
             color="tn-teal-light"
             active-color="tn-teal"
           >
-            <TnStep
+            <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
               :color="item?.color ?? ''"

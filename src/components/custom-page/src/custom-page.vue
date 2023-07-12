@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, toRef } from 'vue'
 import TnNavbar from '@tuniao/tnui-vue3-uniapp/components/navbar/src/navbar.vue'
 import { useComponentColor } from '@tuniao/tnui-vue3-uniapp/hooks'
 import { formatDomSizeValue } from '@tuniao/tnui-vue3-uniapp/utils'
@@ -11,7 +11,10 @@ import type { CSSProperties } from 'vue'
 const props = defineProps(customPageProps)
 
 // 解析颜色
-const [pageBgClass, pageBgStyle] = useComponentColor(props.pageBgColor, 'bg')
+const [pageBgClass, pageBgStyle] = useComponentColor(
+  toRef(props, 'pageBgColor'),
+  'bg'
+)
 
 // 页面容器的类
 const containerClass = computed<string>(() => {
