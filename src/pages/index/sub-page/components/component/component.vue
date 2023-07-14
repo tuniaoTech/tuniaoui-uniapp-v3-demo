@@ -292,6 +292,12 @@ const pageData: PageContainerData = {
       path: 'graphic-card',
       url: '/demo-pages/component/graphic-card/index',
     },
+    {
+      title: '轮播图',
+      icon: 'rocket',
+      path: 'swiper',
+      url: '/demo-pages/component/swiper/index',
+    },
   ],
   拓展组件: [
     {

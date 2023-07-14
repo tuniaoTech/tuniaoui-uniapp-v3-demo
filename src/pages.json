@@ -1,16 +1,16 @@
 {
-	"pages": [
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "图鸟UI"
-			}
-		}
-	],
-	"subPackages": [
-		{
-			"root": "demo-pages",
-			"pages": [
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "图鸟UI"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "demo-pages",
+      "pages": [
         {
           "path": "basic/flex/index",
           "style": {
@@ -382,9 +382,15 @@
           "style": {
             "navigationBarTitleText": "CountScroll数字滚动"
           }
+        },
+        {
+          "path": "component/swiper/index",
+          "style": {
+            "navigationBarTitleText": "Swiper轮播图"
+          }
         }
       ]
-		},
+    },
     {
       "root": "plugin-demo",
       "pages": [
@@ -402,18 +408,18 @@
         }
       ]
     }
-	],
-	"preloadRule": {
-		"pages/index/index": {
-			"network": "all",
-			"packages": ["demo-pages", "plugin-demo"]
-		}
-	},
-	"globalStyle": {
-		"navigationStyle": "custom",
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "图鸟UI-v3演示",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["demo-pages", "plugin-demo"]
+    }
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "图鸟UI-v3演示",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }

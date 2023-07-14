@@ -20,7 +20,10 @@ import { indexPageContextKey } from '@/tokens'
 // 微信分享
 onShareAppMessage(() => ({}))
 onShareTimeline(() => ({}))
-useWxShare()
+useWxShare({
+  imageUrl:
+    'https://resource.tuniaokj.com/images/vue3/market/vue3-banner-min.jpg',
+})
 
 const {
   children: items,

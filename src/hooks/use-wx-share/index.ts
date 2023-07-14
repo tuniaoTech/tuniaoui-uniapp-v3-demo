@@ -11,9 +11,7 @@ export const useWxShare = (options?: WxShareOptions) => {
   const title = options?.title ?? 'TuniaoUI vue3'
   const path = options?.path ?? ''
   const query = options?.query ?? ''
-  const imageUrl =
-    options?.imageUrl ??
-    'https://resource.tuniaokj.com/images/vue3/market/vue3-banner-min.jpg'
+  const imageUrl = options?.imageUrl ?? ''
   onShareAppMessage(() => {
     return {
       title,

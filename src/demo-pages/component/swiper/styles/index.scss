@@ -1,0 +1,45 @@
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .swiper-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & + .swiper-item {
+      margin-top: 30rpx;
+    }
+
+    .swiper-wrapper {
+      position: relative;
+      width: 100%;
+      height: 420rpx;
+      border-radius: 30rpx;
+      background-color: var(--tn-color-gray-light);
+      overflow: hidden;
+
+      .swiper-data {
+        width: 100%;
+        height: 100%;
+        border-radius: 30rpx;
+
+        &.animation {
+          transition: transform 0.5s linear;
+          transform: scale(0.8);
+        }
+
+        &.active {
+          transform: scale(1);
+        }
+
+        .image {
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+        }
+      }
+    }
+  }
+}
