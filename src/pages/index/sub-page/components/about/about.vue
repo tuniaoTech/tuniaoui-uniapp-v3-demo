@@ -4,6 +4,8 @@ import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
 import TnButton from '@tuniao/tnui-vue3-uniapp/components/button/src/button.vue'
 import TnScrollList from '@tuniao/tnui-vue3-uniapp/components/scroll-list/src/scroll-list.vue'
 
+import { tnNavPage } from '@tuniao/tnui-vue3-uniapp/utils'
+
 import { useAbout } from './composables'
 
 import type { CSSProperties } from 'vue'
@@ -197,7 +199,10 @@ export default {
 
     <!-- 项目信息 -->
     <view class="project-info tn-white_bg">
-      <view class="item-container">
+      <view
+        class="item-container"
+        @tap.stop="tnNavPage('/info-pages/change-log/index')"
+      >
         <view class="item">
           <view class="left">
             <view class="left-icon tn-gradient-bg__cool-2">

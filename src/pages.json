@@ -9,6 +9,17 @@
   ],
   "subPackages": [
     {
+      "root": "info-pages",
+      "pages": [
+        {
+          "path": "change-log/index",
+          "style": {
+            "navigationBarTitleText": "更新日志"
+          }
+        }
+      ]
+    },
+    {
       "root": "demo-pages",
       "pages": [
         {
@@ -412,7 +423,7 @@
   "preloadRule": {
     "pages/index/index": {
       "network": "all",
-      "packages": ["demo-pages", "plugin-demo"]
+      "packages": ["info-pages", "demo-pages", "plugin-demo"]
     }
   },
   "globalStyle": {

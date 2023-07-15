@@ -1,0 +1,29 @@
+.version-info {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--tn-color-gray);
+  line-height: 1;
+
+  .version {
+    color: var(--tn-color-primary);
+    &.current {
+      color: var(--tn-color-danger);
+      font-weight: bold;
+    }
+  }
+
+  .date {
+    margin-left: 12rpx;
+    font-size: 28rpx;
+  }
+}
+
+.update-content {
+  position: relative;
+  width: auto;
+  border: 1rpx solid var(--tn-color-gray-light);
+  border-radius: 14rpx;
+  padding: 24rpx;
+}

@@ -17,13 +17,13 @@
       width: 100%;
       height: 420rpx;
       border-radius: 30rpx;
-      background-color: var(--tn-color-gray-light);
       overflow: hidden;
 
       .swiper-data {
         width: 100%;
         height: 100%;
         border-radius: 30rpx;
+        background-color: var(--tn-color-gray-light);
 
         &.animation {
           transition: transform 0.5s linear;

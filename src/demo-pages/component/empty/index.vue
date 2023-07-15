@@ -72,7 +72,7 @@ const { isDemoH5Page } = useDemoH5Page()
     <DemoContainer title="自定义文案">
       <view class="empty-container">
         <view class="empty-item">
-          <TnEmpty mode="data" size="240">
+          <TnEmpty mode="data">
             <template #icon>
               <image
                 class="custom-empty-icon"

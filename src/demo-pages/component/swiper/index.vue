@@ -209,7 +209,7 @@ const currentSwiperIndex = ref(0)
               indicator-active-bg-color="tn-gray-light"
             >
               <template #default="{ data }">
-                <view class="swiper-data animation">
+                <view class="swiper-data">
                   <image class="image" :src="data" mode="aspectFill" />
                 </view>
               </template>
@@ -227,7 +227,7 @@ const currentSwiperIndex = ref(0)
               indicator-text-color="#01beff"
             >
               <template #default="{ data }">
-                <view class="swiper-data animation">
+                <view class="swiper-data">
                   <image class="image" :src="data" mode="aspectFill" />
                 </view>
               </template>
