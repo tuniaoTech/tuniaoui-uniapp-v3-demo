@@ -58,6 +58,7 @@
     "@tuniao/tnui-vue3-uniapp": "1.0.6",
     "tnuiv3p-tn-sign-board": "^1.0.1",
     "tnuiv3p-tn-time-line": "1.0.2",
+    "tnuiv3p-tn-verify-code-input": "^1.0.0",
     "vue": "^3.2.47",
     "vue-i18n": "^9.1.9"
   },

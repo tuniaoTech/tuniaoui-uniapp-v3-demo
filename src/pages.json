@@ -416,6 +416,12 @@
           "style": {
             "navigationBarTitleText": "TnTimeLine时间轴"
           }
+        },
+        {
+          "path": "tn-verify-code-input/index",
+          "style": {
+            "navigationBarTitleText": "TnVerifyCodeInput验证码输入框"
+          }
         }
       ]
     }

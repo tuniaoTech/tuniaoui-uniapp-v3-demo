@@ -1,0 +1,13 @@
+.verify-code-input-container {
+  position: relative;
+  width: 100%;
+
+  .verify-code-input-item {
+    position: relative;
+    width: 100%;
+
+    & + .verify-code-input-item {
+      margin-top: 30rpx;
+    }
+  }
+}

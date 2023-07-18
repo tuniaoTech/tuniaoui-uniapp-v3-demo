@@ -326,6 +326,12 @@ const pageData: PageContainerData = {
       path: 'tn-time-line',
       url: '/plugin-demo/tn-time-line/index',
     },
+    {
+      title: '验证码输入',
+      icon: 'rocket',
+      path: 'tn-verify-code-input',
+      url: '/plugin-demo/tn-verify-code-input/index',
+    },
   ],
 }
 </script>
