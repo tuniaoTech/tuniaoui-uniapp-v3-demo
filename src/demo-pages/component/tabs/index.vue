@@ -178,7 +178,9 @@ const interceptSwitchEvent = (index: number) => {
               v-for="(item, index) in tabsData"
               :key="index"
               :title="item.text"
-              :badge-config="item?.badgeConfig ?? {}"
+              :badge-config="
+                item?.badgeConfig === undefined ? {} : item.badgeConfig
+              "
             />
           </TnTabs>
         </view>

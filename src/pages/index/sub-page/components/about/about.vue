@@ -23,6 +23,7 @@ const { githubData } = useAbout()
 // 自定义按钮样式
 const customButtonStyle: CSSProperties = {
   padding: '0rpx',
+  borderRadius: '0rpx',
 }
 
 const userInfo = reactive({
@@ -77,10 +78,19 @@ const friendLinkData = ref([
 
 // 复制github地址到剪切板
 const copyGithubUrl = () => {
+  // #ifndef MP-ALIPAY
   copyToClipBoard(
     'https://github.com/tuniaoTech/tuniaoui-rc-vue3-uniapp',
     '复制地址成功'
   )
+  // #endif
+  // #ifdef MP-ALIPAY
+  uni.showToast({
+    title: '支付宝小程序暂不支持复制功能',
+    icon: 'none',
+    mask: true,
+  })
+  // #endif
 }
 </script>
 

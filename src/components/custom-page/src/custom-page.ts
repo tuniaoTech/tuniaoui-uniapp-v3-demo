@@ -64,6 +64,13 @@ export const customPageProps = buildProps({
     type: Boolean,
     default: true,
   },
+  /**
+   * @description 内容宽度是否为屏幕宽度
+   */
+  contentFullWidth: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 export type CustomPageProps = ExtractPropTypes<typeof customPageProps>

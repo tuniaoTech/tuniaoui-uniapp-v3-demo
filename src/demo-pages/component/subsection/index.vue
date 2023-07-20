@@ -24,7 +24,9 @@ const currentSubsectionIndex = ref<number>(0)
       <view class="subsection-container">
         <view class="subsection-item">
           当前选中的索引：<text class="tn-gray_text">
-            {{ currentSubsectionIndex ?? '未选中' }}
+            {{
+              currentSubsectionIndex <= 0 ? '未选中' : currentSubsectionIndex
+            }}
           </text>
         </view>
         <view class="subsection-item">

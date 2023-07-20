@@ -104,10 +104,10 @@ const openLinkagePicker = () => {
         <view class="picker-item">
           当前选中的值:
           <text class="tn-gray_text">
-            {{ multiPickerValue?.[0] ?? '' }} -
-            {{ multiPickerValue?.[1] ?? '' }} -
-            {{ multiPickerValue?.[2] ?? '' }} -
-            {{ multiPickerValue?.[3] ?? '' }}
+            {{ multiPickerValue?.[0] || '' }} -
+            {{ multiPickerValue?.[1] || '' }} -
+            {{ multiPickerValue?.[2] || '' }} -
+            {{ multiPickerValue?.[3] || '' }}
           </text>
         </view>
         <view class="picker-item">
@@ -127,10 +127,10 @@ const openLinkagePicker = () => {
         <view class="picker-item">
           当前选中的值:
           <text class="tn-gray_text">
-            {{ multiPickerObjectValue?.[0] ?? '' }} -
-            {{ multiPickerObjectValue?.[1] ?? '' }} -
-            {{ multiPickerObjectValue?.[2] ?? '' }} -
-            {{ multiPickerObjectValue?.[3] ?? '' }}
+            {{ multiPickerObjectValue?.[0] || '' }} -
+            {{ multiPickerObjectValue?.[1] || '' }} -
+            {{ multiPickerObjectValue?.[2] || '' }} -
+            {{ multiPickerObjectValue?.[3] || '' }}
           </text>
         </view>
         <view class="picker-item">
@@ -150,10 +150,10 @@ const openLinkagePicker = () => {
         <view class="picker-item">
           当前选中的值:
           <text class="tn-gray_text">
-            {{ linkagePickerValue?.[0] ?? '' }} -
-            {{ linkagePickerValue?.[1] ?? '' }} -
-            {{ linkagePickerValue?.[2] ?? '' }} -
-            {{ linkagePickerValue?.[3] ?? '' }}
+            {{ linkagePickerValue?.[0] || '' }} -
+            {{ linkagePickerValue?.[1] || '' }} -
+            {{ linkagePickerValue?.[2] || '' }} -
+            {{ linkagePickerValue?.[3] || '' }}
           </text>
         </view>
         <view class="picker-item">

@@ -3,7 +3,10 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "图鸟UI"
+        "navigationBarTitleText": "图鸟UI",
+        "mp-alipay": {
+          "defaultTitle": ""
+        }
       }
     }
   ],
@@ -437,6 +440,15 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "图鸟UI-v3演示",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "mp-alipay": {
+      "transparentTitle": "always",
+      "titlePenetrate": "YES",
+      "defaultTitle": "",
+      "titleBarColor": "#FFFFFF",
+      "backgroundColor": "#FFFFFF",
+      "frontColor": "#000000",
+      "allowsBounceVertical": "NO"
+    }
   }
 }

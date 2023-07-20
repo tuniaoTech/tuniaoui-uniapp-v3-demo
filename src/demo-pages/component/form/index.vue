@@ -259,7 +259,7 @@ const submitForm = () => {
       <TnFormItem label="请选择使用的版本" props="vueVersion">
         <TnInput
           v-model="formData.vueVersion"
-          type="picker"
+          type="select"
           placeholder="请选择当前使用的Vue版本"
           @click="openVueVersionPicker"
         />

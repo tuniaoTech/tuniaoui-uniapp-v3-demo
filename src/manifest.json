@@ -60,7 +60,8 @@
       "optimization": { "subPackages": true }
     },
     "mp-alipay" : {
-        "usingComponents" : true
+        "usingComponents" : true,
+        "appid": "2021004105668595"
     },
     "mp-baidu" : {
         "usingComponents" : true

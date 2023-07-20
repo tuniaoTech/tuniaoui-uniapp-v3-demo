@@ -71,7 +71,11 @@ const customUploadCallbackHandle: ImageUploadCustomCallbackFunction = (
     if (data.code === 200 && data.data.errCode === 0) {
       return data.data.url
     } else {
-      console.error(data?.message ?? (data?.msg || '上传文件发生错误'))
+      console.error(
+        data?.message === undefined
+          ? data?.msg || '上传文件发生错误'
+          : data.message
+      )
     }
   }
   return ''
@@ -99,8 +103,16 @@ const customUploadHandle: ImageUploadCustomFunction = (
           if (data.code === 200 && data.data.errCode === 0) {
             resolve(data.data.url)
           } else {
-            console.error(data?.message ?? (data?.msg || '上传文件发生错误'))
-            reject(data?.message ?? (data?.msg || '上传文件发生错误'))
+            console.error(
+              data?.message === undefined
+                ? data?.msg || '上传文件发生错误'
+                : data.message
+            )
+            reject(
+              data?.message === undefined
+                ? data?.msg || '上传文件发生错误'
+                : data.message
+            )
           }
         }
       },

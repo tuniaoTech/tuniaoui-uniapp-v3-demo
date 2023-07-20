@@ -171,7 +171,7 @@ const openPicker = () => {
         <view class="input-item">
           <TnInput
             v-model="pickerValue"
-            type="picker"
+            type="select"
             placeholder="请选择需要使用tuniaoUI版本"
             @click="openPicker"
           />

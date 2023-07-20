@@ -127,8 +127,8 @@ const nextStep = () => {
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
-              :color="item?.color ?? ''"
-              :active-color="item?.activeColor ?? ''"
+              :color="item?.color || ''"
+              :active-color="item?.activeColor || ''"
             />
           </TnSteps>
         </view>
@@ -156,8 +156,8 @@ const nextStep = () => {
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
-              :color="item?.color ?? ''"
-              :active-color="item?.activeColor ?? ''"
+              :color="item?.color || ''"
+              :active-color="item?.activeColor || ''"
             />
           </TnSteps>
         </view>
@@ -187,8 +187,8 @@ const nextStep = () => {
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
-              :color="item?.color ?? ''"
-              :active-color="item?.activeColor ?? ''"
+              :color="item?.color || ''"
+              :active-color="item?.activeColor || ''"
               :icon="item.icon"
               :active-icon="item.activeIcon"
             />
@@ -220,8 +220,8 @@ const nextStep = () => {
               v-for="(item, index) in stepsData"
               :key="index"
               :title="item.title"
-              :color="item?.color ?? ''"
-              :active-color="item?.activeColor ?? ''"
+              :color="item?.color || ''"
+              :active-color="item?.activeColor || ''"
               :icon="item.icon"
               :active-icon="item.activeIcon"
             />
@@ -237,8 +237,8 @@ const nextStep = () => {
             <TnStepsItem
               v-for="(item, index) in stepsData"
               :key="index"
-              :color="item?.color ?? ''"
-              :active-color="item?.activeColor ?? ''"
+              :color="item?.color || ''"
+              :active-color="item?.activeColor || ''"
               :icon="item.icon"
               :active-icon="item.activeIcon"
             />

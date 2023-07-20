@@ -144,6 +144,7 @@ export const useIcon = () => {
 
   // 复制图标名称
   const copyIconName = (name: string) => {
+    // #ifndef MP-ALIPAY
     uni.setClipboardData({
       data: name,
       success: () => {
@@ -154,6 +155,14 @@ export const useIcon = () => {
         })
       },
     })
+    // #endif
+    // #ifdef MP-ALIPAY
+    uni.showToast({
+      title: '支付宝小程序暂不支持复制',
+      icon: 'none',
+      mask: true,
+    })
+    // #endif
   }
 
   // 保存icon主题标题top值

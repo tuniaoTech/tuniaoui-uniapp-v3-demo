@@ -62,7 +62,11 @@ const onBubbleOptionClickEvent = (index: number) => {
 </script>
 
 <template>
-  <CustomPage title="气泡弹框" :is-h5-demo-page="isDemoH5Page">
+  <CustomPage
+    title="气泡弹框"
+    :is-h5-demo-page="isDemoH5Page"
+    content-full-width
+  >
     <DemoContainer title="基础使用">
       <view class="bubble-box-container">
         <view class="bubble-box-item top-empty fit-content">

@@ -49,7 +49,11 @@ const collapseData: { title: string; content: string }[] = [
         <view class="collapse-item tn-black_text">
           当前选中的折叠面板：
           <text class="tn-gray_text">
-            {{ currentCollapse ?? '没有打开折叠面板' }}
+            {{
+              currentCollapse === undefined
+                ? '没有打开折叠面板'
+                : currentCollapse
+            }}
           </text>
         </view>
         <view class="collapse-item tn-white_bg">

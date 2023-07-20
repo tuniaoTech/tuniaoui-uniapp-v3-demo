@@ -34,6 +34,11 @@ const containerStyle = computed<CSSProperties>(() => {
 
   if (pageBgStyle.value) style.backgroundColor = pageBgStyle.value
 
+  if (props.contentFullWidth) {
+    style.width = '100vw'
+    style.overflowX = 'hidden'
+  }
+
   if (props.bottomMoreSpace) {
     style.paddingBottom = '80rpx'
   }
@@ -53,15 +58,26 @@ const navBarIcon = {
     show: 'home-capsule-fill',
   },
 }
-const backIcon = computed<string>(
-  () =>
+const backIcon = computed<string>(() => {
+  let icon =
     navBarIcon.back[
       props.isH5DemoPage ? 'hide' : props.onlyBack ? 'only' : 'show'
     ]
-)
-const homeIcon = computed<string>(
-  () => navBarIcon.home[props.isH5DemoPage || props.onlyBack ? 'hide' : 'show']
-)
+  // #ifdef MP-ALIPAY
+  icon = ''
+  // #endif
+  return icon
+})
+const homeIcon = computed<string>(() => {
+  let icon =
+    navBarIcon.home[props.isH5DemoPage || props.onlyBack ? 'hide' : 'show']
+
+  // #ifdef MP-ALIPAY
+  icon = ''
+  // #endif
+
+  return icon
+})
 </script>
 
 // #ifdef MP-WEIXIN
@@ -86,7 +102,9 @@ export default {
       :placeholder="navbarPlaceholder"
       :safe-area-inset-right="!isH5DemoPage"
     >
+      <!-- #ifndef MP-ALIPAY -->
       {{ title }}
+      <!-- #endif -->
     </TnNavbar>
     <view :class="[containerClass]" :style="containerStyle">
       <slot />
