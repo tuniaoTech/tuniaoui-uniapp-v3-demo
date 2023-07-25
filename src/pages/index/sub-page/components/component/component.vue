@@ -332,6 +332,12 @@ const pageData: PageContainerData = {
       path: 'tn-verify-code-input',
       url: '/plugin-demo/tn-verify-code-input/index',
     },
+    {
+      title: '评论列表',
+      icon: 'rocket',
+      path: 'tn-comment-list',
+      url: '/plugin-demo/tn-comment-list/index',
+    },
   ],
 }
 </script>

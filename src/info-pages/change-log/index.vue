@@ -23,6 +23,20 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.7': {
+    date: '2023-07-25',
+    data: [
+      '完成支付宝小程序的支持',
+      '`TnWaterFall`新增`reset`方法重置列表',
+      '`TnGraphicCard`组件新增`more-click`事件',
+      '`TnGraphicCard`组件事件名称统一修改为`-`连接，`avatarClick`->`avatar-click` \\ `viewClick` -> `view-click` \\ `commentClick` -> `comment-click` \\ `likeClick` -> `like-click`',
+      '修复`TnWaterFall`在`data`为空时没有重置列表的问题',
+      '修复`TnInput`在textarea模式下无法设置自动高度和指定高度的问题',
+      '优化`TnCollapse`点击内容时阻止收起事件',
+      '优化`TnBubbleBox`样式',
+      '优化部分hooks的处理逻辑',
+    ],
+  },
   '1.0.6': {
     date: '2023-07-16',
     data: [

@@ -31,7 +31,7 @@ const userInfo = reactive({
   avatarUrl: '',
 })
 
-const frameVersion = ref('1.0.4')
+const frameVersion = ref('1.0.7')
 
 const friendLinkData = ref([
   {
@@ -147,6 +147,7 @@ export default {
         </view>
       </view>
 
+      <!-- #ifndef MP-ALIPAY -->
       <!-- vip信息介绍 -->
       <view class="tuniao-vip tn-flex-center-between">
         <view class="vip-info">
@@ -167,8 +168,12 @@ export default {
           立即加入
         </view>
       </view>
+      <!-- #endif -->
     </view>
+
     <view class="about-page__top--placeholder" />
+
+    <!-- #ifndef MP-ALIPAY -->
 
     <!-- 图鸟信息 -->
     <view class="tuniao-info tn-flex-center tn-white_bg">
@@ -206,6 +211,7 @@ export default {
         </TnButton>
       </view>
     </view>
+    <!-- #endif -->
 
     <!-- 项目信息 -->
     <view class="project-info tn-white_bg">
@@ -236,6 +242,7 @@ export default {
           </view>
         </view>
       </view>
+      <!-- #ifndef MP-ALIPAY -->
       <view class="item-container">
         <TnButton
           width="100%"
@@ -278,9 +285,11 @@ export default {
           </view>
         </TnButton>
       </view>
+      <!-- #endif -->
     </view>
 
     <!-- 友情链接 -->
+    <!-- #ifndef MP-ALIPAY -->
     <view class="friend-link">
       <view class="title-container tn-flex-center-between">
         <view class="title">友情链接</view>
@@ -307,6 +316,7 @@ export default {
         </TnScrollList>
       </view>
     </view>
+    <!-- #endif -->
   </view>
 </template>
 

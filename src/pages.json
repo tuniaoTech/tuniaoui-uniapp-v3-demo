@@ -425,6 +425,12 @@
           "style": {
             "navigationBarTitleText": "TnVerifyCodeInput验证码输入框"
           }
+        },
+        {
+          "path": "tn-comment-list/index",
+          "style": {
+            "navigationBarTitleText": "TnCommentList评论列表"
+          }
         }
       ]
     }
