@@ -23,6 +23,14 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.8': {
+    date: '2023-07-26',
+    data: [
+      '修复`TnTabbar`在元素少于5个时凸起按钮无法正常显示的问题',
+      '修复`TnDateTimePicker`和`TnRegionPicker`部分参数无效的问题',
+      '修复`TnWaterFall`在`calc`模式下数据会被清空的问题',
+    ],
+  },
   '1.0.7': {
     date: '2023-07-25',
     data: [
