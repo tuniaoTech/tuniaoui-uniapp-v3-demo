@@ -431,6 +431,12 @@
           "style": {
             "navigationBarTitleText": "TnCommentList评论列表"
           }
+        },
+        {
+          "path": "tn-cool-icon/index",
+          "style": {
+            "navigationBarTitleText": "TnCoolIcon酷炫图标"
+          }
         }
       ]
     }

@@ -1,0 +1,18 @@
+.cool-icon-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+  .cool-icon-item {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  & + .cool-icon-container {
+    margin-top: 60rpx;
+  }
+}

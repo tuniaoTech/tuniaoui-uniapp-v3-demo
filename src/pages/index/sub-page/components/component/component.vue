@@ -338,6 +338,12 @@ const pageData: PageContainerData = {
       path: 'tn-comment-list',
       url: '/plugin-demo/tn-comment-list/index',
     },
+    {
+      title: '酷炫图标',
+      icon: 'rocket',
+      path: 'tn-cool-icon',
+      url: '/plugin-demo/tn-cool-icon/index',
+    },
   ],
 }
 </script>
