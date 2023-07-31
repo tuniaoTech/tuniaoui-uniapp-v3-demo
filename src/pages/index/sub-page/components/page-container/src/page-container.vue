@@ -10,6 +10,7 @@ import type { PageContainerDataItem } from './page-container'
 type ListData = {
   title: string
   data: PageContainerDataItem[]
+  tips?: string
 }
 
 const props = defineProps(pageContainerProps)
@@ -25,7 +26,8 @@ watch(
     if (val) {
       listData.value = Object.entries(val).map(([key, value]) => ({
         title: key,
-        data: value,
+        data: value.data,
+        tips: value?.tips || '',
       }))
     }
   },
@@ -82,6 +84,9 @@ export default {
             size="xl"
             mode="subTitle"
           />
+        </view>
+        <view v-if="!!item.tips" class="list-tips tn-red_text">
+          {{ item.tips }}
         </view>
         <view class="content-container">
           <view

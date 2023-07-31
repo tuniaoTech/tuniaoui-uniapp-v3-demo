@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
-import TnGraphicCard from '@tuniao/tnui-vue3-uniapp/components/graphic-card/src/graphic-card.vue'
+import TnGraphicCard from 'tnuiv3p-tn-graphic-card/index.vue'
 import CustomPage from '@/components/custom-page/src/custom-page.vue'
 import DemoContainer from '@/components/demo-container/src/demo-container.vue'
 import SubDemoContainer from '@/components/demo-container/src/sub-demo-container.vue'

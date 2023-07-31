@@ -278,12 +278,6 @@
           }
         },
         {
-          "path": "component/graphic-card/index",
-          "style": {
-            "navigationBarTitleText": "GraphicCard图文卡片"
-          }
-        },
-        {
           "path": "component/keyboard/index",
           "style": {
             "navigationBarTitleText": "Keyboard软键盘"
@@ -436,6 +430,12 @@
           "path": "tn-cool-icon/index",
           "style": {
             "navigationBarTitleText": "TnCoolIcon酷炫图标"
+          }
+        },
+        {
+          "path": "tn-graphic-card/index",
+          "style": {
+            "navigationBarTitleText": "GraphicCard图文卡片"
           }
         }
       ]

@@ -10,7 +10,13 @@ export interface PageContainerDataItem {
   icon: string
 }
 
-export type PageContainerData = Record<string, PageContainerDataItem[]>
+export type PageContainerData = Record<
+  string,
+  {
+    data: PageContainerDataItem[]
+    tips?: string
+  }
+>
 
 export const pageContainerProps = buildProps({
   /**
