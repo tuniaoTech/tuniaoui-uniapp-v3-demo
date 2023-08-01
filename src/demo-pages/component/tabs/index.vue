@@ -170,6 +170,19 @@ const interceptSwitchEvent = (index: number) => {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="激活后不加粗字体">
+      <view class="tabs-container">
+        <view class="tabs-item">
+          <TnTabs :active-bold="false">
+            <TnTabsItem
+              v-for="(item, index) in tabsData"
+              :key="index"
+              :title="item.text"
+            />
+          </TnTabs>
+        </view>
+      </view>
+    </DemoContainer>
     <DemoContainer title="设置角标">
       <view class="tabs-container">
         <view class="tabs-item">
