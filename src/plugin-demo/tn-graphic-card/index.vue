@@ -50,7 +50,63 @@ const graphicCardData = {
   <CustomPage title="图文卡片" padding="0" :is-h5-demo-page="isDemoH5Page">
     <view class="tn-mt" />
     <DemoContainer title="基础使用" title-padding>
-      <view class="graphic-card-container">
+      <view class="graphic-card-container tn-gray-light_bg">
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            :description="graphicCardData.description"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images.slice(0, 1)"
+            :view-count="graphicCardData.viewCount"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+            :view-user-avatars="graphicCardData.viewUserAvatars"
+          />
+        </view>
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            :description="graphicCardData.description"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images.slice(0, 2)"
+            :view-count="graphicCardData.viewCount"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+            :view-user-avatars="graphicCardData.viewUserAvatars"
+          />
+        </view>
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            :description="graphicCardData.description"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images.slice(0, 3)"
+            :view-count="graphicCardData.viewCount"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+            :view-user-avatars="graphicCardData.viewUserAvatars"
+          />
+        </view>
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            :description="graphicCardData.description"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images.slice(0, 4)"
+            :view-count="graphicCardData.viewCount"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+            :view-user-avatars="graphicCardData.viewUserAvatars"
+          />
+        </view>
         <view class="graphic-card-item">
           <TnGraphicCard
             :avatar="graphicCardData.avatar"
@@ -228,6 +284,28 @@ const graphicCardData = {
             :like-count="graphicCardData.likeCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
+        </view>
+      </view>
+    </DemoContainer>
+    <DemoContainer title="自定义顶部右侧操作区域内容" title-padding>
+      <view class="graphic-card-container">
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            :description="graphicCardData.description"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images"
+            :view-count="graphicCardData.viewCount"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+            :view-user-avatars="graphicCardData.viewUserAvatars"
+          >
+            <template #briefOperation>
+              <view class="custom-brief-operation">关注</view>
+            </template>
+          </TnGraphicCard>
         </view>
       </view>
     </DemoContainer>

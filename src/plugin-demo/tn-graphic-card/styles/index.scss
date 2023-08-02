@@ -9,5 +9,13 @@
     & + .graphic-card-item {
       margin-top: 30rpx;
     }
+
+    .custom-brief-operation {
+      background-color: var(--tn-color-red-light);
+      color: var(--tn-color-red);
+      line-height: 1;
+      padding: 12rpx 20rpx;
+      border-radius: 100rpx;
+    }
   }
 }

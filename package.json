@@ -58,7 +58,7 @@
     "@tuniao/tnui-vue3-uniapp": "1.0.9-beta.10",
     "tnuiv3p-tn-comment-list": "^1.0.2",
     "tnuiv3p-tn-cool-icon": "^1.0.0",
-    "tnuiv3p-tn-graphic-card": "^1.0.0",
+    "tnuiv3p-tn-graphic-card": "^1.0.1",
     "tnuiv3p-tn-sign-board": "^1.0.1",
     "tnuiv3p-tn-time-line": "1.0.3",
     "tnuiv3p-tn-verify-code-input": "1.0.1",
