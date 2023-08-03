@@ -50,6 +50,13 @@ const verifyCodeCompleteHandle = () => {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="隐藏输入值">
+      <view class="verify-code-input-container">
+        <view class="verify-code-input-item tn-flex-center">
+          <TnVerifyCodeInput :focus="false" password />
+        </view>
+      </view>
+    </DemoContainer>
     <DemoContainer title="设置验证码提示框大小">
       <view class="verify-code-input-container">
         <view class="verify-code-input-item tn-flex-center">
