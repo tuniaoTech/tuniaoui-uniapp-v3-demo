@@ -360,6 +360,12 @@ const pageData: PageContainerData = {
         path: 'tn-graphic-card',
         url: '/plugin-demo/tn-graphic-card/index',
       },
+      {
+        title: '下拉框',
+        icon: 'rocket',
+        path: 'tn-dropdown',
+        url: '/plugin-demo/tn-dropdown/index',
+      },
     ],
   },
 }

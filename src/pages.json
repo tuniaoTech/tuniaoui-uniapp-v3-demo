@@ -437,6 +437,12 @@
           "style": {
             "navigationBarTitleText": "GraphicCard图文卡片"
           }
+        },
+        {
+          "path": "tn-dropdown/index",
+          "style": {
+            "navigationBarTitleText": "Dropdown下拉框"
+          }
         }
       ]
     }
