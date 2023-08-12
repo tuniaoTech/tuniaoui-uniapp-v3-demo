@@ -22,10 +22,20 @@ const currentTabbarIndex = ref<number>(0)
 // 普通菜单数据
 const normalTabbarData = [
   { text: '基础', icon: 'assign', activeIcon: 'assign-fill' },
-  { text: '组件', icon: 'menu-more', activeIcon: 'menu-more-fill' },
+  {
+    text: '组件',
+    icon: 'menu-more',
+    activeIcon: 'menu-more-fill',
+    badge: '99+',
+  },
   { text: 'vip', icon: 'vip', activeIcon: 'vip-fill' },
   { text: '模板', icon: 'menu-match', activeIcon: 'menu-match-fill' },
-  { text: '图鸟', icon: 'logo-tuniao', activeIcon: 'logo-tuniao' },
+  {
+    text: '图鸟',
+    icon: 'logo-tuniao',
+    activeIcon: 'logo-tuniao',
+    badge: 'new',
+  },
 ]
 
 // 多彩菜单数据
@@ -217,6 +227,10 @@ const interceptTabbarSwitch = (index: number) => {
               :text="item.text"
               :icon="item.icon"
               :active-icon="item.activeIcon"
+              :badge="item?.badge || ''"
+              :badge-config="{
+                dot: index === 4,
+              }"
             />
           </TnTabbar>
         </view>
