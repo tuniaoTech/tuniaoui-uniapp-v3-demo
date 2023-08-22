@@ -366,6 +366,12 @@ const pageData: PageContainerData = {
         path: 'tn-dropdown',
         url: '/plugin-demo/tn-dropdown/index',
       },
+      {
+        title: '标签选择',
+        icon: 'rocket',
+        path: 'tn-select-tags',
+        url: '/plugin-demo/tn-select-tags/index',
+      },
     ],
   },
 }

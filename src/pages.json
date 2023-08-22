@@ -443,6 +443,12 @@
           "style": {
             "navigationBarTitleText": "Dropdown下拉框"
           }
+        },
+        {
+          "path": "tn-select-tags/index",
+          "style": {
+            "navigationBarTitleText": "SelectTags标签选择"
+          }
         }
       ]
     }
