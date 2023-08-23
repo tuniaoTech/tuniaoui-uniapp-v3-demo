@@ -137,6 +137,16 @@ const openPicker = () => {
           text-align="center"
         />
       </SubDemoContainer>
+      <SubDemoContainer title="显示字数统计">
+        <TnInput
+          type="textarea"
+          placeholder="请输入评论内容"
+          height="250"
+          :maxlength="200"
+          clearable
+          show-word-limit
+        />
+      </SubDemoContainer>
     </DemoContainer>
     <DemoContainer title="密码输入框">
       <SubDemoContainer title="基本使用">

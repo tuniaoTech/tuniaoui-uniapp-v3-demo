@@ -42,6 +42,13 @@ const showDateTimeDateTimePicker = ref(false)
 const openDateTimeDateTimePicker = () => {
   showDateTimeDateTimePicker.value = true
 }
+
+// 选择格式化后日期时间
+const formatDateTimeDateTimePickerValue = ref('')
+const showFormatDateTimeDateTimePicker = ref(false)
+const openFormatDateTimeDateTimePicker = () => {
+  showFormatDateTimeDateTimePicker.value = true
+}
 </script>
 
 <template>
@@ -126,6 +133,26 @@ const openDateTimeDateTimePicker = () => {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="选择格式化日期时间">
+      <view class="date-time-picker-container">
+        <view class="date-time-picker-item">
+          当前选中的日期时间:
+          <text class="tn-gray_text">
+            {{ formatDateTimeDateTimePickerValue }}
+          </text>
+        </view>
+        <view class="date-time-picker-item">
+          <TnButton
+            size="lg"
+            bg-color="gradient-bg__cool-6"
+            text-color="tn-white"
+            @click="openFormatDateTimeDateTimePicker"
+          >
+            打开选择器
+          </TnButton>
+        </view>
+      </view>
+    </DemoContainer>
     <view class="fit-height" />
   </CustomPage>
 
@@ -163,6 +190,16 @@ const openDateTimeDateTimePicker = () => {
     mode="datetime"
     min-time="2020/10/02 12:40:20"
     max-time="2023/12/02 10:30:10"
+  />
+
+  <!-- 选择格式化日期时间选择器 -->
+  <TnDateTimePicker
+    v-model="formatDateTimeDateTimePickerValue"
+    v-model:open="showFormatDateTimeDateTimePicker"
+    mode="datetime"
+    min-time="2020-10-02 12:40"
+    max-time="2023-12-02 10:30"
+    format="YYYY-MM-DD HH:mm"
   />
 </template>
 

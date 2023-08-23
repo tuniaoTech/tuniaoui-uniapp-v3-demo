@@ -23,6 +23,41 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.11': {
+    date: '2023-08-23',
+    data: [
+      '修复`TnFormItem`在没有`label`是会报错的问题',
+      '修复`TnTabbarItem`的`bulge-bg-color`属性无效的问题',
+      '修复`TnDateTimePicker`动态修改最小最大时间后picker数据没有发生改变的问题',
+      '`TnTabbarItem`新增`name`属性可以设置唯一标识',
+      '`TnTabbarItem`新增`badge`和`badge-config`属性设置和配置角标',
+      '`TnTabsItem`新增`name`属性可以设置唯一标识',
+      '`TnImageUpload`新增`upload`方法用于手动上传图片',
+      '`TnButton`新增`only-button`参数设置按钮为纯按钮，不外加任何样式',
+      '`TnDateTimePicker`新增`format`参数格式化回显的日期时间',
+      '`TnDateTimePicker`新增`init-current-date-time`参数是否在初始化时为空时设置为当前时间',
+      '`TnInput`新增`show-word-limit`和`word-limit-color`属性显示字数统计以及设置字数统计颜色',
+      '`TnPicker`、`TnDateTimePicker`、`TnRegionPicker`组件取消之后不会自动恢复到上一次的位置',
+      '优化`TnNoticeBar`样式',
+    ],
+  },
+  '1.0.9': {
+    date: '2023-08-03',
+    data: [
+      '修复在部份情况下组件会编译到全局目录下的问题',
+      '修复`TnPicker`点击取消后值依旧发生改变的问题',
+      '修复`TnTabbar`无法设置图标大小的问题',
+      '修复`TnAvatarGroup`下的`TnAvatar`初始化失败的问题',
+      '修复`TnButton` `border-color`无法设置为内置颜色外的其他颜色的问题',
+      '修复`TnButton` `border-bold`无效的问题',
+      '`TnPicker` `change`和`confirm`事件新增返回传递的数据',
+      '`TnRegionPicker` `change`和`confirm`事件新增返回具体地区的数据',
+      '`TnSwiper`新增`previous-margin`和`next-margin`属性',
+      '`TnTabs`新增`active-bold`参数设置激活时是否加粗字体',
+      '优化`TnPopup`弹出/隐藏动画',
+      '删除`TnGraphicCard`组件，以第三方组件的形式提供',
+    ],
+  },
   '1.0.8': {
     date: '2023-07-26',
     data: [
