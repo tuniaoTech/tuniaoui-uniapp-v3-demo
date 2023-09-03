@@ -54,32 +54,32 @@ dependencies:
     specifier: ^1.0.19
     version: 1.0.19
   '@tuniao/tnui-vue3-uniapp':
-    specifier: 1.0.12-beta.5
-    version: 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+    specifier: 1.0.12-beta.6
+    version: 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
   tnuiv3p-tn-comment-list:
     specifier: ^1.0.2
-    version: 1.0.2(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.2(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-cool-icon:
     specifier: ^1.0.0
-    version: 1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-dropdown:
     specifier: ^1.0.1
-    version: 1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-graphic-card:
-    specifier: ^1.0.1
-    version: 1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    specifier: ^1.0.8
+    version: 1.0.8(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-select-tags:
     specifier: ^1.0.4
-    version: 1.0.4(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.4(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-sign-board:
     specifier: ^1.0.1
-    version: 1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-time-line:
     specifier: 1.0.3
-    version: 1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-verify-code-input:
     specifier: 1.0.3
-    version: 1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    version: 1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   vue:
     specifier: ^3.2.47
     version: 3.2.47
@@ -3644,8 +3644,8 @@ packages:
     resolution: {integrity: sha512-n96Da8uUot3wIsVV/x5i9XhDCNHrTL/ZXjfoYFkliJ1wNXfVh7D0Muhx8FjE9trBQE8AtniX4kEc3YsKV2qzwQ==}
     dev: false
 
-  /@tuniao/tnui-vue3-uniapp@1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47):
-    resolution: {integrity: sha512-rxG87QZjNlQYNd8H+e3mNb/Y7k5jITFRa3TA71dSvMtQRRoQsgpQ/UGOLfbtZJCcL5fyVF3CMtbB2tHNlD/Ktw==}
+  /@tuniao/tnui-vue3-uniapp@1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47):
+    resolution: {integrity: sha512-dnR6df2Hq0SodJ4Bt9eQAoQcUgSH+KRi7TH67s/xK2futl74JrtEmxwDCGGYWgmt56+MNXilETuucN64sam+Pw==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17
@@ -8388,7 +8388,7 @@ packages:
     resolution: {integrity: sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==}
     dev: true
 
-  /tnuiv3p-tn-comment-list@1.0.2(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-comment-list@1.0.2(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-9wnTUgpQOHvztL5w3LrTVJtpymO+35ORZ+7R16Gu61CQH0xqhjfi2zyI7OS2XNt4vxan1AjYuzOgAPSngWnbYQ==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8400,13 +8400,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-cool-icon@1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-cool-icon@1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-EeMZRc464+BJYEXCULaNd3gDDMaLl9NU3KuIMP7dyqjfDJbjv1PF/sCFMAUx7wpwdYVJSAUZ0Pzrbt1CTFBU0A==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8418,13 +8418,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-dropdown@1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-dropdown@1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-b3wMGzJPShNpXSGh9byTDuRUhh0CA37lqGOVSchJ6UgUSHz6U+7SjnBknMRiqhv7/qN77wn/skP5nfjZ9G4YwQ==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8436,14 +8436,14 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-graphic-card@1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
-    resolution: {integrity: sha512-jTZAb6krbLgR+56J14dwEPmIpt6LBZgdxYqzmjxIds1PTTpPrCHhZ6CwR59MCsPIIFivMbWJOVSZ9VZMS5tImA==}
+  /tnuiv3p-tn-graphic-card@1.0.8(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+    resolution: {integrity: sha512-XtzykMJijMTzz4A/1pLP6VmOVadj7qiKH00gfFffxfT3eD68C5horAMwTugkDf4fs3Yv5+0GD2f6AFa+TMUfJA==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17
@@ -8454,13 +8454,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-select-tags@1.0.4(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-select-tags@1.0.4(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-0NyAElIUlfXvB1lQ7WzlEF28FuE0l9+Stydo5GbxXl4VKXr6S+pbuiySEeftfw27MzXTfiWqmlsY9yNo8gq44A==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8472,13 +8472,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-sign-board@1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-sign-board@1.0.1(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-RX/oRRSU/DHDlewRHGGQ5cogAL9IClcCo+4hosrtOzLFzAJnTkvieUgUezufqXb7WHskXuincMpORRqNGtobQg==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8490,13 +8490,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-time-line@1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-time-line@1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-A9VRKRxejN0Ww0Fo2FZKQpdr5ZW+PxipYtqVJDRPq9zvaFlGJUV7pNgVnlMCMq2GGetzzeLn6Il8cpfK8ZG0pg==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8508,13 +8508,13 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-verify-code-input@1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.5)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+  /tnuiv3p-tn-verify-code-input@1.0.3(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.12-beta.6)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-0pjT8jC0rBucxuPW1ZQ93VviBPdCQulWlbPUtuF4Ul/0pMhCS6KYfNcX7QO1THfWS4nWBcQPBuujptoMDqTGMw==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -8526,7 +8526,7 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.5.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.5(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      '@tuniao/tnui-vue3-uniapp': 1.0.12-beta.6(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
       sass: 1.62.1
       typescript: 5.1.6
       vue: 3.2.47
