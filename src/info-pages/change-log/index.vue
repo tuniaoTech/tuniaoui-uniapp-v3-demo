@@ -23,6 +23,23 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.13': {
+    date: '2023-09-13',
+    data: [
+      '修复`TnPopup`在结合部份组件一起使用的时候会闪烁的问题',
+      '修复`TnPopup`在初始化时为`true`时无法弹出弹框的问题',
+      '`TnWaterFall`插槽返回值中新增`index`属性返回当前元素的索引',
+      '`TnNavbar`新增`right-operation-width`参数设置右边操作区域的宽度，配合`right`插槽实现自定义右边显示的内容',
+      '`TnTabs`、`TnTabsItem`新增`active-font-size``参数设置激活时的字体大小',
+      '`TnButton`新增`getUserInfo`、`chooseAvatar`、`agreePrivacyAuthorization`的open-type类型支持',
+      '`TnNoticeBar`新增`left-icon-size`和`right-icon-size`参数设置左右图标的大小',
+      '`TnSwiper`新增`blank-count`参数创建空白swiper参数',
+      '优化`TnImageUpload`、`TnCheckBox`、`TnRadio`样式',
+      '优化`TnButton`样式',
+      '优化`TnAvatar`、`TnButton`组件的点击事件',
+      '优化`TnIndexList`数据类型',
+    ],
+  },
   '1.0.11': {
     date: '2023-08-23',
     data: [
