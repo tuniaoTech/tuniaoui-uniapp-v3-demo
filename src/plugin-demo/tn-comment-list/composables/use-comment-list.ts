@@ -125,6 +125,7 @@ export const useCommentList = () => {
       position: '广东',
       content: replyContent.value,
       allowDelete: true,
+      disabledReply: false,
     })
     openReplyPopup.value = false
     replyContent.value = ''

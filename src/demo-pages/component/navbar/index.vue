@@ -124,6 +124,38 @@ const interceptBackHomeEvent = () => {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="设置右边操作区域">
+      <view class="navbar-container">
+        <view class="navbar-item">
+          <TnNavbar :height="demoNavbarHeight" :z-index="demoNavbarZIndex">
+            <template #right>
+              <view class="right-operation">
+                <TnIcon name="location" />
+              </view>
+            </template>
+            图鸟UI
+          </TnNavbar>
+        </view>
+      </view>
+    </DemoContainer>
+    <DemoContainer title="设置右边操作区域 - 固定宽度">
+      <view class="navbar-container">
+        <view class="navbar-item">
+          <TnNavbar
+            :height="demoNavbarHeight"
+            :z-index="demoNavbarZIndex"
+            right-operation-width="100"
+          >
+            <template #right>
+              <view class="right-operation">
+                <TnIcon name="location" />
+              </view>
+            </template>
+            图鸟UI
+          </TnNavbar>
+        </view>
+      </view>
+    </DemoContainer>
     <DemoContainer title="修改导航栏颜色">
       <view class="navbar-container">
         <view class="navbar-item">
@@ -139,7 +171,7 @@ const interceptBackHomeEvent = () => {
       </view>
     </DemoContainer>
     <DemoContainer title="修改导航栏透明度">
-      <view class="navbar-container tn-type-primary_bg">
+      <view class="navbar-container">
         <view class="navbar-item">
           <TnNavbar
             :height="demoNavbarHeight"

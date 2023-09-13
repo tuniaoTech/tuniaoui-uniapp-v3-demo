@@ -309,6 +309,26 @@ const graphicCardData = {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="自定义底部右侧操作区域内容" title-padding>
+      <view class="graphic-card-container">
+        <view class="graphic-card-item">
+          <TnGraphicCard
+            :avatar="graphicCardData.avatar"
+            :title="graphicCardData.title"
+            description="广东 广州"
+            :tags="graphicCardData.tags"
+            :content="graphicCardData.content"
+            :images="graphicCardData.images"
+            :comment-count="graphicCardData.commentCount"
+            :like-count="graphicCardData.likeCount"
+          >
+            <template #bottomRight>
+              <view class="tn-gray_text"> 6分钟前 </view>
+            </template>
+          </TnGraphicCard>
+        </view>
+      </view>
+    </DemoContainer>
   </CustomPage>
 </template>
 
