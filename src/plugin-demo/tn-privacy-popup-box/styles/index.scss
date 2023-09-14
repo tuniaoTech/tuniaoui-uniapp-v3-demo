@@ -1,0 +1,13 @@
+.privacy-popup-box-container {
+  position: relative;
+  width: 100%;
+
+  .privacy-popup-box-item {
+    position: relative;
+    width: 100%;
+
+    & + .privacy-popup-box-item {
+      margin-top: 30rpx;
+    }
+  }
+}

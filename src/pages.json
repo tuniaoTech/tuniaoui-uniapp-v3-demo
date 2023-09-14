@@ -449,6 +449,12 @@
           "style": {
             "navigationBarTitleText": "SelectTags标签选择"
           }
+        },
+        {
+          "path": "tn-privacy-popup-box/index",
+          "style": {
+            "navigationBarTitleText": "PrivacyPopupBox隐私弹框"
+          }
         }
       ]
     }

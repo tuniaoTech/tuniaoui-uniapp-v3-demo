@@ -68,6 +68,9 @@ dependencies:
   tnuiv3p-tn-graphic-card:
     specifier: ^1.0.8
     version: 1.0.8(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.13)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+  tnuiv3p-tn-privacy-popup-box:
+    specifier: ^1.0.0
+    version: 1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.13)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-select-tags:
     specifier: ^1.0.4
     version: 1.0.4(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.13)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
@@ -8444,6 +8447,24 @@ packages:
 
   /tnuiv3p-tn-graphic-card@1.0.8(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.13)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
     resolution: {integrity: sha512-XtzykMJijMTzz4A/1pLP6VmOVadj7qiKH00gfFffxfT3eD68C5horAMwTugkDf4fs3Yv5+0GD2f6AFa+TMUfJA==}
+    peerDependencies:
+      '@tuniao/tn-icon': ^1.4.0
+      '@tuniao/tn-style': ^1.0.17
+      '@tuniao/tnui-vue3-uniapp': ^1.0.5
+      sass: ^1.61.0
+      typescript: ^5.1.6
+      vue: ^3.2.47
+    dependencies:
+      '@tuniao/tn-icon': 1.5.0
+      '@tuniao/tn-style': 1.0.19
+      '@tuniao/tnui-vue3-uniapp': 1.0.13(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.24)(sass@1.62.1)(typescript@5.1.6)(vite@4.0.3)(vue@3.2.47)
+      sass: 1.62.1
+      typescript: 5.1.6
+      vue: 3.2.47
+    dev: false
+
+  /tnuiv3p-tn-privacy-popup-box@1.0.0(@tuniao/tn-icon@1.5.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.13)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+    resolution: {integrity: sha512-ehm0uGafXf3cC4xf7JYiKjfjXR33qHa5kVaXbA049DJA+Daqy3renrriJsENhSHF4qphtH9WD39oK332J74Ycg==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17

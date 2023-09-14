@@ -372,6 +372,12 @@ const pageData: PageContainerData = {
         path: 'tn-select-tags',
         url: '/plugin-demo/tn-select-tags/index',
       },
+      {
+        title: '隐私弹框',
+        icon: 'rocket',
+        path: 'tn-privacy-popup-box',
+        url: '/plugin-demo/tn-privacy-popup-box/index',
+      },
     ],
   },
 }
