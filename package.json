@@ -63,6 +63,7 @@
     "tnuiv3p-tn-privacy-popup-box": "^1.0.0",
     "tnuiv3p-tn-select-tags": "^1.0.4",
     "tnuiv3p-tn-sign-board": "^1.0.1",
+    "tnuiv3p-tn-stack-swiper": "^1.0.1",
     "tnuiv3p-tn-time-line": "1.0.3",
     "tnuiv3p-tn-verify-code-input": "1.0.3",
     "vue": "^3.2.47",

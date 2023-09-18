@@ -1,0 +1,25 @@
+.stack-swiper-container {
+  position: relative;
+  width: 100%;
+
+  .stack-swiper-item {
+    position: relative;
+    width: 100%;
+    height: 400rpx;
+
+    & + .tn-sign-board-item {
+      margin-top: 30rpx;
+    }
+
+    &.vertical {
+      height: 800rpx;
+    }
+
+    .swiper-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 12rpx;
+    }
+  }
+}

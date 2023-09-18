@@ -378,6 +378,12 @@ const pageData: PageContainerData = {
         path: 'tn-privacy-popup-box',
         url: '/plugin-demo/tn-privacy-popup-box/index',
       },
+      {
+        title: '堆叠轮播',
+        icon: 'rocket',
+        path: 'tn-stack-swiper',
+        url: '/plugin-demo/tn-stack-swiper/index',
+      },
     ],
   },
 }

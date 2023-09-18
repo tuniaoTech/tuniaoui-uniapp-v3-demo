@@ -455,6 +455,12 @@
           "style": {
             "navigationBarTitleText": "PrivacyPopupBox隐私弹框"
           }
+        },
+        {
+          "path": "tn-stack-swiper/index",
+          "style": {
+            "navigationBarTitleText": "StackSwiper堆叠轮播"
+          }
         }
       ]
     }
