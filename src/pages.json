@@ -461,6 +461,12 @@
           "style": {
             "navigationBarTitleText": "StackSwiper堆叠轮播"
           }
+        },
+        {
+          "path": "tn-color-select/index",
+          "style": {
+            "navigationBarTitleText": "ColorSelect颜色选择器"
+          }
         }
       ]
     }

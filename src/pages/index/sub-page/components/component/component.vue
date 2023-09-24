@@ -384,6 +384,12 @@ const pageData: PageContainerData = {
         path: 'tn-stack-swiper',
         url: '/plugin-demo/tn-stack-swiper/index',
       },
+      {
+        title: '颜色选择器',
+        icon: 'rocket',
+        path: 'tn-color-select',
+        url: '/plugin-demo/tn-color-select/index',
+      },
     ],
   },
 }
