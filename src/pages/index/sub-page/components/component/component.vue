@@ -390,6 +390,12 @@ const pageData: PageContainerData = {
         path: 'tn-color-select',
         url: '/plugin-demo/tn-color-select/index',
       },
+      {
+        title: '图片裁剪框',
+        icon: 'rocket',
+        path: 'tn-image-crop',
+        url: '/plugin-demo/tn-image-crop/index',
+      },
     ],
   },
 }

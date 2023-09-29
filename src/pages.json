@@ -467,6 +467,12 @@
           "style": {
             "navigationBarTitleText": "ColorSelect颜色选择器"
           }
+        },
+        {
+          "path": "tn-image-crop/index",
+          "style": {
+            "navigationBarTitleText": "ImageCrop图片裁剪"
+          }
         }
       ]
     }
