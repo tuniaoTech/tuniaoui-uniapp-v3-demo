@@ -23,6 +23,15 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.14': {
+    date: '2023-10-07',
+    data: [
+      '修复`TnNavbar`无法初始化的问题',
+      '修复`TnWeekCalendar`动态修改`custom-data`后没有同步渲染的问题',
+      '修复无法识别`vw`和`vh`单位',
+      '优化`TnImageUpload`组件上传图片的进度样式',
+    ],
+  },
   '1.0.13': {
     date: '2023-09-13',
     data: [
