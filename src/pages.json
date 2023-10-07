@@ -449,6 +449,30 @@
           "style": {
             "navigationBarTitleText": "SelectTags标签选择"
           }
+        },
+        {
+          "path": "tn-privacy-popup-box/index",
+          "style": {
+            "navigationBarTitleText": "PrivacyPopupBox隐私弹框"
+          }
+        },
+        {
+          "path": "tn-stack-swiper/index",
+          "style": {
+            "navigationBarTitleText": "StackSwiper堆叠轮播"
+          }
+        },
+        {
+          "path": "tn-color-select/index",
+          "style": {
+            "navigationBarTitleText": "ColorSelect颜色选择器"
+          }
+        },
+        {
+          "path": "tn-image-crop/index",
+          "style": {
+            "navigationBarTitleText": "ImageCrop图片裁剪"
+          }
         }
       ]
     }

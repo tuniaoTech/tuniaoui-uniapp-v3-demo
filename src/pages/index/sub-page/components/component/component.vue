@@ -372,6 +372,30 @@ const pageData: PageContainerData = {
         path: 'tn-select-tags',
         url: '/plugin-demo/tn-select-tags/index',
       },
+      {
+        title: '隐私弹框',
+        icon: 'rocket',
+        path: 'tn-privacy-popup-box',
+        url: '/plugin-demo/tn-privacy-popup-box/index',
+      },
+      {
+        title: '堆叠轮播',
+        icon: 'rocket',
+        path: 'tn-stack-swiper',
+        url: '/plugin-demo/tn-stack-swiper/index',
+      },
+      {
+        title: '颜色选择器',
+        icon: 'rocket',
+        path: 'tn-color-select',
+        url: '/plugin-demo/tn-color-select/index',
+      },
+      {
+        title: '图片裁剪框',
+        icon: 'rocket',
+        path: 'tn-image-crop',
+        url: '/plugin-demo/tn-image-crop/index',
+      },
     ],
   },
 }

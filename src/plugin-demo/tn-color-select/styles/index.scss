@@ -1,0 +1,24 @@
+.tn-color-select-container {
+  position: relative;
+  width: 100%;
+
+  .tn-color-select-item {
+    position: relative;
+    width: 100%;
+
+    & + .tn-color-select-item {
+      margin-top: 30rpx;
+    }
+
+    &.multi {
+      display: flex;
+      align-items: center;
+
+      .select {
+        & + .select {
+          margin-left: 30rpx;
+        }
+      }
+    }
+  }
+}
