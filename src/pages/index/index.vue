@@ -54,7 +54,7 @@ const onTabbarChange = (index: string | number) => {
 const pageStatus = ref(Array.from({ length: tabbarData.length }, () => false))
 
 // 当前选中的子页面的索引
-const currentTabbarIndex = ref<number>(0)
+const currentTabbarIndex = ref<number>(-1)
 
 // pageContainer的样式
 const pageContainerStyle = computed<(index: number) => CSSProperties>(() => {
