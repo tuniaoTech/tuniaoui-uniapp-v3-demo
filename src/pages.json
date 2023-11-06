@@ -473,6 +473,12 @@
           "style": {
             "navigationBarTitleText": "ImageCrop图片裁剪"
           }
+        },
+        {
+          "path": "tn-suspend-button/index",
+          "style": {
+            "navigationBarTitleText": "SuspendButton悬浮按钮"
+          }
         }
       ]
     }

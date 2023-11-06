@@ -396,6 +396,12 @@ const pageData: PageContainerData = {
         path: 'tn-image-crop',
         url: '/plugin-demo/tn-image-crop/index',
       },
+      {
+        title: '悬浮按钮',
+        icon: 'rocket',
+        path: 'tn-suspend-button',
+        url: '/plugin-demo/tn-suspend-button/index',
+      },
     ],
   },
 }

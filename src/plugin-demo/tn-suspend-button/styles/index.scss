@@ -1,0 +1,15 @@
+.suspend-button-container {
+  position: relative;
+  width: 100%;
+
+  .suspend-button-item {
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+
+    .custom-text {
+      font-size: 54rpx;
+      line-height: 1;
+    }
+  }
+}
