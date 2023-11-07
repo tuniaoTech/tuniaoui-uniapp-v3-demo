@@ -402,6 +402,12 @@ const pageData: PageContainerData = {
         path: 'tn-suspend-button',
         url: '/plugin-demo/tn-suspend-button/index',
       },
+      {
+        title: '幻灯片',
+        icon: 'rocket',
+        path: 'tn-slideshow',
+        url: '/plugin-demo/tn-slideshow/index',
+      },
     ],
   },
 }

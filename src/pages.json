@@ -479,6 +479,12 @@
           "style": {
             "navigationBarTitleText": "SuspendButton悬浮按钮"
           }
+        },
+        {
+          "path": "tn-slideshow/index",
+          "style": {
+            "navigationBarTitleText": "SlideShow幻灯片"
+          }
         }
       ]
     }
