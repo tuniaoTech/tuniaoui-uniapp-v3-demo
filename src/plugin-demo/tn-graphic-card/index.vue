@@ -29,7 +29,8 @@ const graphicCardData = {
     'https://resource.tuniaokj.com/images/album/xiong2.jpg',
     'https://resource.tuniaokj.com/images/album/xiong3.jpg',
   ],
-  viewCount: 999,
+  hotCount: 999,
+  viewCount: 245,
   commentCount: 99,
   likeCount: 888,
   viewUserAvatars: [
@@ -59,9 +60,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images.slice(0, 1)"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
@@ -73,9 +75,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images.slice(0, 2)"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
@@ -87,9 +90,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images.slice(0, 3)"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
@@ -101,9 +105,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images.slice(0, 4)"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
@@ -115,18 +120,19 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
       </view>
     </DemoContainer>
-    <DemoContainer title="控制查看、评论、点赞的显示状态" title-padding>
+    <DemoContainer title="控制热度、评论、点赞的显示状态" title-padding>
       <view class="graphic-card-container">
         <view class="graphic-card-item">
-          <SubDemoContainer title="只显示查看数据">
+          <SubDemoContainer title="只显示热度数据">
             <TnGraphicCard
               :avatar="graphicCardData.avatar"
               :title="graphicCardData.title"
@@ -134,9 +140,10 @@ const graphicCardData = {
               :tags="graphicCardData.tags"
               :content="graphicCardData.content"
               :images="graphicCardData.images"
-              :view-count="graphicCardData.viewCount"
+              :hot-count="graphicCardData.hotCount"
               :show-comment="false"
               :show-like="false"
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
@@ -151,8 +158,9 @@ const graphicCardData = {
               :content="graphicCardData.content"
               :images="graphicCardData.images"
               :comment-count="graphicCardData.commentCount"
-              :show-view="false"
+              :show-hot="false"
               :show-like="false"
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
@@ -167,18 +175,19 @@ const graphicCardData = {
               :content="graphicCardData.content"
               :images="graphicCardData.images"
               :like-count="graphicCardData.likeCount"
-              :show-view="false"
+              :show-hot="false"
               :show-comment="false"
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
         </view>
       </view>
     </DemoContainer>
-    <DemoContainer title="设置查看、评论、点赞的激活状态" title-padding>
+    <DemoContainer title="设置热度、评论、点赞的激活状态" title-padding>
       <view class="graphic-card-container">
         <view class="graphic-card-item">
-          <SubDemoContainer title="激活查看">
+          <SubDemoContainer title="激活热度">
             <TnGraphicCard
               :avatar="graphicCardData.avatar"
               :title="graphicCardData.title"
@@ -186,10 +195,11 @@ const graphicCardData = {
               :tags="graphicCardData.tags"
               :content="graphicCardData.content"
               :images="graphicCardData.images"
-              :view-count="graphicCardData.viewCount"
+              :hot-count="graphicCardData.hotCount"
               :comment-count="graphicCardData.commentCount"
               :like-count="graphicCardData.likeCount"
-              active-view
+              active-hot
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
@@ -203,10 +213,11 @@ const graphicCardData = {
               :tags="graphicCardData.tags"
               :content="graphicCardData.content"
               :images="graphicCardData.images"
-              :view-count="graphicCardData.viewCount"
+              :hot-count="graphicCardData.hotCount"
               :comment-count="graphicCardData.commentCount"
               :like-count="graphicCardData.likeCount"
               active-comment
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
@@ -220,10 +231,11 @@ const graphicCardData = {
               :tags="graphicCardData.tags"
               :content="graphicCardData.content"
               :images="graphicCardData.images"
-              :view-count="graphicCardData.viewCount"
+              :hot-count="graphicCardData.hotCount"
               :comment-count="graphicCardData.commentCount"
               :like-count="graphicCardData.likeCount"
               active-like
+              :view-count="graphicCardData.viewCount"
               :view-user-avatars="graphicCardData.viewUserAvatars"
             />
           </SubDemoContainer>
@@ -240,10 +252,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
-            :show-view-user="false"
+            :show-hot-user="false"
           />
         </view>
       </view>
@@ -258,9 +270,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
             :max-view-user-avatar-count="6"
           />
@@ -279,9 +292,10 @@ const graphicCardData = {
             tag-text-color="tn-white"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           />
         </view>
@@ -297,9 +311,10 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
-            :view-count="graphicCardData.viewCount"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
+            :view-count="graphicCardData.viewCount"
             :view-user-avatars="graphicCardData.viewUserAvatars"
           >
             <template #briefOperation>
@@ -319,6 +334,7 @@ const graphicCardData = {
             :tags="graphicCardData.tags"
             :content="graphicCardData.content"
             :images="graphicCardData.images"
+            :hot-count="graphicCardData.hotCount"
             :comment-count="graphicCardData.commentCount"
             :like-count="graphicCardData.likeCount"
           >

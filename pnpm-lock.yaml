@@ -69,8 +69,8 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-graphic-card:
-    specifier: ^1.0.12
-    version: 1.0.12(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
+    specifier: ^1.0.15
+    version: 1.0.15(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
   tnuiv3p-tn-image-crop:
     specifier: ^1.0.5
     version: 1.0.5(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47)
@@ -8478,8 +8478,8 @@ packages:
       vue: 3.2.47
     dev: false
 
-  /tnuiv3p-tn-graphic-card@1.0.12(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
-    resolution: {integrity: sha512-fdOq5gPFWUjh5rEM668fWBTt2rcvQaIEl08W5VFaPFtb89yrQ2PN2GudHwJkcI7465NZ4RJt3bLt+cJcaqLf8Q==}
+  /tnuiv3p-tn-graphic-card@1.0.15(@tuniao/tn-icon@1.6.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.15)(sass@1.62.1)(typescript@5.1.6)(vue@3.2.47):
+    resolution: {integrity: sha512-6v5lVNawveNpNhEIVTp/FfF5syY7AwjKgvQuALGUh37o6aD2xOTtjql5xkFU0EnXUbbXmM1ceJ8aANqG+y8NbA==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17
