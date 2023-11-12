@@ -408,6 +408,12 @@ const pageData: PageContainerData = {
         path: 'tn-slideshow',
         url: '/plugin-demo/tn-slideshow/index',
       },
+      {
+        title: '用户信息弹框',
+        icon: 'rocket',
+        path: 'tn-update-user-info-popup',
+        url: '/plugin-demo/tn-update-user-info-popup/index',
+      },
     ],
   },
 }

@@ -485,6 +485,12 @@
           "style": {
             "navigationBarTitleText": "SlideShow幻灯片"
           }
+        },
+        {
+          "path": "tn-update-user-info-popup/index",
+          "style": {
+            "navigationBarTitleText": "UpdateUserInfoPopup用户信息更新弹框"
+          }
         }
       ]
     }

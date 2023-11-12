@@ -1,0 +1,26 @@
+.update-user-info-container {
+  position: relative;
+  width: 100%;
+
+  .update-user-info-item {
+    position: relative;
+    width: 100%;
+
+    .user-info {
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      .avatar {
+        position: relative;
+        width: 110rpx;
+        height: 110rpx;
+        border-radius: 50%;
+      }
+      .nickname {
+        margin-left: 24rpx;
+        margin-top: 12rpx;
+      }
+    }
+  }
+}
