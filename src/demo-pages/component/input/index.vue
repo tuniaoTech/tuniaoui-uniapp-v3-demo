@@ -76,6 +76,20 @@ const openPicker = () => {
         </view>
       </view>
     </DemoContainer>
+    <DemoContainer title="显示下划线输入框">
+      <view class="input-container">
+        <view class="input-item">
+          <TnInput placeholder="请输入需要搜索的内容" underline />
+        </view>
+        <view class="input-item">
+          <TnInput
+            placeholder="请输入需要搜索的内容"
+            underline
+            border-color="tn-grey"
+          />
+        </view>
+      </view>
+    </DemoContainer>
     <DemoContainer title="对齐方式">
       <view class="input-container">
         <view class="input-item">
@@ -125,6 +139,15 @@ const openPicker = () => {
           placeholder="请输入评论内容"
           height="250"
           clearable
+        />
+      </SubDemoContainer>
+      <SubDemoContainer title="设置为换行按钮">
+        <TnInput
+          type="textarea"
+          placeholder="请输入评论内容"
+          height="250"
+          clearable
+          confirm-type=""
         />
       </SubDemoContainer>
       <SubDemoContainer title="设置尺寸">

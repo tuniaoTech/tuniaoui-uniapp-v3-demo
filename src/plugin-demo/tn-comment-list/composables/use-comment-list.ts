@@ -23,7 +23,7 @@ export const useCommentList = () => {
   const commentData = ref<TnCommentListData>([])
 
   const avatarList = Array.from({ length: 20 }).map(
-    (_, i) => `https://tnuiimage.tnkjapp.com/avatar/normal/${i + 1}.png`
+    (_, i) => `https://resource.tuniaokj.com/images/avatar/default/${i + 1}.png`
   )
   // 获取随机头像
   const getRandomAvatar = () => {

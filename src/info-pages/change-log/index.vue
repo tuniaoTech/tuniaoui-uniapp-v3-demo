@@ -23,6 +23,46 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.19': {
+    date: '2024-01-16[node版本]',
+    data: [
+      '修复`TnInput`在`select`模式下`H5`端无法点击的问题',
+      '修复`TnInput`在`textarea`模式下无法换行的问题',
+      '修复`TnInput`在`number`模式下手动删除数据会出现`NaN`的问题',
+      '修复`TnTabbar`无法初始化选择`TabbarItem`的问题',
+      '修复`TnInput`在`textarea`模式下初始化值的时候无法统计字数的问题',
+      '修复`TnPopup`初始化时会触发`close`和`open`方法的问题',
+      '`TnDateTimePicker` `mode`新增`datetimeNoSecond`和`timeNoSecond`模式',
+      '`TnButton`新增`click-modifiers`参数设置点击事件的修饰符',
+      '`TnInput`新增`underline`参数',
+    ],
+  },
+  '1.0.17': {
+    date: '2023-12-28',
+    data: [
+      '修复`TnTabs`设置`active-font-size`无效的问题',
+      '修复`TnPicker`不选择后直接点击确认会报错的问题',
+      '修复`TnCountDown`无法动态修改倒计时的问题',
+      '`TnButton`新增`getRealtimePhoneNumber`type类型',
+      '`TnButton`新增`phoneNumberNoQuotaToast`参数',
+      '`TnButton`新增`getrealtimephonenumber`事件',
+      '`TnButton`新增`contact`事件',
+    ],
+  },
+  '1.0.16': {
+    date: '2023-11-13',
+    data: [
+      '修复`TnTabs`组件修改了尺寸后滑块位置不正确的问题',
+      '修复`TnCalendar`在APP下切换年份后月份切换会失败的问题',
+      '修复`TnLazyLoad`无法显示加载中的问题',
+      '修复`TnPicker`value值为0时无法正常显示的问题',
+      '修复`TnNotify`修改颜色失败的问题',
+      '修复`TnTabs`在支付宝小程序端出错的问题',
+      '优化`TnTabbar`突起按钮的样式',
+      '优化`TnSwiper`样式',
+      '优化`TnPicker`返回的原始数据',
+    ],
+  },
   '1.0.15': {
     date: '2023-10-30',
     data: [
