@@ -23,7 +23,7 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
-  '1.0.19': {
+  '1.0.20': {
     date: '2024-01-16[node版本]',
     data: [
       '修复`TnInput`在`select`模式下`H5`端无法点击的问题',
