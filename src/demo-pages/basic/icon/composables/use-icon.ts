@@ -39,9 +39,9 @@ export const useIcon = () => {
   const filterResponseData = ref<ResponseIconData[]>([])
 
   // 导航栏数据
-  const tabsData = computed<string[]>(() =>
-    filterResponseData.value.map((item) => item.title)
-  )
+  const tabsData = computed<string[]>(() => {
+    return filterResponseData.value.map((item) => item.name)
+  })
 
   // 当前选中的tabsIndex
   const currentTabsIndex = ref(0)

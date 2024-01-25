@@ -78,7 +78,7 @@ const {
           <view class="title-icon">
             <TnIcon name="font" />
           </view>
-          <view class="title-value">{{ item.title }}</view>
+          <view class="title-value">{{ item.name }}</view>
           <view class="title-icon">
             <TnIcon name="font" />
           </view>
