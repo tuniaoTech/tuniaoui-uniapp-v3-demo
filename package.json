@@ -55,7 +55,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3081120230719001",
     "@tuniao/tn-icon": "^1.8.0",
     "@tuniao/tn-style": "^1.0.19",
-    "@tuniao/tnui-vue3-uniapp": "1.0.20",
+    "@tuniao/tnui-vue3-uniapp": "1.0.21",
     "tnuiv3p-tn-color-select": "^1.0.2",
     "tnuiv3p-tn-comment-list": "^1.0.8",
     "tnuiv3p-tn-cool-icon": "^1.0.0",

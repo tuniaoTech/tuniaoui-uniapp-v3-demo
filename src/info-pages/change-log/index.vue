@@ -23,6 +23,16 @@ type ChangeLog = {
 }
 
 const changeLog: ChangeLog = {
+  '1.0.21': {
+    date: '2024-07-18',
+    data: [
+      '修复`TnInput`在部分环境下无法使用的问题',
+      '修复`TnPicker`在没有选中任何值得情况下多列无法选中得问题',
+      '修复`TnPicker`在多列选择时初始化值为字符串下选中不正确的问题',
+      '`TnActionSheer`新增`maskClosable`参数设置点击遮罩是否关闭',
+      '`TnPopup`新增`overlay-click`遮罩点击事件',
+    ],
+  },
   '1.0.20': {
     date: '2024-01-16[node版本]',
     data: [

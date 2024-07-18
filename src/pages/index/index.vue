@@ -17,6 +17,8 @@ import type { IndexSubPageContext } from '@/tokens'
 import { useWxShare } from '@/hooks'
 import { indexPageContextKey } from '@/tokens'
 
+import { navMiniProgram } from '@/utils'
+
 // 微信分享
 onShareAppMessage(() => ({}))
 onShareTimeline(() => ({}))
@@ -40,6 +42,10 @@ const tabbarData = [
 ]
 // 导航切换事件
 const onTabbarChange = (index: string | number) => {
+  if (index === 2) {
+    navMiniProgram('wxa698b1eee960632f', 'pages/index/index')
+    return
+  }
   if (!pageStatus.value?.[index as number]) {
     pageStatus.value[index as number] = true
     nextTick(() => {

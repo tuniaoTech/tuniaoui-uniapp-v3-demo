@@ -31,7 +31,7 @@ const userInfo = reactive({
   avatarUrl: '',
 })
 
-const frameVersion = ref('1.0.20')
+const frameVersion = ref('1.0.21')
 
 const friendLinkData = ref([
   {
